@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.MethodOverloading;
+package com.shah.javacoretutorials.beginner.methodOverloading;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,6 @@
-package com.shah.javacoretutorials.beginner.TernaryOperator;
+package com.shah.javacoretutorials.beginner.ternaryOperator;
+
+import org.junit.jupiter.api.Test;
 
 /*
 The Java ternary operator functions like a simplified Java if statement. 
@@ -7,16 +9,18 @@ plus a value that is returned if the condition is true and
 another value that is returned if the condition is false. 
 Here is a simple Java ternary operator example:
  */
-public class intro1 {
-  public static void main(String[] args) {
+class intro1 {
 
-    int i = 2;
+    @Test
+    void test() {
 
-    /* if i==1, then assign 2 into j. else assign 1 into j */
-    int j = (i == 1 ? 2 : 3);
+        int i = 2;
 
-    /* statement is same as if(i==1) j=2; else j=3; */
+        /* if i==1, then assign 2 into j. else assign 1 into j */
+        int j = (i == 1 ? 2 : 3);
 
-    System.out.println(j);
-  }
+        /* statement is same as if(i==1) j=2; else j=3; */
+
+        System.out.println(j);
+    }
 }

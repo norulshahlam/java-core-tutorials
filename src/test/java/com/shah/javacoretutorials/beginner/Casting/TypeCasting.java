@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Casting;
+package com.shah.javacoretutorials.beginner.casting;
 /*
 Type casting is when you assign a value of one primitive data type to another type.
 In Java, there are two types of casting:

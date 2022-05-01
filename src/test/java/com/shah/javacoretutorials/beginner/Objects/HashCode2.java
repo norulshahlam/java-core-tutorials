@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Objects;
+package com.shah.javacoretutorials.beginner.objects;
 
 import org.junit.jupiter.api.Test;
 
@@ -32,6 +32,7 @@ class HashCode2 {
     String a = "123";
     String b = "123";
     String c = "49";
+    String d = a;
 
     /*
      * Integers have same value as the hashcode because the hash
@@ -47,6 +48,9 @@ class HashCode2 {
     /* String/Number having diff value usually has diff hashcode */
     System.out.println(a.equals(c));
     System.out.println(i.equals(k));
+
+    /* Since a points to d, they are equal in reference comparison */
+    System.out.println(a.equals(d));
 
     /* equal() only applies to wrapper class! */
     int f = 1, g = 1;

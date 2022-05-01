@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.ThisKeyword;
+package com.shah.javacoretutorials.beginner.thisKeyword;
 
 /*
 when two variable of the same name(local & constructor), compiler will use
@@ -6,6 +6,8 @@ local even if u use parameterized constructor. to counter that, 'this.name'
 means to use the one where in the method is, not the local variable
 
 ‘this’ is a local variable that refers to the current object.	 */
+
+import org.junit.jupiter.api.Test;
 
 class thisPublic {
 	public int age = 0;
@@ -20,8 +22,9 @@ class thisPublic {
 	}
 }
 
-public class intro1 {
-	public static void main(String[] args) {
+class intro1 {
+	@Test
+	void test() {
 		thisPublic new1 = new thisPublic();
 		thisPublic new2 = new thisPublic(20, "shah");
 

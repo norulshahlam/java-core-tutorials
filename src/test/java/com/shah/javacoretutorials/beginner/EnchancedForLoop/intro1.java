@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.EnchancedForLoop;
+package com.shah.javacoretutorials.beginner.enchancedForLoop;
 
 import org.junit.jupiter.api.Test;
 

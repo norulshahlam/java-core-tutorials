@@ -1,4 +1,6 @@
-package com.shah.javacoretutorials.beginner.PrimitiveDataTypesValues;
+package com.shah.javacoretutorials.beginner.primitiveDataTypesValues;
+
+import org.junit.jupiter.api.Test;
 
 /*
 A primitive data type specifies the size and type of variable values, and it has no additional methods.
@@ -17,18 +19,19 @@ double  	8 bytes 	Stores fractional numbers. Sufficient for storing 15 decimal d
 boolean	  1 bit	    Stores true or false values
 char	    2 bytes	  Stores a single character/letter or ASCII values
 */
-public class sample1 {
+class sample1 {
 
-  /* some of the values shown here */
-  public static void main(String[] args) {
-    byte maxByte = Byte.MAX_VALUE;
-    byte minByte = Byte.MIN_VALUE;
+    /* some of the values shown here */
+    @Test
+    void test() {
+        byte maxByte = Byte.MAX_VALUE;
+        byte minByte = Byte.MIN_VALUE;
 
-    System.out.println("Byte min & max val: " + minByte + " to " + maxByte);
+        System.out.println("Byte min & max val: " + minByte + " to " + maxByte);
 
-    int maxInt = Integer.MAX_VALUE;
-    int minInt = Integer.MIN_VALUE;
+        int maxInt = Integer.MAX_VALUE;
+        int minInt = Integer.MIN_VALUE;
 
-    System.out.println("Integer min & max val: " + minInt + " to " + maxInt);
-  }
+        System.out.println("Integer min & max val: " + minInt + " to " + maxInt);
+    }
 }

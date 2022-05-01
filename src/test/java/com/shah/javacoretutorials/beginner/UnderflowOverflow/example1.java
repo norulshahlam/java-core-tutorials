@@ -1,12 +1,16 @@
-package com.shah.javacoretutorials.beginner.UnderflowOverflow;
+package com.shah.javacoretutorials.beginner.underflowOverflow;
 /*
 if we try to put a val larger than the max val, u will get an overflow value where it just skips back to the min number which is not what u want. same goes to (min val - 1). important convept to be aware of..
 
 if u also try to add a number to an alr max val in a variable, it will show compile time error??
 */
 
-public class example1 {
-  public static void main(String[] args) {
+import org.junit.jupiter.api.Test;
+
+class example1 {
+  @Test
+  void test() {
+
     int maxVal = Integer.MAX_VALUE;
     int minVal = Integer.MIN_VALUE;
 

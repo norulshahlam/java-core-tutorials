@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Objects;
+package com.shah.javacoretutorials.beginner.objects;
 /*
  In general both .equals() and “==” operator in Java are used to compare objects to check equality but here are some of the differences between the two:
 

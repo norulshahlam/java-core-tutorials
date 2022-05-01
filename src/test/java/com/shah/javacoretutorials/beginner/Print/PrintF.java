@@ -1,11 +1,14 @@
-package com.shah.javacoretutorials.beginner.Print;
+package com.shah.javacoretutorials.beginner.print;
 
 /*
 The printf() method of Java PrintStream class is a convenience method to write a String which is formatted to this output Stream. It uses the specified format string and arguments.
 */
+import org.junit.jupiter.api.Test;
+
 import java.util.Calendar;
-public class PrintF {
-	public static void main(String[] args) {
+class PrintF {
+	@Test
+	void test() {
 
 		int i = 1;
 		int j = 2;

@@ -1,4 +1,6 @@
-package com.shah.javacoretutorials.beginner.WrapperClass;
+package com.shah.javacoretutorials.beginner.wrapperClass;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -10,14 +12,11 @@ b) Assigned to a variable of the corresponding wrapper class.
 
 java compiler performs automatic conversion between primitive type and corresponding Wrapper objects
  */
-public class AutoBoxing {
+class AutoBoxing {
 
-	public static void myMethod(Integer num) {
-
-		System.out.println(num);
-	}
 	@SuppressWarnings("unused")
-	public static void main(String[] args) {
+	@Test
+	void test() {
 		// CASE 1: passed int (primitive type), it would be converted to Integer object at Runtime
 		myMethod(2);
 
@@ -29,6 +28,12 @@ public class AutoBoxing {
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		arrayList.add(11); //Autoboxing - int primitive to Integer
 		arrayList.add(22); //Autoboxing
+	}
+
+
+	void myMethod(Integer num) {
+
+		System.out.println(num);
 	}
 }
 /*

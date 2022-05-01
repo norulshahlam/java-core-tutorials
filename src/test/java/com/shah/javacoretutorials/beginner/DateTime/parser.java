@@ -1,5 +1,6 @@
-package com.shah.javacoretutorials.beginner.DateTime;
+package com.shah.javacoretutorials.beginner.dateTime;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.util.Scanner;
 class parser {
 
 	@Test
+	@Disabled
 	void test()  {
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");

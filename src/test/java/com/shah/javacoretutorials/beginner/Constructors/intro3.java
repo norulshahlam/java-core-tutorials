@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Constructors;
+package com.shah.javacoretutorials.beginner.constructors;
 /*
 alternative way to assign values in default constructor if you dont have value in the global variable.
 */

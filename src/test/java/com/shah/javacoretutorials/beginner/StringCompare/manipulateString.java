@@ -1,11 +1,14 @@
-package com.shah.javacoretutorials.beginner.StringCompare;
+package com.shah.javacoretutorials.beginner.stringCompare;
+
+import org.junit.jupiter.api.Test;
 
 /*
  * manipulate string values
  */
-public class manipulateString {
+class manipulateString {
 
-	public static void main(String[] args) {
+	@Test
+	void test() {
 		
 		
 		String x = "Donald trump";

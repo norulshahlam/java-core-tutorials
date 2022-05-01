@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.MethodOverride;
+package com.shah.javacoretutorials.beginner.methodOverride;
 
 import org.junit.jupiter.api.Test;
 

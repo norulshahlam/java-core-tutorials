@@ -1,14 +1,19 @@
-package com.shah.javacoretutorials.beginner.ScannerInput;
+package com.shah.javacoretutorials.beginner.scannerInput;
 
 /*
  * this class demos the manipulation of string from user input. it counts how many uppercase / lowercase letters
  */
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 import java.util.Scanner;
 
-public class intro2 {
+class intro2 {
 
-	public static void main(String[] args) {
+	@Disabled
+	@Test
+	void test() {
 
 		int upperCase = 0, lowerCase = 0;
 		Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,6 @@
-package com.shah.javacoretutorials.beginner.WrapperClass;
+package com.shah.javacoretutorials.beginner.wrapperClass;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
@@ -10,40 +12,41 @@ a) Passed as a parameter to a method that expects a value of the corresponding p
 b) Assigned to a variable of the corresponding primitive type.
 
  */
-public class Unboxing {
+class Unboxing {
+    @SuppressWarnings({"unused"})
+    @Test
+    void test() {
 
-	public static void myMethod(int num) {
-		System.out.println(num);
-	}
-	@SuppressWarnings({ "unused" })
+        Integer inum = Integer.valueOf(100);
 
-	public static void main(String[] args) {
+        /*
+         * CASE 1: passed Integer wrapper class object, it would be converted to int
+         * primitive type at Runtime
+         */
+        myMethod(inum);
+        // Case 2: Assignments
+        Integer inum2 = Integer.valueOf(5);
+        int num = inum2; // unboxing object to primitive conversion
 
-		Integer inum = Integer.valueOf(100);
+        // Case 3: While dealing with collection classes:
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(inum2);
+        // unboxing because get method returns an Integer object
+        int num2 = list.get(0);
+    }
 
-		/*
-		 * CASE 1: passed Integer wrapper class object, it would be converted to int
-		 * primitive type at Runtime
-		 */
-		myMethod(inum);
-		// Case 2: Assignments
-		Integer inum2 = Integer.valueOf(5);
-		int num = inum2; // unboxing object to primitive conversion
-
-		// Case 3: While dealing with collection classes:
-		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-		// unboxing because get method returns an Integer object
-		int num2 = arrayList.get(0);
-	}
+    void myMethod(int num) {
+        System.out.println(num);
+    }
 }
 /*
  * Unboxing:
- * 
- * What we see: 
-		* Integer num2 = new Integer(50);
-		* int inum = num2;
- * 
- * What compiler does: 
-		* Integer num2 = new Integer(50); 
-		* int inum = num2.intValue();
+ *
+ * What we see:
+ * Integer num2 = new Integer(50);
+ * int inum = num2;
+ *
+ * What compiler does:
+ * Integer num2 = new Integer(50);
+ * int inum = num2.intValue();
  */

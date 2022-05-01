@@ -1,4 +1,7 @@
-package com.shah.javacoretutorials.beginner.StaticNonStatic;
+package com.shah.javacoretutorials.beginner.staticNonStatic;
+
+import org.junit.jupiter.api.Test;
+
 /*
 static var means variable is shared / accessible among all obj of the same class. if any object changes that static variable, it will affect other object too
 instance variables is th opposite - has its own copy of variable aka fields/member variables
@@ -23,9 +26,10 @@ class employee {
 	}
 }
 
-public class intro1 {
+class intro1 {
 
-	public static void main(String args[]) {
+	@Test
+	void test() {
 
 		employee a = new employee(01, "shah", "mike");
 		employee b = new employee(02, "ahmad", "mike");

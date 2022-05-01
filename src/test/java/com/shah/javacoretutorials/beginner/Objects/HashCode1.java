@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Objects;
+package com.shah.javacoretutorials.beginner.objects;
 
 import org.junit.jupiter.api.Test;
 

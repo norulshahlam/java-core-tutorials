@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Methods;
+package com.shah.javacoretutorials.beginner.methods;
 
 import org.junit.jupiter.api.Test;
 

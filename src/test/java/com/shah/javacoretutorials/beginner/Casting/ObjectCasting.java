@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Casting;
+package com.shah.javacoretutorials.beginner.casting;
 
 import org.junit.jupiter.api.Test;
 

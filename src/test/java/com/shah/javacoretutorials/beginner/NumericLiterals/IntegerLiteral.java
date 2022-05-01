@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.NumericLiterals;
+package com.shah.javacoretutorials.beginner.numericLiterals;
 
 import org.junit.jupiter.api.Test;
 

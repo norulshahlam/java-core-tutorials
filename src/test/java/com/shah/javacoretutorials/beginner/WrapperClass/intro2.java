@@ -1,13 +1,17 @@
-package com.shah.javacoretutorials.beginner.WrapperClass;
+package com.shah.javacoretutorials.beginner.wrapperClass;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
 /*  this class demonstrates the use of primitive datatype in wrapper class in collections */
-public class intro2 {
+class intro2 {
 	@SuppressWarnings("rawtypes")
-	public static void main(String[] args) {
+	@Test
+	void test() {
 		
-		/*  we are now creeating an ArrayList without datatype defined. This is considered not type-safe. this is also called raw type  */
+		/*  we are now creating an ArrayList without datatype defined. This is considered not type-safe.
+		this is also called raw type  */
 		ArrayList salary = new ArrayList();
 
 		salary.add(2);
@@ -15,8 +19,9 @@ public class intro2 {
 		salary.add("hi");
 
 		
-		/* if u wanna create arrayist of certain datatype ie int, you cannot assign int cos it only accept Integer class. thats where wrapper class comes. Collections only accept wrapper class, not primitive */
-		ArrayList<Integer> bonus = new ArrayList<Integer>();
+		/* if u wanna create arrayist of certain datatype ie int, you cannot assign int cos it only accept Integer class.
+		thats where wrapper class comes. Collections only accept wrapper class, not primitive */
+		ArrayList<Integer> bonus = new ArrayList<>();
 		bonus.add(4);
 		bonus.add(3);
 		System.out.println(bonus.get(1));

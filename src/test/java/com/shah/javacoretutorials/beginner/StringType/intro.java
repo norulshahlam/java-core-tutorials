@@ -1,9 +1,13 @@
-package com.shah.javacoretutorials.beginner.StringType;
+package com.shah.javacoretutorials.beginner.stringType;
+
+import org.junit.jupiter.api.Test;
+
 /*
 In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string.
 */
-public class intro {
-  public static void main(String[] args) {
+class intro {
+  @Test
+  void test() {
     char[] ch = { 'j', 'a', 'v', 'a', 't', 'p', 'o', 'i', 'n', 't' };
     String s = new String(ch);
 

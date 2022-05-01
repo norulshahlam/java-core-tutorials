@@ -1,4 +1,6 @@
-package com.shah.javacoretutorials.beginner.Unicode;
+package com.shah.javacoretutorials.beginner.unicode;
+
+import org.junit.jupiter.api.Test;
 
 /*
 Unicode is a universal international standard character encoding that is capable of representing most of the world's written languages.
@@ -10,8 +12,10 @@ highest value:\uFFFF
 https://unicode-table.com/en/
 
 */
-public class UniCode {
-  public static void main(String[] args) {
+class UniCode {
+
+  @Test
+  void test() {
 
     char c1 = 'D';
     char c2 = '\u0044'; // D

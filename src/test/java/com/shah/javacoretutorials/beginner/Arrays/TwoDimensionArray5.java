@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.Arrays;
+package com.shah.javacoretutorials.beginner.arrays;
 
 
 import org.junit.jupiter.api.Test;

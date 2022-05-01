@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.InstanceOf;
+package com.shah.javacoretutorials.beginner.instanceOf;
 
 import org.junit.jupiter.api.Test;
 

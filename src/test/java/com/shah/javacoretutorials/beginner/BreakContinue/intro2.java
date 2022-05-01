@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.BreakContinue;
+package com.shah.javacoretutorials.beginner.breakContinue;
 
 import org.junit.jupiter.api.Test;
 

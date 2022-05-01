@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.beginner.DateTime;
+package com.shah.javacoretutorials.beginner.dateTime;
 
 import org.junit.jupiter.api.Test;
 
