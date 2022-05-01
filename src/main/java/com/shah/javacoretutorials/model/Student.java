@@ -1,10 +1,12 @@
 package com.shah.javacoretutorials.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Student {
     int RollNo;
     String Name;
