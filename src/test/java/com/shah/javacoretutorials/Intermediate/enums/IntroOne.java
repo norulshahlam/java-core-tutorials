@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.enums;
+package com.shah.javacoretutorials.intermediate.enums;
 
 import org.junit.jupiter.api.Test;
 

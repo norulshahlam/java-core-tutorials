@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.annotations;
+package com.shah.javacoretutorials.intermediate.annotations;
 /* 
 Introduced in java 1.5
 

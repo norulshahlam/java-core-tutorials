@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.explicitImplicit;
+package com.shah.javacoretutorials.intermediate.explicitImplicit;
 
 import com.shah.javacoretutorials.model.Author;
 import org.junit.jupiter.api.Test;

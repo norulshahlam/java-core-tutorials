@@ -1,9 +1,7 @@
-package com.shah.javacoretutorials.Intermediate.objectCopy;
+package com.shah.javacoretutorials.advance.objectCopy;
 
 import com.shah.javacoretutorials.model.Employee;
 import org.junit.jupiter.api.Test;
-
-import java.util.Objects;
 
 /*
 here we have our plain POJO & create a new obj using existing obj

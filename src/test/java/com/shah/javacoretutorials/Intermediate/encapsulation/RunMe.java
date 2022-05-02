@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.encapsulation;
+package com.shah.javacoretutorials.intermediate.encapsulation;
 
 import com.shah.javacoretutorials.model.Student;
 import org.junit.jupiter.api.Test;

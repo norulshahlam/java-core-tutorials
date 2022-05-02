@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.instanceLocalVariable;
+package com.shah.javacoretutorials.intermediate.instanceLocalVariable;
 /*
 insrtance vs local variable
 */
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 class StaticVar {
 	// static variable - class level variable
 	static int i = 1;
-
 	@Test
 	void test1() {
 		// As i is a static variable it can be accessed directly without using any object

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.accessModifier;
+package com.shah.javacoretutorials.intermediate.accessModifier;
 
 /*
 Access Modifiers in Java

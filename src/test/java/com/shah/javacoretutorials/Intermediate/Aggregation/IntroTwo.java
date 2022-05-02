@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.aggregation;
+package com.shah.javacoretutorials.intermediate.aggregation;
 
 import com.shah.javacoretutorials.model.School;
 import com.shah.javacoretutorials.model.StudentSch;

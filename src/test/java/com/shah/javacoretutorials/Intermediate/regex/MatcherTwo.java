@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.myinterface.regex;
+package com.shah.javacoretutorials.intermediate.regex;
 /*
 //this function checks if two strings are same
 */

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.abstraction;
+package com.shah.javacoretutorials.intermediate.abstraction;
 
 /* An abstract class is a class that is declared abstract— it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), 
 

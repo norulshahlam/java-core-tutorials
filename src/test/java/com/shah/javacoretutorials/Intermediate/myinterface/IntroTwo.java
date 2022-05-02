@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.myinterface;
+package com.shah.javacoretutorials.intermediate.myinterface;
 
 /*
 Earlier we show that in order to implement abstact class we have to:
@@ -10,6 +10,7 @@ Earlier we show that in order to implement abstact class we have to:
 here we use lambda to achieve the above using less code
 */
 
+import com.shah.javacoretutorials.intermediate.myinterface.MyInterface;
 import org.junit.jupiter.api.Test;
 
 class IntroTwo {

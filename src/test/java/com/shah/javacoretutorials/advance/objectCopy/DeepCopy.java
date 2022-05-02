@@ -1,8 +1,6 @@
-package com.shah.javacoretutorials.Intermediate.objectCopy;
+package com.shah.javacoretutorials.advance.objectCopy;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
 
 /*
 In object-oriented programming, object copying is creating a copy of an existing object, the resulting object is called an object copy or simply copy of the original object

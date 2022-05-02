@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.objectCopy;
+package com.shah.javacoretutorials.advance.objectCopy;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.myinterface;
+package com.shah.javacoretutorials.intermediate.myinterface;
 
 public interface MyInterface {
 

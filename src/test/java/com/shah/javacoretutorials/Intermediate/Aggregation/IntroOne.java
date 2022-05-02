@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.aggregation;
+package com.shah.javacoretutorials.intermediate.aggregation;
 
 /*
 Association is relation between two separate classes which establishes through their Objects. Association can be one-to-one, one-to-many, many-to-one, many-to-many.

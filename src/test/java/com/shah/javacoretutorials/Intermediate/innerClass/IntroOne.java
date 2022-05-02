@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.Intermediate.innerClass;
+package com.shah.javacoretutorials.intermediate.innerClass;
 
 import org.junit.jupiter.api.Test;
 
