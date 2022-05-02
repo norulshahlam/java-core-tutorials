@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 /*  how to take a date and manipulate it  */
-class manipulate2 {
+class Manipulate2 {
 
 	@Test
 	void test()  {

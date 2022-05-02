@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 /*
  * manipulate string values
  */
-class manipulateString {
+class ManipulateString {
 
 	@Test
 	void test() {

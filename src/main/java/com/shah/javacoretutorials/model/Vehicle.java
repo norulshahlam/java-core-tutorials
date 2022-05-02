@@ -29,7 +29,7 @@ c) Constructors are used to initialize the object’s state. constructors are us
 d) However, then you are not able to set initial values for object attributes.
 
 1. constructor has same name as class name
-2. dont return anything (void)
+2. don't return anything (void)
 3. constructor will be called once you create the object
  */
 
