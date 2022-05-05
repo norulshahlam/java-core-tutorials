@@ -1,0 +1,83 @@
+2022-05-05 15:40:18,654 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Starting RestCrudApiTutorialApplication using Java 17.0.2 on DESKTOP-9JL74QH with PID 2308 (C:\Users\NORUL\Downloads\rest-crud-api-tutorial\target\classes started by NORUL in C:\Users\NORUL\Downloads\java-core-tutorials)
+2022-05-05 15:40:18,655 DEBUG com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-05-05 15:40:18,655 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-05-05 15:40:21,990 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Started RestCrudApiTutorialApplication in 3.567 seconds (JVM running for 4.002)
+2022-05-05 15:40:21,993 INFO com.shah.restcrudapitutorial.startup.MyStartup [restartedMain] Application name: rest-api-tutorials just loaded!
+2022-05-05 15:40:21,994 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] App started
+2022-05-05 15:42:19,714 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2022-05-05 15:42:19,715 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Starting RestCrudApiTutorialApplication using Java 17.0.2 on DESKTOP-9JL74QH with PID 16912 (C:\Users\NORUL\Downloads\rest-crud-api-tutorial\target\classes started by NORUL in C:\Users\NORUL\Downloads\java-core-tutorials)
+2022-05-05 15:42:19,716 DEBUG com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-05-05 15:42:19,716 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-05-05 15:42:19,745 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-05 15:42:19,745 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-05 15:42:20,284 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 15:42:20,330 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2022-05-05 15:42:20,851 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2022-05-05 15:42:20,860 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2022-05-05 15:42:20,860 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-05-05 15:42:20,861 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-05 15:42:20,925 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-05-05 15:42:20,925 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1179 ms
+2022-05-05 15:42:21,079 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 15:42:21,120 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-05 15:42:21,254 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 15:42:21,330 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-05-05 15:42:21,534 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-05-05 15:42:21,544 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-05 15:42:22,020 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 15:42:22,025 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 15:42:22,538 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 15:42:22,668 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-05 15:42:22,806 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-05-05 15:42:22,934 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2022-05-05 15:42:22,960 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-05 15:42:22,960 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-05-05 15:42:22,998 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-05-05 15:42:23,035 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-05-05 15:42:23,150 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Started RestCrudApiTutorialApplication in 3.668 seconds (JVM running for 4.066)
+2022-05-05 15:42:23,156 INFO com.shah.restcrudapitutorial.startup.MyStartup [restartedMain] Application name: rest-api-tutorials just loaded!
+2022-05-05 15:42:23,157 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] App started
+2022-05-05 15:42:30,520 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 15:42:30,520 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-9090-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-05-05 15:42:30,521 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-9090-exec-1] Completed initialization in 1 ms
+2022-05-05 15:42:30,536 INFO com.shah.restcrudapitutorial.service.EmployeeService [http-nio-9090-exec-1] Getting all employees...
+2022-05-05 15:42:30,536 DEBUG com.shah.restcrudapitutorial.service.EmployeeService [http-nio-9090-exec-1] sefaes
+2022-05-05 15:44:27,561 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 15:44:27,562 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-05-05 15:44:27,571 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-05-05 15:44:29,251 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.0.Final
+2022-05-05 15:44:29,253 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Starting RestCrudApiTutorialApplication using Java 17.0.2 on DESKTOP-9JL74QH with PID 17600 (C:\Users\NORUL\Downloads\rest-crud-api-tutorial\target\classes started by NORUL in C:\Users\NORUL\Downloads\java-core-tutorials)
+2022-05-05 15:44:29,254 DEBUG com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-05-05 15:44:29,254 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-05-05 15:44:29,284 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-05 15:44:29,284 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-05 15:44:29,823 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-05 15:44:29,864 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2022-05-05 15:44:30,382 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 9090 (http)
+2022-05-05 15:44:30,393 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-9090"]
+2022-05-05 15:44:30,394 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-05-05 15:44:30,394 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-05 15:44:30,457 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-05-05 15:44:30,457 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1172 ms
+2022-05-05 15:44:30,604 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-05 15:44:30,648 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-05-05 15:44:30,796 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-05 15:44:30,885 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-05-05 15:44:31,082 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-05-05 15:44:31,092 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-05 15:44:31,588 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-05 15:44:31,593 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 15:44:32,134 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-05 15:44:32,255 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-05 15:44:32,363 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-05-05 15:44:32,491 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-9090"]
+2022-05-05 15:44:32,511 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-05 15:44:32,512 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2022-05-05 15:44:32,545 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2022-05-05 15:44:32,575 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2022-05-05 15:44:32,691 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] Started RestCrudApiTutorialApplication in 3.669 seconds (JVM running for 4.079)
+2022-05-05 15:44:32,694 INFO com.shah.restcrudapitutorial.startup.MyStartup [restartedMain] Application name: rest-api-tutorials just loaded!
+2022-05-05 15:44:32,694 INFO com.shah.restcrudapitutorial.RestCrudApiTutorialApplication [restartedMain] App started
+2022-05-05 15:44:43,522 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-05 15:44:43,523 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-05-05 15:44:43,531 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
