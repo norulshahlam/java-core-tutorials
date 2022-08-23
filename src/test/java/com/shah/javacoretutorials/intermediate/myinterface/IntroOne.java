@@ -25,6 +25,7 @@ import org.junit.jupiter.api.Test;
 
 class IntroOne implements MyInterface {
 
+    @Override
     public void display() {
         System.out.println("Geek");
     }

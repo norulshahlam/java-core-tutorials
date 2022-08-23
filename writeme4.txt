@@ -1,5 +1,9 @@
-Apple
-banaddddna
-carrot
-donkey
-elephant
+staff_table
+
+staff_id
+staff_name
+manager_id
+
+select e.staff_id, e.staff_name, e.manager_id, m.manager_id
+from staff_table e, staff_table m,
+where e.manager_id = m.staff_id
