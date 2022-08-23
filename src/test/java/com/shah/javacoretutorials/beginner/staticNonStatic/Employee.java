@@ -9,7 +9,7 @@ public class Employee {
         super();
         this.id = id;
         this.name = name;
-        this.CEO = CEO;
+        Employee.CEO = CEO;
     }
 
     public String toString() {

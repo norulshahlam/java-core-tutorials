@@ -18,7 +18,7 @@ class SuppressedExceptionFour {
     /* remove the throws statement n c what happens */
     @Test
     @Disabled
-    void test() throws IOException, SQLException {
+    void test() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Enter something");

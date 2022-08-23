@@ -2,7 +2,8 @@ package com.shah.javacoretutorials.advance.objectCopy;
 
 public class Complex {
 
-    private double re, im;
+    private final double re;
+    private final double im;
 
     // A normal parametrized constructor
     public Complex(double re, double im) {

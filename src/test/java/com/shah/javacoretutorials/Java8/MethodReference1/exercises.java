@@ -2,6 +2,8 @@ package Java8.MethodReference1;
 
 import java.util.List;
 
+import static java.util.List.*;
+
 /*
 map
 transform the object values. The map operation allows us to apply a function, that takes in a parameter of one type, and returns something else.
@@ -12,10 +14,10 @@ filtering the data, always returns boolean value. If it returns true, the item i
 now we underrstand how method reference and lambda works, we do some exercises
 */
 public class exercises {
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
 
-    List<Integer> numbers = List.of(2, 5, 8, 4, 2, 6, 1, 9, 3);
-    List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker",
+    List<Integer> numbers = of(2, 5, 8, 4, 2, 6, 1, 9, 3);
+    List<String> courses = of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker",
         "Kubernetes");
 
     oddNumbers(numbers);
@@ -32,7 +34,6 @@ public class exercises {
   // 2. filter string
   private static void getSpring(List<String> courses) {
     courses.stream().filter(i -> i.contains("Spring")).forEach(System.out::println);
-    ;
   }
 
   // 3. square number

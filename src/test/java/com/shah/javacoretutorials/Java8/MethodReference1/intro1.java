@@ -10,7 +10,7 @@ package Java8.MethodReference1;
 import java.util.List;
 
 public class intro1 {
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
 
     // create an array
     printList(List.of(2, 5, 8, 4, 2, 6, 1));

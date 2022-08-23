@@ -38,7 +38,7 @@ class TryCatchTwo {
         // SINGLE TRY WITH MUTIPLE CATCH
         try {
             // array is created of size 1
-            int c[] = {22};
+            int[] c = {22};
             // but here, an attempt to insert another value to array index size 44. so it
             // gives out of bound error
             c[1] = 44;

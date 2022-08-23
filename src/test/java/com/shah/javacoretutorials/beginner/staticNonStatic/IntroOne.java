@@ -26,7 +26,7 @@ class IntroOne {
     System.out.println("after changing a static variable CEO");
 
     // we try to change the ceo from a. which also change ceo from b indirectly bcos of static var
-		a.CEO = "bob"; 
+		Employee.CEO = "bob";
     //name for 'a' will change only for 'a' not 'b' cos it is not shared (static) var
 		a.name="shah1";
     
