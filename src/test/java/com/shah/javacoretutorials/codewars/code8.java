@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.codewars;
 import org.junit.jupiter.api.Test;
 
 
-class StringComparison {
+public class code8 {
 
 	@Test
 	void contextLoads() {
