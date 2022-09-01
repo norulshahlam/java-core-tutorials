@@ -1,6 +1,6 @@
 package com.shah.javacoretutorials.codewars;
 
-public class code2 {
+public class Code2 {
   public static void main(String[] args) {
 
     String word = "testing";

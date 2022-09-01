@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.codewars;
 import org.junit.jupiter.api.Test;
 
 
-public class code8 {
+public class Code8 {
 
 	@Test
 	void contextLoads() {

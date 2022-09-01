@@ -2,7 +2,7 @@ package  com.shah.javacoretutorials.codewars;
 
 import java.util.ArrayList;
 
-public class code7 {
+public class Code7 {
   public static void main(String[] args) {
     String data = "iiisdosodddddiso";
 

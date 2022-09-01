@@ -2,7 +2,7 @@ package  com.shah.javacoretutorials.codewars;
 
 import java.util.Arrays;
 
-public class code5 {
+public class Code5 {
   public static void main(String[] args) {
     int[] array = { 0, 1, 4 };
     oddOrEven(array);

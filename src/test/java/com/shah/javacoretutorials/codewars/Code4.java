@@ -1,6 +1,6 @@
 package  com.shah.javacoretutorials.codewars;
 
-public class code4 {
+public class Code4 {
   public static void main(String[] args) {
     // String str = "4556364607935616";
     String str = "Skid";

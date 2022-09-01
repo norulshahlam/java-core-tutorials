@@ -1,6 +1,6 @@
 package  com.shah.javacoretutorials.codewars;
 
-public class code6 {
+public class Code6 {
   public static void main(String[] args) {
 
     int n = 5;

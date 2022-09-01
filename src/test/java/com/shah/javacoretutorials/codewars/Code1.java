@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.codewars;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class code1 {
+public class Code1 {
   public static void main(String[] args) {
     String sentence = "This is another test";
     String s = Arrays.asList(sentence.split(" ")).stream().map(i -> i.length() > 4 ? new StringBuilder(i).reverse() : i)

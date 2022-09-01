@@ -1,6 +1,6 @@
 package  com.shah.javacoretutorials.codewars;
 
-public class code3 {
+public class Code3 {
   public static void main(String[] args) {
     String str = "";
     System.out.println(isIsogram(str));
