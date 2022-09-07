@@ -3,8 +3,6 @@ package com.shah.javacoretutorials.codewars;
 import org.junit.jupiter.api.Test;
 
 import static java.lang.Integer.*;
-import static java.lang.Integer.parseInt;
-import static java.lang.Math.max;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -37,8 +35,8 @@ public class LargestFiveDigitNumbersTest {
     public static int solve(final String digits) {
         int largest = MIN_VALUE;
         for (int i = 0; i <= digits.length() - 5; i++) {
-            int number = parseInt(digits.substring(i, i + 5));
-            largest = max(number, largest);
+            int number = Integer.parseInt(digits.substring(i, i + 5));
+            largest = Math.max(number, largest);
         }
         return largest;
     }
