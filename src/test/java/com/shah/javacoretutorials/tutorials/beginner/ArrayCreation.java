@@ -1,8 +1,8 @@
-package com.shah.javacoretutorials.tutorials.beginner.arrays;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
-public class CreateArray1 {
+class ArrayCreation {
 
     @Test
     void test() {
@@ -10,10 +10,10 @@ public class CreateArray1 {
         int add = 0;
 
         // method #1 - array size is defined but its elements are not added yet
-        int array1[] = new int[10];
+        int[] array1 = new int[10];
 
         // method #2 - elements are added upon creation of arrays
-        int array2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] array2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("aaa" + array2[3]);
 
         // adding elements by using for loop
@@ -29,6 +29,5 @@ public class CreateArray1 {
         for (int a : array1) {
             System.out.println("array2: " + a);
         }
-
     }
 }

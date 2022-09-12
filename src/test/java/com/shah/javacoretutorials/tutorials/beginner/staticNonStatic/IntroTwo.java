@@ -24,6 +24,7 @@ class IntroTwo {
     }
 
     static int num;
+
     static void method1() {
         System.out.println("Inside method1");
     }
@@ -37,5 +38,4 @@ class IntroTwo {
     static {
         System.out.println("Static Block 2");
     }
-
 }

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.methodOverloading;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ overriding - runtime polymorphism - same method name, same behaviour, diff class
 we show here that method Overloading allows different methods to have the same name but different signatures where the signature can differ by the number of input parameters or type of input parameters or both. Overloading is related to compile-time (or static) polymorphism. 
 
 */
- class intro1 {
+ class MethodOverloading {
   @Test
   void test() {
 

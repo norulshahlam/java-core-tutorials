@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.print;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 /*
 Another important method in Object is the .toString() method that returns a string representing the value of this object.
@@ -12,7 +12,7 @@ import com.shah.javacoretutorials.model.Year;
 import org.junit.jupiter.api.Test;
 
 
-class StringRepresentation {
+class PrintStatement2 {
 	@Test
 	void test() {
 		Year new1 = new Year("shah", 35, "Singapore");

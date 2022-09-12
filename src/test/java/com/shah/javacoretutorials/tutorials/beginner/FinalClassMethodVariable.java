@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.finals;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ final var - cant make any changes
 final method - cant overide parent method
 final class - cant inherit class
 */
-class intro1 {
+class FinalClassMethodVariable {
 	@SuppressWarnings("unused")
 	@Test
 	void test()  {

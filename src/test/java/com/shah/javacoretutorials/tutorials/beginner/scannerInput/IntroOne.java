@@ -1,16 +1,19 @@
 package com.shah.javacoretutorials.tutorials.beginner.scannerInput;
 
 /*  using scanner input with validation */
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
 
+import static java.lang.System.in;
+
 class IntroOne {
     @Disabled
     @Test
     void test() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(in);
         System.out.println("Enter your year of birth:");
         boolean hasNextInt = scanner.hasNextInt();
 

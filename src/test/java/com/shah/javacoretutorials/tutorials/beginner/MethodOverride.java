@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.methodOverride;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +15,7 @@ overriding - runtime polymorphism - same method name, same behaviour, diff class
   method overriding happens when there is same method name from child and parent class so compiler will override parent's method in favour of child method. 
 */
 class RunMe {
+
     @Test
     void test() {
         sofa s = new sofa();

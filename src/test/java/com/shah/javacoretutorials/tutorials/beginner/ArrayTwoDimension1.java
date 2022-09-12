@@ -1,9 +1,9 @@
-package com.shah.javacoretutorials.tutorials.beginner.arrays;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
 //this demonstrates the use of 2d array
-class TwoDimensionArray4 {
+class ArrayTwoDimension1 {
 
     @Test
     void test() {

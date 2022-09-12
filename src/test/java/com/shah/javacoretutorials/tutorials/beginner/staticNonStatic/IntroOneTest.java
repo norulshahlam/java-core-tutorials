@@ -10,28 +10,27 @@ Static - class level
 non-static - object level
  */
 
-
 class IntroOneTest {
 
-	@Test
-	void test() {
+    @Test
+    void test() {
 
-		Employee a = new Employee(1, "shah", "mike");
-		Employee b = new Employee(2, "ahmad", "mike");
+        Employee a = new Employee(1, "shah", "mike");
+        Employee b = new Employee(2, "ahmad", "mike");
 
-    // here both a b has same ceo
-		System.out.println(a);
-		System.out.println(b); 
+        // here both a b has same ceo
+        System.out.println(a);
+        System.out.println(b);
 
-    System.out.println("after changing a static variable CEO");
+        System.out.println("after changing a static variable CEO");
 
-    // we try to change the ceo from a. which also change ceo from b indirectly cos of static var
-		Employee.CEO = "bob";
-    //name for 'a' will change only for 'a' not 'b' cos it is not shared (static) var
-		a.name="shah1";
-    
-		// here both a b has same new ceo
-		System.out.println(a);
-		System.out.println(b); 
-	}
+        // we try to change the ceo from a. which also change ceo from b indirectly cos of static var
+        Employee.CEO = "bob";
+        //name for 'a' will change only for 'a' not 'b' cos it is not shared (static) var
+        a.name = "shah1";
+
+        // here both a b has same new ceo
+        System.out.println(a);
+        System.out.println(b);
+    }
 }

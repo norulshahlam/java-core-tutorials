@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.string;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ From Java 7 onwards, the Java String Pool is stored in the Heap space
 
 */
 
-class IntroOne {
+class StringPool {
 
     @Test
     void test() {

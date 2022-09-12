@@ -1,9 +1,9 @@
-package com.shah.javacoretutorials.tutorials.beginner.arrays;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 
 import org.junit.jupiter.api.Test;
 
-class TwoDimensionArray5 {
+class ArrayTwoDimension2 {
 
     @Test
     void test() {

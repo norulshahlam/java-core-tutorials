@@ -1,8 +1,8 @@
-package com.shah.javacoretutorials.tutorials.beginner.arrays;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
-class ArrayAsArgs2 {
+class ArrayAsArguments {
 
     @Test
     void test() {

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.enchancedForLoop;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * (enhanced form of for loop) to iterate through items of  arrays/collections. 
  * It is also referred as for-each loop because the loop iterates through each element of array/collection
  */
-class IntroOne {
+class EnhancedForLoop {
 
   @Test
   void test()  {

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.ternaryOperator;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ plus a value that is returned if the condition is true and
 another value that is returned if the condition is false. 
 Here is a simple Java ternary operator example:
  */
-class intro1 {
+class TernaryOperator {
 
     @Test
     void test() {

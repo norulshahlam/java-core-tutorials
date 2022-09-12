@@ -1,11 +1,11 @@
-package com.shah.javacoretutorials.tutorials.beginner.arrays;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 // Array can also store objects. 
 
 import com.shah.javacoretutorials.model.Student;
 import org.junit.jupiter.api.Test;
 
-class ArrayObjects3 {
+class ArrayAsObjects {
 
 	/**
 	 * An array of Student type holding student objects

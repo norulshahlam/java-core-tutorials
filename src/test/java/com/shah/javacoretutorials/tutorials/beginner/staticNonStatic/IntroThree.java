@@ -18,27 +18,28 @@ import org.junit.jupiter.api.Test;
 
 class IntroThree {
 
-	@Test
-	void test() {
-		System.out.println("in main method");
-		// u call any non-ststic member, we need to create an obj of the class
-		IntroThree obj = new IntroThree();
-		System.out.println(obj.num);
-		obj.method1();
-	}
-	int num;
-	void method1() {
-		System.out.println("Inside method1");
-	}
+    @Test
+    void test() {
+        System.out.println("in main method");
+        // u call any non-ststic member, we need to create an obj of the class
+        IntroThree obj = new IntroThree();
+        System.out.println(obj.num);
+        obj.method1();
+    }
 
-	// non-static block - will get called when new obj is created
-	{
-		System.out.println("non-Static Block 1");
-	}
-	// if theres 2 non-static block, the top wil get called first
-	{
-		System.out.println("non-Static Block 2");
-	}
+    int num;
 
+    void method1() {
+        System.out.println("Inside method1");
+    }
 
+    // non-static block - will get called when new obj is created
+    {
+        System.out.println("non-Static Block 1");
+    }
+
+    // if theres 2 non-static block, the top wil get called first
+    {
+        System.out.println("non-Static Block 2");
+    }
 }
