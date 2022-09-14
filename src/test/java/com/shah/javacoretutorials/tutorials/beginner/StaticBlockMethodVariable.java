@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.staticNonStatic;
+package com.shah.javacoretutorials.tutorials.beginner;
 /*
 1. static var means variable is shared / accessible among all obj of the same class. if any object changes that static variable, it will affect other object too
 2. non-static (instance) variables is the opposite - has its own copy of variable aka fields/member variables
@@ -12,15 +12,15 @@ here we will cover static block, method, variable. how do we use static members?
 
 import org.junit.jupiter.api.Test;
 
-class IntroTwo {
+class StaticBlockMethodVariable {
 
     @Test
     void test() {
         System.out.println("in main method");
         // this is how u call static variable
-        System.out.println(IntroTwo.num);
+        System.out.println(StaticBlockMethodVariable.num);
         // this is how u call static method
-        IntroTwo.method1();
+        StaticBlockMethodVariable.method1();
     }
 
     static int num;

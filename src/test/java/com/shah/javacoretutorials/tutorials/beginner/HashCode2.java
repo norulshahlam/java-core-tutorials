@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.objects;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +22,7 @@ hashCode(int value) Method
 The hashCode(int value) is an inbuilt Java Integer Class method which determines a hash code for a given int value.
 This method is compatible with Integer.hashCode().
 */
-class HashCodeTwo {
+class HashCode2 {
   @Test
   void test()  {
     Integer i = Integer.valueOf(155);

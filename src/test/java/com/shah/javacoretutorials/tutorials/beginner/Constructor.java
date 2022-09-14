@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.constructors;
+package com.shah.javacoretutorials.tutorials.beginner;
 /*
 What is constructor???
 
@@ -36,7 +36,7 @@ d) However, then you are not able to set initial values for object attributes.
 import com.shah.javacoretutorials.model.Vehicle;
 import org.junit.jupiter.api.Test;
 
-class IntroOne {
+class Constructor {
 
     @Test
     void test() {

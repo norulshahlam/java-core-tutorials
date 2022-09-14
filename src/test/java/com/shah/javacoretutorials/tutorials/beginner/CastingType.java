@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.casting;
+package com.shah.javacoretutorials.tutorials.beginner;
 /*
 Type casting is when you assign a value of one primitive data type to another type.
 In Java, there are two types of casting:
@@ -16,7 +16,7 @@ https://www.baeldung.com/java-primitive-conversions
 
 import org.junit.jupiter.api.Test;
 
-class TypeCasting {
+class CastingType {
   @Test
   void test() {
 

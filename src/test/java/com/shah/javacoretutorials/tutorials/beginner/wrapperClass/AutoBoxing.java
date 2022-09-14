@@ -30,9 +30,7 @@ class AutoBoxing {
 		arrayList.add(22); //Autoboxing
 	}
 
-
 	void myMethod(Integer num) {
-
 		System.out.println(num);
 	}
 }

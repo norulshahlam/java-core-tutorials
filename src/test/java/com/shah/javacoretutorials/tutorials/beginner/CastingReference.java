@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.casting;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,18 +13,18 @@ class ObjectCasting {
   @Test
   void test() {
 
-    Parent p1 = new Parent(); // allowed
-    Child c1 = new Child(); // allowed
+    Parent2 p1 = new Parent2(); // allowed
+    Child2 c1 = new Child2(); // allowed
     //
     // Child c2 = new Parent(); //not allowed
-    Parent p2 = new Child(); // upcasting
-    Parent p3 = c1; // upcasting
+    Parent2 p2 = new Child2(); // upcasting
+    Parent2 p3 = c1; // upcasting
     p2.method1();
 
     // Child c3 = p2(); //not allowed for downcasting
     // Child c4 = p1(); //not allowed for downcasting
 
-    Child d4 = (Child) p2; // allowed as reference is base, and object is derived
+    Child2 d4 = (Child2) p2; // allowed as reference is base, and object is derived
     // Child d5 = (Child) p1; //java.lang.ClassCastException
 
     p1.method1();
@@ -41,8 +41,8 @@ class ObjectCasting {
   }
 }
 
-class Parent {
-  public Parent() {
+class Parent2 {
+  public Parent2() {
     System.out.println("constructor in base class");
   }
 
@@ -51,8 +51,8 @@ class Parent {
   }
 }
 
-class Child extends Parent {
-  public Child() {
+class Child2 extends Parent2 {
+  public Child2() {
     System.out.println("constructor in derived class");
   }
 

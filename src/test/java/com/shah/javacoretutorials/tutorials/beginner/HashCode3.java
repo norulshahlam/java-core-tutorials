@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.objects;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 /*
 
@@ -18,7 +18,7 @@ If o1.hashCode() == o2.hashCode is true, it does not mean that o1.equals(o2) wil
 import com.shah.javacoretutorials.model.Employee;
 import org.junit.jupiter.api.Test;
 
-class RunMe {
+class HashCode3 {
     @Test
     void test() {
 
