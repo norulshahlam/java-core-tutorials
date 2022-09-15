@@ -1,7 +1,5 @@
 package com.shah.javacoretutorials.model;
 
-import lombok.Getter;
-
 public class Person {
 
     // composition has-a relationship - Person has-a job

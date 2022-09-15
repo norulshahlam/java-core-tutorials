@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.intermediate.encapsulation;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
 import com.shah.javacoretutorials.model.Student;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ a) Declare the member variables of the class as private.
 b) Provide public setter and getter methods to modify and view the variables values.
 c) we can achieve b) by using @Lombok
 */
-class RunMe {
+class EncapsulationClass {
     @Test
     void test() {
         Student A = new Student();
