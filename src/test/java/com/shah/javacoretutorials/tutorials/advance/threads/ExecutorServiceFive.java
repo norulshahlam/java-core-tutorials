@@ -15,7 +15,7 @@ newSingleThreadExecutor
 
 This method returns thread pool executor which executes one task at a time.If you have submitted n task to executors, it will execute it one by one.
 
-1. we will create a new thread pool executor FROM DIFF CLASS and will expects the thread to be executed one at a time
+1. we will create a new thread pool executor FROM DIFF CLASS and will expect the thread to be executed one at a time
  */
 class ExecutorServiceFive {
     @Test
@@ -23,10 +23,8 @@ class ExecutorServiceFive {
         System.out.println("***********************");
 
         ExecutorService es = Executors.newSingleThreadExecutor();
-
-        es.execute(new Thread(new ThreadExtends()));
-        es.execute(new Thread(new ThreadImplements()));
-
+        es.execute(new Thread(new MyThreadExtend()));
+        es.execute(new Thread(new MyThreadImplements()));
         es.shutdown();
     }
 }

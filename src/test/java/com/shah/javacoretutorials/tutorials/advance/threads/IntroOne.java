@@ -6,28 +6,28 @@ import static com.shah.javacoretutorials.tutorials.advance.threads.IntroOne.coun
 
 /**
  * diff way to use thread.
-
+ * <p>
  * 1. extend threads
  * 2. implements runnable
-
+ * <p>
  * t / t1 - thread using extends threads
  * i / t2 - threads using implement
  * methods n - not thread
-
+ * <p>
  * run this to see who / show they start off
  */
 class IntroOne {
 
-    static int count = 50;
+    static int count = 500000;
 
     @SuppressWarnings({"unused"})
     @Test
     void test() {
         /* Method 1 */
-        ThreadExtends t1 = new ThreadExtends();
+        MyThreadExtend t1 = new MyThreadExtend();
 
         /* Method 2 */
-        ThreadImplements t = new ThreadImplements();
+        MyThreadImplements t = new MyThreadImplements();
         Thread t2 = new Thread(t);
 
         t1.start();
@@ -36,7 +36,7 @@ class IntroOne {
         System.out.print("normal n start\n");
         long start = System.currentTimeMillis();
         for (int i = 1; i < count; i++) {
-            System.out.print("n" + i + " ");
+//            System.out.print("n" + i + " ");
         }
         long timeTaken = System.currentTimeMillis() - start;
         System.out.print("\nnormal n end. Time taken: "
@@ -44,14 +44,14 @@ class IntroOne {
     }
 }
 
-class ThreadExtends extends Thread {
+class MyThreadExtend extends Thread {
 
     public void run() {
         System.out.print("thread extends t start\n");
         long start = System.currentTimeMillis();
 
         for (int i = 1; i < count; i++) {
-            System.out.print("t" + i + " ");
+//            System.out.print("t" + i + " ");
         }
         long timeTaken = System.currentTimeMillis() - start;
         System.out.print("\nThread extends t end. Time taken: "
@@ -59,13 +59,13 @@ class ThreadExtends extends Thread {
     }
 }
 
-class ThreadImplements implements Runnable {
+class MyThreadImplements implements Runnable {
 
     public void run() {
         System.out.print("thread implement i start\n");
         long start = System.currentTimeMillis();
         for (int i = 1; i < count; i++) {
-            System.out.print("i" + i + " ");
+//            System.out.print("i" + i + " ");
         }
         long timeTaken = System.currentTimeMillis() - start;
         System.out.print("\nthread implement i end Time taken: "

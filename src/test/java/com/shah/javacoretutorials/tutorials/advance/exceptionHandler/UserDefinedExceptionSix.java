@@ -17,9 +17,7 @@ class UserDefinedExceptionSix {
 
     @Test
     void test() {
-        System.out.println("heelo");
         int i = 5;
-
         try {
             if (i < 10) {
                 // firstly forcing an error, then using a constructor of a class

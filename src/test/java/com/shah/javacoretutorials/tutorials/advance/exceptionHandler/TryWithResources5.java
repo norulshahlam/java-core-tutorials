@@ -4,9 +4,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLException;
 
 /*
 Java try-with-resources, is an exception handling mechanism that can automatically close resources like a Java InputStream or a JDBC Connection or Scanner.input when you are done with them.

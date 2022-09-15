@@ -20,7 +20,6 @@ which is present in here: run()
 */
 class RunnableTwo {
 
-
     @SuppressWarnings("unused")
     @Test
     void test() {
@@ -31,7 +30,6 @@ class RunnableTwo {
 
             @Override
             public void run() {
-
                 for (int i = 0; i < count; i++) {
                     System.out.print("Structured approach - " + Thread.currentThread().getId() + " : " + i + "\n");
                 }
@@ -41,7 +39,6 @@ class RunnableTwo {
 
         /* 2. functional approach */
         Runnable r2 = () -> {
-
             for (int i = 0; i < count; i++) {
                 System.out.print("Functional approach - " + Thread.currentThread().getId() + " : " + i + "\n");
             }
@@ -50,14 +47,12 @@ class RunnableTwo {
 
         /* 3. Stream approach */
         Runnable r3 = () -> IntStream
-            .range(0, count)
-            .forEach(i -> System.out.println("Stream approach - " + Thread.currentThread().getId() + ":" + i));
-
+                .range(0, count)
+                .forEach(i -> System.out.println("Stream approach - " + Thread.currentThread().getId() + ":" + i));
 
         Thread t7 = new Thread(r3);
         t7.start();
         t4.start();
         t1.start();
-
     }
 }

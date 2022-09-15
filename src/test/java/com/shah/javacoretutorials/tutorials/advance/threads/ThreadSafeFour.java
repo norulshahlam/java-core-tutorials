@@ -39,17 +39,15 @@ class ThreadSafeFour {
     void test() throws InterruptedException {
 
         counter c = new counter();
-        Thread t1 = new Thread(new Runnable() { // thread1
-            public void run() {
-                for (int i = 1; i <= 1000000; i++)
-                    c.increment();
-            }
+        // thread1
+        Thread t1 = new Thread(() -> {
+            for (int i = 1; i <= 1000000; i++)
+                c.increment();
         });
-        Thread t2 = new Thread(new Runnable() { // thread2
-            public void run() {
-                for (int i = 1; i <= 1000000; i++)
-                    c.increment();
-            }
+        // thread2
+        Thread t2 = new Thread(() -> {
+            for (int i = 1; i <= 1000000; i++)
+                c.increment();
         });
         t1.run();
         t2.run();

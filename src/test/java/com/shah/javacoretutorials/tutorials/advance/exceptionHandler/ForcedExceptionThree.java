@@ -22,8 +22,7 @@ class ForcedExceptionThree {
             System.out.println("enter number 10 or more: ");
             int input = scanner.nextInt();
             if (input < 10) {
-                // The throw statement allows you to create a custom error. It can force
-                // exception n set the error type if requirements r not met
+                /* The throw statement allows you to create a custom error. It can force exception n set the error type if requirements r not met */
                 throw new ArithmeticException();
             } else {
                 System.out.println("input passed");

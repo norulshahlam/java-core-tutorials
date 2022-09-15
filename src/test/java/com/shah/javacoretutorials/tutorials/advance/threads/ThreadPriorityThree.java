@@ -24,9 +24,9 @@ class ThreadStates2 {
     void test() throws InterruptedException {
         System.out.println("***********************");
 
-        ThreadExtends t1 = new ThreadExtends();
-        ThreadExtends t2 = new ThreadExtends();
-        ThreadImplements t = new ThreadImplements();
+        MyThreadExtend t1 = new MyThreadExtend();
+        MyThreadExtend t2 = new MyThreadExtend();
+        MyThreadImplements t = new MyThreadImplements();
 
         t1.setPriority(10);
         t2.setPriority(1);
