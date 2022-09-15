@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.intermediate.innerClass;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,11 +7,11 @@ we can write a class within a method and this will be a local type. Like local v
 
 A method-local inner class can be instantiated only within the method where the inner class is defined.
 */
-class IntroTwo {
+class ClassMethodLocalInner {
 
     @Test
     void test() {
-        IntroTwo outer = new IntroTwo();
+        ClassMethodLocalInner outer = new ClassMethodLocalInner();
         outer.my_Method();
     }
 

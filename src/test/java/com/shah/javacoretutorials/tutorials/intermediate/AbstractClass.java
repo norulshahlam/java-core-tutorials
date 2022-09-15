@@ -1,18 +1,19 @@
-package com.shah.javacoretutorials.tutorials.intermediate.abstraction;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
-/* An abstract class is a class that is declared abstract— it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), 
+import org.junit.jupiter.api.Test;
 
-like this: 
+/* An abstract class is a class that is declared abstract— it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon),
 
-	abstract void moveTo(double deltaX, double deltaY); 
-	
+like this:
+
+	abstract void moveTo(double deltaX, double deltaY);
+
 If a class includes abstract methods, then the class itself must be declared abstract,
-a class extends abstract class, but implements interface    
+a class extends abstract class, but implements interface
 
 Abstraction is one of the key concepts of object-oriented programming (OOP) languages. Its main goal is to handle complexity by hiding unnecessary details from the user
  */
 
-import org.junit.jupiter.api.Test;
 
 // even if one method is abstract, then the class must be declared abstract
 abstract class animal {
@@ -41,7 +42,7 @@ class feline extends animal {
     }
 }
 
-class RunMe {
+class AbstractClass {
 
     @Test
     void test() {

@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.intermediate.stringBufferBuilder;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
 /*
 The String class is an immutable class whereas StringBuffer and StringBuilder classes are mutable.
@@ -15,34 +15,36 @@ StringBuilder
 
 ******************************************
 
-We  run test on which one is faster and why
+We run test on which one is faster and why
  */
 
 import org.junit.jupiter.api.Test;
 
-class Intro {
+import static java.lang.System.currentTimeMillis;
+import static java.lang.System.out;
+
+class StringBufferBuilder {
     @Test
     void test() {
 
         long N = 77777771;
-
         {
             StringBuffer sb = new StringBuffer();
-            long t = System.currentTimeMillis();
+            long t = currentTimeMillis();
             for (long i = N; i-- > 0; ) {
                 sb.append("");
             }
-            System.out.println("StringBuffer: " + (System.currentTimeMillis() - t) + "ms");
-            System.out.println(sb);
+            out.println("StringBuffer: " + (currentTimeMillis() - t) + "ms");
+            out.println(sb);
         }
 
         {
             StringBuilder sb = new StringBuilder();
-            long t = System.currentTimeMillis();
+            long t = currentTimeMillis();
             for (long i = N; i > 0; i--) {
                 sb.append("");
             }
-            System.out.println("StringBuilder: " + (System.currentTimeMillis() - t) + "ms");
+            out.println("StringBuilder: " + (currentTimeMillis() - t) + "ms");
         }
     }    //builder is faster due to non-synchronised
 

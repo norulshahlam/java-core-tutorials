@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.intermediate.explicitImplicit;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
 import com.shah.javacoretutorials.model.Author;
 import org.junit.jupiter.api.Test;
@@ -13,17 +13,16 @@ Implicit – that is passed by specifying an object variable (object reference) 
 for example:
 if you don't explicitly create a constructor for your class the compiler will implicitly provide a default one for you.
 
-Explicit is opposite to this , ie. programmer has to write .
+Explicit is opposite to this i.e. programmer has to write .
 */
-class TryMe {
+class ExplicitImplicit {
 
     @Test
     void test() {
-        {
-            /* when obj is created, jvm implicitly call the constructor at runtime */
-            Author d = new Author(33);
-            /* when we call the obj ourselves, we are explicitly calling it */
-            System.out.println(d.getAge());
-        }
+
+        /* when obj is created, jvm implicitly call the constructor at runtime */
+        Author d = new Author(33);
+        /* when we call the obj ourselves, we are explicitly calling it */
+        System.out.println(d.getAge());
     }
 }

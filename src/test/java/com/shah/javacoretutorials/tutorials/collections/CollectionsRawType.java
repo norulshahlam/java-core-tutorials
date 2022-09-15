@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.wrapperClass;
+package com.shah.javacoretutorials.tutorials.collections;
 
 import org.junit.jupiter.api.Test;
 

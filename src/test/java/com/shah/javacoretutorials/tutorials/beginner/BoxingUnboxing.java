@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner.wrapperClass;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,8 +7,21 @@ A Wrapper class is a class whose object wraps or contains a primitive data types
 Data structures in the Collection framework, such as ArrayList, LinkedList and Vector store only objects (reference types) and not primitive types.
 
 The wrapper classes are immutable—you cannot change a wrapped value after the wrapper has been constructed. They are also final, so you cannot subclass them.
+
+Boxing - conversion of primitive data types into its corresponding Wrapper type
+Unboxing - converting an object into corresponding primitive datatype
+
+Primitive Type	Wrapper Class
+    boolean	        Boolean
+    byte	        Byte
+    char	        Character
+    float           Float
+    int 	        Integer
+    long        	Long
+    short       	Short
+    double      	Double
  */
-class BoxingUnbox {
+class BoxingUnboxing {
     @SuppressWarnings("unused")
     @Test
     void test() {
@@ -33,3 +46,14 @@ class BoxingUnbox {
         System.out.println(((Object) n).getClass().getName());
     }
 }
+/*
+ * Unboxing:
+ *
+ * What we see:
+ * Integer num2 = new Integer(50);
+ * int inum = num2;
+ *
+ * What compiler does:
+ * Integer num2 = new Integer(50);
+ * int inum = num2.intValue();
+ */

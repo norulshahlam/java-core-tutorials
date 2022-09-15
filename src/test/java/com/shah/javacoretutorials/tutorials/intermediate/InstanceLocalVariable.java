@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.intermediate.instanceLocalVariable;
+package com.shah.javacoretutorials.tutorials.intermediate;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,13 +11,16 @@ Local variables − Local variables are declared in methods, constructors, or bl
 
 https://www.tutorialspoint.com/java/java_variable_types.htm
 */
-class IntroOne {
+class InstanceLocalVariable {
+
+    // Here i is an Instance variable.
+    int i;
+
     @Test
     void test() {
-
-        Student A = new Student();
-        System.out.println(A.name);
-        A.printName();
+        Student student = new Student();
+        System.out.println(student.name);
+        student.printName();
     }
 }
 
