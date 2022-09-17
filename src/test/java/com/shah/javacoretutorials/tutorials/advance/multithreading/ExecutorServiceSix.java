@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.advance.threads;
+package com.shah.javacoretutorials.tutorials.advance.multithreading;
 
 import org.junit.jupiter.api.Test;
 

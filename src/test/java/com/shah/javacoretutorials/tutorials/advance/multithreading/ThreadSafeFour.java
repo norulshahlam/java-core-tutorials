@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.advance.threads;
+package com.shah.javacoretutorials.tutorials.advance.multithreading;
 /* 
 thread safe means that a method or class instance can be used by multiple
 threads at the same time without any problems occuring.

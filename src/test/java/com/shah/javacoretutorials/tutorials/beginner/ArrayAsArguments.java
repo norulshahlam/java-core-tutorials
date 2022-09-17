@@ -27,5 +27,4 @@ class ArrayAsArguments {
             x[i] += 5;
         }
     }
-
 }

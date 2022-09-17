@@ -1,8 +1,8 @@
-package com.shah.javacoretutorials.tutorials.advance.threads;
+package com.shah.javacoretutorials.tutorials.advance.multithreading;
 
 import org.junit.jupiter.api.Test;
 
-import static com.shah.javacoretutorials.tutorials.advance.threads.IntroOne.count;
+import static com.shah.javacoretutorials.tutorials.advance.multithreading.IntroOne.count;
 
 /**
  * diff way to use thread.
