@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.advance.immutableClass;
+package com.shah.javacoretutorials.tutorials.advance;
 /*
 How to create Immutable class in Java?
 

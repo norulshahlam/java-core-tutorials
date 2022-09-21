@@ -26,7 +26,7 @@ class RunnableTwo {
 
         int count = 5000;
         /* 1. Structured approach */
-        Runnable r = new Runnable() {
+        Runnable r1 = new Runnable() {
 
             @Override
             public void run() {
@@ -35,7 +35,7 @@ class RunnableTwo {
                 }
             }
         };
-        Thread t1 = new Thread(r);
+        Thread t1 = new Thread(r1);
 
         /* 2. functional approach */
         Runnable r2 = () -> {
@@ -43,16 +43,16 @@ class RunnableTwo {
                 System.out.print("Functional approach - " + Thread.currentThread().getId() + " : " + i + "\n");
             }
         };
-        Thread t4 = new Thread(r2);
+        Thread t2 = new Thread(r2);
 
         /* 3. Stream approach */
         Runnable r3 = () -> IntStream
                 .range(0, count)
                 .forEach(i -> System.out.println("Stream approach - " + Thread.currentThread().getId() + ":" + i));
 
-        Thread t7 = new Thread(r3);
-        t7.start();
-        t4.start();
+        Thread t3 = new Thread(r3);
+        t3.start();
+        t2.start();
         t1.start();
     }
 }

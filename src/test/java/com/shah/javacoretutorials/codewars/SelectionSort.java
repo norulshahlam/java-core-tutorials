@@ -49,23 +49,29 @@ public class SelectionSort {
         int[] numberList = new Random().ints(300000, 5678, 6666841).toArray();
         selectionSort(numberList);
     }
+    @Test
+    void counterFour() {
+        selectionSort(new int[]{1, 2, 5, 7, 4, 6, 3, 9, 8});
+    }
 
-    public void selectionSort(final int[] arr) {
+    public void selectionSort(final int[] array) {
         stopWatch.start();
-        for (int i = 0; i < arr.length - 1; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             int minElementIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[minElementIndex] > arr[j]) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[minElementIndex] > array[j]) {
                     minElementIndex = j;
                 }
             }
             if (minElementIndex != i) {
-                int temp = arr[i];
-                arr[i] = arr[minElementIndex];
-                arr[minElementIndex] = temp;
+                int temp = array[i];
+                array[i] = array[minElementIndex];
+                array[minElementIndex] = temp;
             }
         }
         stopWatch.stop();
-        System.out.println("Time taken: " + stopWatch.getTotalTimeMillis() + " ms");
+        for (int a : array)
+            System.out.print(a);
+        System.out.println("\nTime taken: " + stopWatch.getTotalTimeMillis() + " ms");
     }
 }
