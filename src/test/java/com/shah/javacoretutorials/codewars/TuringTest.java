@@ -55,24 +55,24 @@ class TuringTest {
         }
     }
 
-    static void rotate1(int nums[], int k) {
-        for (int i = 0; i < nums.length; i++) {
-            System.out.print(nums[i] + " ");
+    static void rotate1(int[] A, int K) {
+        for (int i = 0; i < A.length; i++) {
+            System.out.print(A[i] + " ");
         }
         System.out.println("");
-        int n = nums.length;
+        int n = A.length;
         int p = 1;
-        while (p <= k) {
-            int last = nums[0];
+        while (p <= K) {
+            int last = A[0];
             for (int i = 0; i < n - 1; i++) {
-                nums[i] = nums[i + 1];
+                A[i] = A[i + 1];
             }
-            nums[n - 1] = last;
+            A[n - 1] = last;
             p++;
         }
 
         for (int i = 0; i < n; i++) {
-            System.out.print(nums[i] + " ");
+            System.out.print(A[i] + " ");
         }
     }
 

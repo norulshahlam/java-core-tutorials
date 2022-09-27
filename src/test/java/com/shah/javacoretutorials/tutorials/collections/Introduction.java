@@ -78,9 +78,8 @@ SortedSet Interface
 TreeSet
   -  fast access and retrieval time
 
-
 */
-class IntroToCollections {
+class Introduction {
     @SuppressWarnings("unused")
     @Test
     void test() {

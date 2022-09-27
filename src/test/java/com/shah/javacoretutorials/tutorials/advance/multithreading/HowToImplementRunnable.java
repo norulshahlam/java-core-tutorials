@@ -18,7 +18,7 @@ What would happen is, this would create a implementation of the runnable interfa
 Because runnable is also a functional interface, there is just one abstract method
 which is present in here: run()
 */
-class RunnableTwo {
+class HowToImplementRunnable {
 
     @SuppressWarnings("unused")
     @Test
