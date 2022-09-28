@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.collections.list;
+package com.shah.javacoretutorials.tutorials.beginner;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ LIST
 
 */
 
-class ListOne {
+class StringCheck {
 
     @Test
     void test() {
@@ -23,5 +23,4 @@ class ListOne {
         System.out.println("Does "+apple + " exists? " + fruits.contains(apple));
         fruits.forEach(System.out::println);
     }
-
 }

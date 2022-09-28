@@ -1,6 +1,9 @@
 package com.shah.javacoretutorials.tutorials.collections.sort;
 
 /*
+
+    ****DEPRECATED****
+
 this is the same as previous demo.
 comparator can be used to sort multiple elements, so we will create 1 to sort
  by name, another 1 by age. steps are similar to comparable:
@@ -30,7 +33,6 @@ class Comparator2 {
         al.add(new Student(109, "Asshish", 18));
         al.add(new Student(105, "Jai", 21));
         al.forEach(s -> System.out.println(s.getRollNo() + " " + s.getName() + " " + s.getMarks()));
-
 
         System.out.println("\nSorting by Name");
         Collections.sort(al, new sortByName());

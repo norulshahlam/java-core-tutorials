@@ -1,6 +1,10 @@
 package com.shah.javacoretutorials.tutorials.collections.sort;
 
 /*
+
+    ****DEPRECATED****
+
+
 we will explore that Collections of String type can use sort() but not for buffer and builder.
 why?
 firtly, sort() sorts the specified list into ascending order, according to the natural ordering of its elements. And all elements in the list must implement the Comparable interface. 
@@ -42,7 +46,6 @@ class StringBufferBuilderComparator {
         for (StringBuffer set2 : set) {
             System.out.println(set2);
         }
-
     }
 }
 
@@ -54,5 +57,4 @@ class SBComparator implements Comparator<StringBuffer> {
         String s2 = o2.toString();
         return s1.compareTo(s2);
     }
-
 }

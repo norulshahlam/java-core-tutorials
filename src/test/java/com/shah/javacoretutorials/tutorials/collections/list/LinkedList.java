@@ -28,7 +28,7 @@ https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist
 import org.junit.jupiter.api.Test;
 
 class LinkedList {
-    
+
     @SuppressWarnings("unused")
     @Test
     void test() {
@@ -75,6 +75,5 @@ class LinkedList {
         for (int i = 0; i < val.size(); i++) {
             System.out.println(i + ": " + val.get(i));
         }
-
     }
 }

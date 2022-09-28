@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 /*
 
@@ -53,21 +52,21 @@ class HashSetVsHashMap3 {
         hs.add("practice");
         hs.add("contribute");
         hs.add("geeks"); // no duplicate value
-        hs.add(null); // allow 1 null values
-        hs.add(null);
-        // no insertion order
-        hs.forEach(i -> System.out.println("HashSet:  " + i));
+        hs.add(null); // allow 1 null value
+        hs.add(null); // no insertion order
+        System.out.print("Hashkey: ");
+        hs.forEach(i -> System.out.print(i + ", "));
+        System.out.print("\n");
 
         HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
         hm.put(2, 33);
-        hm.put(1, 33);
+        hm.put(1, 31);
         hm.put(3, 33); // allow duplicate value
-        hm.put(4, 33);
-        hm.put(5, 33);
-        hm.put(3, 34); // but no duplicate key - replaces earlier value
+        hm.put(4, null);
+        hm.put(5, null); // allow null values
+        hm.put(3, 34); // no duplicate key - replaces earlier value
+
         // stores in order of insertion
-        for (Map.Entry<Integer, Integer> data : hm.entrySet()) {
-            System.out.println("HashMap:  " + data.getKey() + " : " + data.getValue());
-        }
+        hm.forEach((k, v) -> System.out.println(k + " : " + v));
     }
 }

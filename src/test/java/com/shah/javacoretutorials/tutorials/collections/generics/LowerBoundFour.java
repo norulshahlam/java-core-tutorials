@@ -22,10 +22,10 @@ class lowerBound4 {
     void test() {
 
         // create list according to classes
-        List<Animal> animalList = new ArrayList<Animal>();
-        List<Cat> catList = new ArrayList<Cat>();
-        List<RedCat> redCatList = new ArrayList<RedCat>();
-        List<Dog> dogList = new ArrayList<Dog>();
+        List<Animal> animalList = new ArrayList<>();
+        List<Cat> catList = new ArrayList<>();
+        List<RedCat> redCatList = new ArrayList<>();
+        List<Dog> dogList = new ArrayList<>();
 
         // can add list of super class Animal of Cat class
         addCat(animalList);
@@ -33,12 +33,10 @@ class lowerBound4 {
         // can add list of Cat class
         addCat(catList);
 
-        // compile time error
-        // can not add list of subclass RedCat of Cat class
+        // compile time error - can not add list of subclass RedCat of Cat class
         // addCat(redCatList);
 
-        // compile time error
-        // can not add list of subclass Dog of Superclass Animal of Cat class
+        // compile time error - can not add list of subclass Dog of Superclass Animal of Cat class
         // addCat.addMethod(dogList);
     }
 

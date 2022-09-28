@@ -6,6 +6,9 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Stack;
 
+import static com.shah.javacoretutorials.model.Fruits.numbers;
+import static org.assertj.core.api.Assertions.assertThat;
+
 /*
 Key Differences Between Stack and Queue
 
@@ -29,24 +32,20 @@ has variants like circular queue, priority queue, doubly ended queue
 class IntroOne {
     @Test
     void test() {
-
-        Stack<Integer> st = new Stack<Integer>();
-        st.add(4);
-        st.add(9);
-        st.add(2);
-        st.add(1);
+        Stack<Integer> st = new Stack<>();
+        st.addAll(numbers);
+        System.out.println(st); // no duplicates
+        assertThat(st.peek()).isEqualTo(1);
+        assertThat(st.pop()).isEqualTo(1); // remove from top
+        st.push(4); // add from top
+        assertThat(st.peek()).isEqualTo(4);
         System.out.println(st);
-        System.out.println(st.pop());
-        System.out.println(st);
+    }
 
-        Queue<Integer> q = new ArrayDeque<Integer>();
-        q.add(4);
-        q.add(9);
-        q.add(2);
-        q.add(1);
-        System.out.println(q);
+    @Test
+    void test2() {
+        Queue<Integer> q = new ArrayDeque<>(numbers);
         System.out.println(q.remove());
         System.out.println(q);
-
     }
 }
