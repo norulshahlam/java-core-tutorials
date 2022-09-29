@@ -46,43 +46,43 @@ so the flow will be as follows:
 77
 */
 public class intro1 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
+        List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
 
-    System.out.println(getTotal1(numbers));
-    System.out.println(getTotal2(numbers));
-    System.out.println(getTotal3(numbers));
-    System.out.println(getTotal4(numbers));
-  }
-
-  // 1. Structured approach
-  private static int getTotal1(List<Integer> numbers) {
-    int sum = 0;
-    for (int number : numbers) {
-      sum += number;
+        System.out.println(getTotal1(numbers));
+        System.out.println(getTotal2(numbers));
+        System.out.println(getTotal3(numbers));
+        System.out.println(getTotal4(numbers));
     }
-    return sum;
-  }
 
-  // 2. functional approach - method reference
-  private static int getTotal2(List<Integer> numbers) {
-    return numbers.stream().reduce(0, intro1::sum);
-  }
+    // 1. Structured approach
+    private static int getTotal1(List<Integer> numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
 
-  private static int sum(int aggregate, int nextNumber) {
-    System.out.println(aggregate + " + " + nextNumber + " = ");
-    return aggregate + nextNumber;
-  }
+    // 2. functional approach - method reference
+    private static int getTotal2(List<Integer> numbers) {
+        return numbers.stream().reduce(0, intro1::sum);
+    }
 
-  // 3. lambda approach
-  private static int getTotal3(List<Integer> numbers) {
-    return numbers.stream().reduce(0, (x, y) -> x + y);
-  }
+    private static int sum(int aggregate, int nextNumber) {
+        System.out.println(aggregate + " + " + nextNumber + " = ");
+        return aggregate + nextNumber;
+    }
 
-  // 4. static method reference
-  private static int getTotal4(List<Integer> numbers) {
-    return numbers.stream().reduce(0, Integer::sum);
-  }
+    // 3. lambda approach
+    private static int getTotal3(List<Integer> numbers) {
+        return numbers.stream().reduce(0, (x, y) -> x + y);
+    }
+
+    // 4. static method reference
+    private static int getTotal4(List<Integer> numbers) {
+        return numbers.stream().reduce(0, Integer::sum);
+    }
 
 }

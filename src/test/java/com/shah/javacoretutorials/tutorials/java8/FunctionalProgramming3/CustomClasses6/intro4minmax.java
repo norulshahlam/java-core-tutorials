@@ -1,5 +1,7 @@
 package com.shah.javacoretutorials.tutorials.java8.FunctionalProgramming3.CustomClasses6;
 
+import com.shah.javacoretutorials.model.Course;
+
 import java.util.Comparator;
 
 /*

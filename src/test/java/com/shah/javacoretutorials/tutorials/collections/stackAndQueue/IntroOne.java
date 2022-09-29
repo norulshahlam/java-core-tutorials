@@ -31,10 +31,11 @@ has variants like circular queue, priority queue, doubly ended queue
  */
 class IntroOne {
     @Test
-    void test() {
+    void testStack() {
         Stack<Integer> st = new Stack<>();
         st.addAll(numbers);
         System.out.println(st); // no duplicates
+
         assertThat(st.peek()).isEqualTo(1);
         assertThat(st.pop()).isEqualTo(1); // remove from top
         st.push(4); // add from top
@@ -43,7 +44,7 @@ class IntroOne {
     }
 
     @Test
-    void test2() {
+    void testQueue() {
         Queue<Integer> q = new ArrayDeque<>(numbers);
         System.out.println(q.remove());
         System.out.println(q);

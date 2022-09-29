@@ -19,7 +19,7 @@ Both map and reduce have as input the array and a function you define. They are 
 
 Intermediate and Stream Operations
 
-Intermediate Operation- These operations are used to pipeline other methods and to transform the output into the other streams. They don’t produce results because these operation does not invoke until the terminal operation gets executed.
+Intermediate Operation- These operations are used to pipeline other methods and to transform the output into the other streams. They don’t produce results because this operation does not invoke until the terminal operation gets executed.
 
 distinct(), sorted(), filter(), map() are  Stream operation - they return streams
 
@@ -29,26 +29,26 @@ forEach(), reduce(), collect(),  are terminal operations
 */
 
 public class intro3 {
-  @SuppressWarnings("unused")
-  public static void main(String[] args) {
-    List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker",
-        "Kubernetes");
+    @SuppressWarnings("unused")
+    public static void main(String[] args) {
+        List<String> courses = List.of("Spring", "Spring Boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker",
+                "Kubernetes");
 
-    List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
-    // return the result as list
-    List<Integer> squaredNumbers = doubleList(numbers);
-    List<Integer> evenNumbers = evenList(numbers);
+        List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
+        // return the result as list
+        List<Integer> squaredNumbers = doubleList(numbers);
+        List<Integer> evenNumbers = evenList(numbers);
 
-    System.out.println(numbers);
-    System.out.println(squaredNumbers);
-    System.out.println(evenNumbers);
-  }
+        System.out.println(numbers);
+        System.out.println(squaredNumbers);
+        System.out.println(evenNumbers);
+    }
 
-  private static List<Integer> doubleList(List<Integer> numbers) {
-    return numbers.stream().map(number -> number * number).collect(Collectors.toList());
-  }
+    private static List<Integer> doubleList(List<Integer> numbers) {
+        return numbers.stream().map(number -> number * number).collect(Collectors.toList());
+    }
 
-  private static List<Integer> evenList(List<Integer> numbers) {
-    return numbers.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
-  }
+    private static List<Integer> evenList(List<Integer> numbers) {
+        return numbers.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+    }
 }

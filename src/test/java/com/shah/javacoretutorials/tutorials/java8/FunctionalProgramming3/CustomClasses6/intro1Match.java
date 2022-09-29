@@ -10,6 +10,8 @@ we will start off with functional approcah and then breakdown the arguments sepe
 
 */
 
+import com.shah.javacoretutorials.model.Course;
+
 import java.util.List;
 import java.util.function.Predicate;
 

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static com.shah.javacoretutorials.model.Fruits.numbers;
+
 /*
    List allow element to be added by inserting into index specified by user.
    the concept of mentioning what type of data (ie integer, Float, even Objects!) in your collection is called GENERICS
@@ -13,11 +15,9 @@ import java.util.List;
 class ArrayListOne {
 
     @Test
-    void test() {
+    void testSort() {
         List<Integer> values = new ArrayList<>();
-        values.add(44);
-        values.add(424);
-        values.add(3);
+        values.addAll(numbers);
         values.add(1, 5); // add this element to the 1st index
 
         System.out.println("Before sort");

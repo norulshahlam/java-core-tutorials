@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.tutorials.java8.Streams2;
 import java.util.List;
 
 /*
-now we have understand streeam, let do an exercise use reduce()
+now we have understood stream, let do an exercise use reduce()
 
 Explanation
 test1 - return 0 - only return x ie initial value
@@ -36,27 +36,27 @@ test4 is opp - find min value. in case theres big value, we must set inital val 
 
 */
 public class Exercise1 {
-  public static void main(String[] args) {
-    List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
-    System.out.println(test1(numbers));
-    System.out.println(test2(numbers));
-    System.out.println(test3(numbers));
-    System.out.println(test4(numbers));
-  }
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(12, 9, 13, 4, 6, 2, 4, 12, 15);
+        System.out.println(test1(numbers));
+        System.out.println(test2(numbers));
+        System.out.println(test3(numbers));
+        System.out.println(test4(numbers));
+    }
 
-  private static int test1(List<Integer> numbers) {
-    return numbers.stream().reduce(0, (x, y) -> x);
-  }
+    private static int test1(List<Integer> numbers) {
+        return numbers.stream().reduce(0, (x, y) -> x);
+    }
 
-  private static int test2(List<Integer> numbers) {
-    return numbers.stream().reduce(0, (x, y) -> y);
-  }
+    private static int test2(List<Integer> numbers) {
+        return numbers.stream().reduce(0, (x, y) -> y);
+    }
 
-  private static int test3(List<Integer> numbers) {
-    return numbers.stream().reduce(Integer.MIN_VALUE, (x, y) -> x < y ? y : x);
-  }
+    private static int test3(List<Integer> numbers) {
+        return numbers.stream().reduce(Integer.MIN_VALUE, (x, y) -> x < y ? y : x);
+    }
 
-  private static int test4(List<Integer> numbers) {
-    return numbers.stream().reduce(Integer.MAX_VALUE, (x, y) -> x > y ? y : x);
-  }
+    private static int test4(List<Integer> numbers) {
+        return numbers.stream().reduce(Integer.MAX_VALUE, (x, y) -> x > y ? y : x);
+    }
 }

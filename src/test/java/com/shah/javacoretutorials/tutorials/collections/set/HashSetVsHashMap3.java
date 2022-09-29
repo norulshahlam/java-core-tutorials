@@ -25,7 +25,7 @@ HashSet requires only one object add(Object o) .
 HashMap requires two objects put(K key, V Value) to add an element to HashMap object
 
 HashSet internally uses HashMap to add elements. 
-In HashSet, the argument passed in add(Object) method serves as key K. 
+In HashSet, the argument passed in add(Object) method serves as key K.
 
 Java internally associates dummy value for each value passed in add(Object) method.	
 HashMap no concept of dummy value,

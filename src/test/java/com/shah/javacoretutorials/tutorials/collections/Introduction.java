@@ -68,7 +68,8 @@ Tree - stores data using Tree algorithm
 
 https://www.udemy.com/course/java-programming-tutorial-for-beginners/learn/lecture/9565750#content
 
-
+All use-cases for collections
+https://www.javacodeexamples.com/java-collection-framework-tutorial-with-examples/1641
 
 SortedSet Interface
 ----------------------------

@@ -8,6 +8,8 @@ count
 max
 min
 */
+import com.shah.javacoretutorials.model.Course;
+
 import java.util.List;
 
 import java.util.OptionalDouble;

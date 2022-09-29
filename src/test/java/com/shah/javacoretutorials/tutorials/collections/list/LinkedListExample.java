@@ -27,13 +27,15 @@ https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist
 
 import org.junit.jupiter.api.Test;
 
-class LinkedList {
+import java.util.LinkedList;
+
+class LinkedListExample {
 
     @SuppressWarnings("unused")
     @Test
     void test() {
 
-        java.util.LinkedList<String> val = new java.util.LinkedList<String>();
+        LinkedList<String> val = new LinkedList<>();
 
         val.add("hello");
         val.add("world");
