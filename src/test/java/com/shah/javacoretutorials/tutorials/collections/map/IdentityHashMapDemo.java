@@ -3,6 +3,7 @@ package com.shah.javacoretutorials.tutorials.collections.map;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.Map;
 
 /*
@@ -16,25 +17,25 @@ import java.util.Map;
 
     Shows that duplication is based on key, not value
  */
-class IdentityHashMap {
+class IdentityHashMapDemo {
 
   @Test
   void test() {
 
     // this is considered duplicate key
     Map<Integer, String> map1 = new HashMap<>();
-    map1.put(Integer.valueOf(2), "shah");
-    map1.put(Integer.valueOf(1), "rabika");
-    map1.put(Integer.valueOf(1), "cindi");
-    map1.put(Integer.valueOf(1), "yayas");
+    map1.put(2, "shah");
+    map1.put(1, "rabika");
+    map1.put(1, "cindi");
+    map1.put(1, "yayas");
     System.out.println(map1);
 
     // this is considered duplicate key 
-    Map<Integer, String> map2 = new java.util.IdentityHashMap<>();
-    map2.put(Integer.valueOf(2), "shah");
-    map2.put(Integer.valueOf(2), "rabika");
-    map2.put(Integer.valueOf(3), "cindi");
-    map2.put(Integer.valueOf(4), "yayas");
+    Map<Integer, String> map2 = new IdentityHashMap<>();
+    map2.put(2, "shah");
+    map2.put(2, "rabika");
+    map2.put(3, "cindi");
+    map2.put(4, "yayas");
     System.out.println(map2);
   }
 }

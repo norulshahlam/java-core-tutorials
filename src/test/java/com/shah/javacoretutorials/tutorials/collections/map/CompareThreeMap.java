@@ -52,7 +52,6 @@ class CompareThreeMap {
     }
 
     @SuppressWarnings("unused")
-
     private synchronized static void generate(Map<String, Integer> hm, Map<String, Integer> lhm, Map<String, Integer> tm) {
         Random r = new Random();
 

@@ -48,13 +48,12 @@ class IntroOne {
         // maintain insertion order (by key)
         // all keys & values
         System.out.println(m);
-        m.forEach((k,v) -> System.out.println(k + " : " +v));
+        m.forEach((k, v) -> System.out.println(k + " : " + v));
 
         System.out.println(m.get("C"));
         System.out.println(m.size());
         System.out.println(m.isEmpty());
         System.out.println(m.containsKey("C"));
         System.out.println(m.containsValue(9));
-
     }
 }
