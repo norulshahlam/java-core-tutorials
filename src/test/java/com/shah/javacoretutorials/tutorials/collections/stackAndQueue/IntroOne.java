@@ -2,10 +2,10 @@ package com.shah.javacoretutorials.tutorials.collections.stackAndQueue;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
+import java.util.stream.Collectors;
 
+import static com.shah.javacoretutorials.model.Fruits.fruits2;
 import static com.shah.javacoretutorials.model.Fruits.numbers;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,6 +28,8 @@ uses two pointers to refer front and the rear end of the queue.
 enqueue and dequeue.
 implementation is tricky.
 has variants like circular queue, priority queue, doubly ended queue
+https://www.baeldung.com/cs/types-of-queues
+
  */
 class IntroOne {
     @Test
@@ -44,9 +46,46 @@ class IntroOne {
     }
 
     @Test
-    void testQueue() {
+    void testQueueInteger() {
+        /*
+        It is a Doubly Ended Queue in which you can insert the elements from both sides
+         */
         Queue<Integer> q = new ArrayDeque<>(numbers);
+        System.out.println("Arraydeque");
         System.out.println(q.remove());
         System.out.println(q);
+    }
+
+    @Test
+    void testQueueString() {
+        /*
+        It is a Doubly Ended Queue in which you can insert the elements from both sides
+         */
+        Queue<String> q = new ArrayDeque<>(fruits2);
+        System.out.println("Arraydeque");
+        System.out.println(q.remove());
+        System.out.println(q);
+    }
+
+    @Test
+    void testPriorityQueueInteger() {
+        /*
+        In Priority Queue, the front of the queue has the least elements as per the natural ordering and the rear is pointed to the greatest element in the queue.
+         */
+        Queue<Integer> q = new PriorityQueue<>(numbers);
+        System.out.println("Priority queue");
+        System.out.println(q);
+    }
+
+    @Test
+    void testPriorityQueueString() {
+        /*
+        In Priority Queue, the front of the queue has the least elements as per the natural ordering and the rear is pointed to the greatest element in the queue.
+         */
+        Queue<String> q = new PriorityQueue<>(fruits2);
+        System.out.println("Priority queue");
+        System.out.println(q);
+        List<String> collect = q.stream().sorted().collect(Collectors.toList());
+        System.out.println(collect);
     }
 }

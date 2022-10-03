@@ -28,7 +28,7 @@ public class intro3 {
 
         // old way
         Supplier<String> supplier = () -> new String();
-        // method refernce
+        // method reference
         Supplier<String> supplier2 = String::new;
 
     }

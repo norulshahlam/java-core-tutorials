@@ -52,7 +52,7 @@ class LinkedListExample {
         System.out.println("after added in between\n" + val + "\n");
 
         // remove using index
-        val.remove(0);
+        String remove = val.remove(0);
 
         // removes the first element
         Object o = val.pop();
