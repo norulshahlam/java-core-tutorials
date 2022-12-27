@@ -1,5 +1,8 @@
 package com.shah.javacoretutorials.model;
 
+import lombok.Data;
+
+@Data
 public class Person {
 
     // composition has-a relationship - Person has-a job
