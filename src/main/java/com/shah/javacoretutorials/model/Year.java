@@ -14,8 +14,6 @@ public class Year {
     private int age;
     private String place;
 
-
-
     public String toString() {
         // return String.format("place is %d, name is %d, age is %d", place, name, age);
         // //return "place is " +place+ "/" +name+ "/" +age;

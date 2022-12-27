@@ -1,11 +1,10 @@
 package  com.shah.javacoretutorials.codewars;
 
-public class Code6 {
+public class DiamondShape {
   public static void main(String[] args) {
 
     int n = 5;
     print(n);
-
   }
 
   public static String print(int n) {

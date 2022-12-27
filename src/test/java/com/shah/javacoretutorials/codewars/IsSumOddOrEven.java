@@ -2,7 +2,7 @@ package com.shah.javacoretutorials.codewars;
 
 import java.util.Arrays;
 
-public class Code5 {
+public class IsSumOddOrEven {
     public static void main(String[] args) {
         int[] array = {0, 1, 4};
         oddOrEven(array);

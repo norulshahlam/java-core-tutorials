@@ -12,5 +12,4 @@ public class Course {
     private String category;
     private int reviewScore;
     private int noOfStudents;
-
 }

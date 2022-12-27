@@ -10,6 +10,4 @@ import lombok.NoArgsConstructor;
 public class School {
     String SchName;
     String SchCountry;
-
-
 }

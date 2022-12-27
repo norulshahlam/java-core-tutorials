@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials;
+package com.shah.javacoretutorials.codewars;
 
 import org.junit.jupiter.api.Test;
 
