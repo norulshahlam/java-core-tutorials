@@ -1,6 +1,7 @@
 package com.shah.javacoretutorials.codewars;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class IsSumOddOrEven {
     public static void main(String[] args) {
@@ -16,6 +17,9 @@ public class IsSumOddOrEven {
         Integer list = Arrays.stream(array).boxed().reduce(0, Integer::sum);
         return list % 2 == 0 ? "even" : "odd";
     }
+
+
+
 }
 
 /*
