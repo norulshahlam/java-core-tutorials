@@ -18,7 +18,8 @@ public class Groceries {
     private String brand;
     private String country;
     private String category;
-    private BigDecimal price;
+    private BigDecimal costPrice;
+    private Long quantity;
     private LocalDate expiryDate;
     private LocalDate arrivalDate;
 }
