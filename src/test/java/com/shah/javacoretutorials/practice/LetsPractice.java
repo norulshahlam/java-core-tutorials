@@ -1,6 +1,7 @@
 package com.shah.javacoretutorials.practice;
 
 import com.shah.javacoretutorials.model.Groceries;
+import org.apache.commons.lang.StringUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,27 @@ class LetsPractice {
     }
 
     @Test
+    void sortAllItemsByQuantityReverse() {
+        List<Groceries> collect = groceries
+                .stream()
+                .sorted(Comparator.comparing(Groceries::getQuantity)
+                        .reversed())
+                .toList();
+        collect.forEach(System.out::println);
+    }
+
+    @Test
+    void itemPriceBiggerThan15() {
+        List<Groceries> list = groceries
+                .stream()
+                .filter(
+                        price -> price.getCostPrice().compareTo(BigDecimal.valueOf(15.00)) > 0)
+                .toList();
+        list.forEach(System.out::println);
+        list.forEach(i -> assertThat(i.getCostPrice()).isGreaterThan(BigDecimal.valueOf(15.00)));
+    }
+
+    @Test
     void groupByBrandAndCount() {
         Map<String, Long> listMap = groceries
                 .stream()
@@ -41,22 +63,12 @@ class LetsPractice {
     }
 
     @Test
-    void groupByCategoriesAndCount() {
-        Map<String, Long> listMap = groceries
-                .stream()
-                .collect(
-                        Collectors.groupingBy(Groceries::getCategory, Collectors.counting()));
-        listMap.forEach((k, v) -> System.out.println(k + " : " + v));
-    }
-
-    @Test
-    void priceBiggerThan15() {
-        List<Groceries> list = groceries
-                .stream()
-                .filter(
-                        price -> price.getCostPrice().compareTo(BigDecimal.valueOf(15.00)) > 0)
+    void findItemWithLetterA() {
+        List<Groceries> collect = groceries.stream()
+                .filter(i -> StringUtils.containsIgnoreCase(
+                        i.getItem(), "A"))
                 .toList();
-        list.forEach(i -> assertThat(i.getCostPrice()).isGreaterThan(BigDecimal.valueOf(15.00)));
+        collect.forEach(System.out::println);
     }
 
     @Test
@@ -71,17 +83,21 @@ class LetsPractice {
     }
 
     @Test
-    void showOnlyItem() {
+    void showOnlyUniqueBrandSorted() {
         List<String> items = groceries
                 .stream()
-                .map(Groceries::getItem)
+                .map(Groceries::getBrand)
+                .sorted()
+                .distinct()
                 .toList();
+        items.forEach(System.out::println);
         items.forEach(
                 i -> assertThat(i).isInstanceOf(String.class));
+        assertThat(items).hasSize(26);
     }
 
     @Test
-    void totalNestleProducts() {
+    void AllCarlsbergProducts() {
         List<Groceries> collect = groceries
                 .stream()
                 .filter(
@@ -112,21 +128,43 @@ class LetsPractice {
     }
 
     @Test
-    void sortAllItemsByQuantityReverse() {
-        List<Groceries> collect = groceries
-                .stream()
-                .sorted(Comparator.comparing(Groceries::getQuantity)
-                        .reversed())
-                .toList();
-        collect.forEach(System.out::println);
-    }
-
-    @Test
     void ItemWithMinimumQuantity() {
-        Groceries minGroceries = groceries.stream()
+        Groceries minGroceries = groceries
+                .stream()
                 .min(Comparator.comparing(Groceries::getQuantity))
                 .orElse(null);
         System.out.println(minGroceries);
+        assertThat(minGroceries).isNotNull();
+        assertThat(minGroceries.getQuantity()).isEqualTo(2);
     }
 
+    @Test
+    void minQuantityOfEachBrand() {
+        List<Groceries> groceryList = groceries.stream()
+                .collect(Collectors.groupingBy(
+                        Groceries::getBrand,
+                        Collectors.minBy(Comparator.comparingLong(Groceries::getQuantity))
+                ))
+                .values()
+                .stream()
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .toList();
+        System.out.println(groceryList.size());
+        groceryList.forEach(System.out::println);
+    }
+
+    @Test
+    void groupByCountryAndCountAndSortByHighestCount() {
+        LinkedHashMap<String, Long> collect = groceries
+                .stream()
+                .collect(
+                        Collectors.groupingBy(Groceries::getCountry, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (e1, e2) -> e1, LinkedHashMap::new));
+        collect.forEach((k, v) -> System.out.println(k + " : " + v));
+    }
 }
