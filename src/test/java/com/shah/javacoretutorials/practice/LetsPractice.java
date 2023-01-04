@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -43,6 +44,20 @@ class LetsPractice {
     }
 
     @Test
+    void showOnlyUniqueBrandSorted() {
+        List<String> items = groceries
+                .stream()
+                .map(Groceries::getBrand)
+                .sorted()
+                .distinct()
+                .toList();
+        items.forEach(System.out::println);
+        items.forEach(
+                i -> assertThat(i).isInstanceOf(String.class));
+        assertThat(items).hasSize(26);
+    }
+
+    @Test
     void itemPriceBiggerThan15() {
         List<Groceries> list = groceries
                 .stream()
@@ -60,6 +75,23 @@ class LetsPractice {
                 .collect(
                         Collectors.groupingBy(Groceries::getBrand, Collectors.counting()));
         listMap.forEach((k, v) -> System.out.println(k + " : " + v));
+    }
+
+    @Test
+    void findItemArriveDate() {
+        List<Groceries> collect = groceries.stream()
+                .filter(date -> date.getArrivalDate().compareTo(LocalDate.of(2022, 8, 1)) == 0)
+                .toList();
+        collect.forEach(System.out::println);
+    }
+
+    @Test
+    void earliest5ItemsToArrive() {
+        List<Groceries> collect = groceries.stream()
+                .sorted(Comparator.comparing(Groceries::getArrivalDate))
+                .limit(5)
+                .toList();
+        collect.forEach(System.out::println);
     }
 
     @Test
@@ -82,19 +114,6 @@ class LetsPractice {
         collect.forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
-    @Test
-    void showOnlyUniqueBrandSorted() {
-        List<String> items = groceries
-                .stream()
-                .map(Groceries::getBrand)
-                .sorted()
-                .distinct()
-                .toList();
-        items.forEach(System.out::println);
-        items.forEach(
-                i -> assertThat(i).isInstanceOf(String.class));
-        assertThat(items).hasSize(26);
-    }
 
     @Test
     void AllCarlsbergProducts() {
