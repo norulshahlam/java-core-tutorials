@@ -11,6 +11,17 @@ class ParallelStreamPerformanceTest {
 
     /**
      * This demonstrates that using parallel streams doesn't necessarily improve performance. It might be worse so always test!
+     *
+     * When to use parallel streams?
+     * - Lots of data
+     * - Longer computation time
+     * - More cores in your machine.
+     *
+     * When NOT to use parallel streams?
+     * - When are lots of data splits and combine as demonstrates below.
+     * - Dataset is small.
+     * - When there are auto-boxing and unboxing.
+     * Stream operators like iterate(), limit();
      */
 
     ParallelStreamPerformance intStreamExample = new ParallelStreamPerformance();
