@@ -1,6 +1,6 @@
-package com.learnjava.parallelstreams;
+package com.shah.javacoretutorials.practice.async;
 
-import com.learnjava.util.DataSet;
+import com.shah.javacoretutorials.util.DataSet;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ParallelStreamPerformanceTest {
+
+    /**
+     * This demonstrates that using parallel streams doesn't necessarily improve performance. It might be worse so always test!
+     */
 
     ParallelStreamPerformance intStreamExample = new ParallelStreamPerformance();
 
@@ -17,7 +21,7 @@ class ParallelStreamPerformanceTest {
 
         //when
         int sum = intStreamExample.sum_using_intstream(1000000, false);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);
@@ -29,7 +33,7 @@ class ParallelStreamPerformanceTest {
 
         //when
         int sum = intStreamExample.sum_using_intstream(1000000, true);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);
@@ -41,7 +45,7 @@ class ParallelStreamPerformanceTest {
 
         //when
         int sum = intStreamExample.sum_using_iterate(1000000, false);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);
@@ -53,7 +57,7 @@ class ParallelStreamPerformanceTest {
 
         //when
         int sum = intStreamExample.sum_using_iterate(1000000, true);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);
@@ -66,7 +70,7 @@ class ParallelStreamPerformanceTest {
         ArrayList<Integer> inputList = DataSet.generateArrayList(size);
         //when
         int sum = intStreamExample.sum_using_list(inputList, false);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);
@@ -79,7 +83,7 @@ class ParallelStreamPerformanceTest {
         ArrayList<Integer> inputList = DataSet.generateArrayList(size);
         //when
         int sum = intStreamExample.sum_using_list(inputList, true);
-        System.out.println("sum : "+ sum);
+        System.out.println("sum : " + sum);
 
         //then
         assertEquals(1784293664, sum);

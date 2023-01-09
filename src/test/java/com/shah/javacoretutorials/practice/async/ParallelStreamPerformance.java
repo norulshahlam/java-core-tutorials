@@ -1,19 +1,19 @@
-package com.learnjava.parallelstreams;
+package com.shah.javacoretutorials.practice.async;
 
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static com.learnjava.util.CommonUtil.startTimer;
-import static com.learnjava.util.CommonUtil.timeTaken;
+import static com.shah.javacoretutorials.util.CommonUtil.startTimer;
+import static com.shah.javacoretutorials.util.CommonUtil.timeTaken;
 
 public class ParallelStreamPerformance {
 
-    public int sum_using_intstream(int count, boolean isParallel){
+    public int sum_using_intstream(int count, boolean isParallel) {
         startTimer();
-        IntStream intStream = IntStream.rangeClosed(0,count);
+        IntStream intStream = IntStream.rangeClosed(0, count);
 
-        if(isParallel)
+        if (isParallel)
             intStream.parallel();
 
         int sum = intStream
@@ -23,37 +23,35 @@ public class ParallelStreamPerformance {
     }
 
 
-    public int sum_using_list(List<Integer> inputList, boolean isParallel){
+    public int sum_using_list(List<Integer> inputList, boolean isParallel) {
         startTimer();
         Stream<Integer> inputStream = inputList.stream();
 
-        if(isParallel)
+        if (isParallel)
             inputStream.parallel();
 
-        int sum  = inputStream
+        int sum = inputStream
                 .mapToInt(Integer::intValue) // unboxing
                 .sum();
         timeTaken();
         return sum;
     }
 
-    public int sum_using_iterate(int n, boolean isParallel){
+    public int sum_using_iterate(int n, boolean isParallel) {
         startTimer();
-         Stream<Integer> integerStream = Stream.
-                 iterate(0, i ->i+1 );
+        Stream<Integer> integerStream = Stream.
+                iterate(0, i -> i + 1);
 
-
-        if(isParallel)
+        if (isParallel)
             integerStream.parallel();
 
         int sum = integerStream
-                .limit(n+1) // includes the end value too
+                .limit(n + 1) // includes the end value too
                 .reduce(0, Integer::sum);
 
         timeTaken();
         return sum;
     }
-
 
 
 }

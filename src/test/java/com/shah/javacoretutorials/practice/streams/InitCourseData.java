@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.practice;
+package com.shah.javacoretutorials.practice.streams;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

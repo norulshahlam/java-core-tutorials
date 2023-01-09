@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.practice;
+package com.shah.javacoretutorials.practice.streams;
 
 import com.shah.javacoretutorials.model.Groceries;
 import org.apache.commons.lang.StringUtils;
