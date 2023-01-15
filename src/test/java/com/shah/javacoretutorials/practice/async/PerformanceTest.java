@@ -1,5 +1,6 @@
 package com.shah.javacoretutorials.practice.async;
 
+import com.shah.javacoretutorials.parallelStreams.ParallelStreamPerformance;
 import com.shah.javacoretutorials.util.DataSet;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ParallelStreamPerformanceTest {
+class PerformanceTest {
 
     /**
      * This demonstrates that using parallel streams doesn't necessarily improve performance. It might be worse so always test!

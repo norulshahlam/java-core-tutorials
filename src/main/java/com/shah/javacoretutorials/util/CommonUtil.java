@@ -21,7 +21,7 @@ public class CommonUtil {
 
     public static void timeTaken() {
         stopWatch.stop();
-        log.info("Total Time Taken : " + stopWatch.getTime());
+        log.info("Total Time Taken : " + stopWatch.getTime() + " ms");
     }
 
     public static void delay(long delayMilliSeconds) {
@@ -52,5 +52,9 @@ public class CommonUtil {
                 .boxed()
                 .forEach((linkedList::add));
         return linkedList;
+    }
+
+    public static void log(String message) {
+        System.out.println("[" + Thread.currentThread().getName() + "] - " + message);
     }
 }

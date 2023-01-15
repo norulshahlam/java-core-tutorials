@@ -1,6 +1,7 @@
 package com.shah.javacoretutorials.practice.streams;
 
-import com.shah.javacoretutorials.model.Groceries;
+import com.shah.javacoretutorials.model.GroceriesInfo;
+import com.shah.javacoretutorials.parallelStreams.InitData;
 import org.apache.commons.lang.StringUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,11 +17,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class LetsPractice {
 
-    List<Groceries> groceries = null;
+    List<GroceriesInfo> groceries = null;
 
     @BeforeEach
     void setUp() throws IOException {
-        groceries = InitCourseData.init();
+        groceries = InitData.initGroceries();
     }
 
     @AfterEach
@@ -35,9 +36,9 @@ class LetsPractice {
 
     @Test
     void sortAllItemsByQuantityReverse() {
-        List<Groceries> collect = groceries
+        List<GroceriesInfo> collect = groceries
                 .stream()
-                .sorted(Comparator.comparing(Groceries::getQuantity)
+                .sorted(Comparator.comparing(GroceriesInfo::getQuantity)
                         .reversed())
                 .toList();
         collect.forEach(System.out::println);
@@ -47,7 +48,7 @@ class LetsPractice {
     void showOnlyUniqueBrandSorted() {
         List<String> items = groceries
                 .stream()
-                .map(Groceries::getBrand)
+                .map(GroceriesInfo::getBrand)
                 .sorted()
                 .distinct()
                 .toList();
@@ -59,7 +60,7 @@ class LetsPractice {
 
     @Test
     void itemPriceBiggerThan15() {
-        List<Groceries> list = groceries
+        List<GroceriesInfo> list = groceries
                 .stream()
                 .filter(
                         price -> price.getCostPrice().compareTo(BigDecimal.valueOf(15.00)) > 0)
@@ -73,13 +74,13 @@ class LetsPractice {
         Map<String, Long> listMap = groceries
                 .stream()
                 .collect(
-                        Collectors.groupingBy(Groceries::getBrand, Collectors.counting()));
+                        Collectors.groupingBy(GroceriesInfo::getBrand, Collectors.counting()));
         listMap.forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
     @Test
     void findItemArriveDate() {
-        List<Groceries> collect = groceries.stream()
+        List<GroceriesInfo> collect = groceries.stream()
                 .filter(date -> date.getArrivalDate().compareTo(LocalDate.of(2022, 8, 1)) == 0)
                 .toList();
         collect.forEach(System.out::println);
@@ -87,8 +88,8 @@ class LetsPractice {
 
     @Test
     void earliest5ItemsToArrive() {
-        List<Groceries> collect = groceries.stream()
-                .sorted(Comparator.comparing(Groceries::getArrivalDate))
+        List<GroceriesInfo> collect = groceries.stream()
+                .sorted(Comparator.comparing(GroceriesInfo::getArrivalDate))
                 .limit(5)
                 .toList();
         collect.forEach(System.out::println);
@@ -96,7 +97,7 @@ class LetsPractice {
 
     @Test
     void findItemWithLetterA() {
-        List<Groceries> collect = groceries.stream()
+        List<GroceriesInfo> collect = groceries.stream()
                 .filter(i -> StringUtils.containsIgnoreCase(
                         i.getItem(), "A"))
                 .toList();
@@ -108,7 +109,7 @@ class LetsPractice {
         Map<BigDecimal, BigDecimal> collect = groceries
                 .stream()
                 .collect(Collectors
-                        .toMap(Groceries::getCostPrice,
+                        .toMap(GroceriesInfo::getCostPrice,
                                 i -> i.getCostPrice().multiply(BigDecimal.valueOf(1.2)),
                                 (existing, replacement) -> existing));
         collect.forEach((k, v) -> System.out.println(k + " : " + v));
@@ -117,7 +118,7 @@ class LetsPractice {
 
     @Test
     void AllCarlsbergProducts() {
-        List<Groceries> collect = groceries
+        List<GroceriesInfo> collect = groceries
                 .stream()
                 .filter(
                         brand -> brand.getBrand().equals("Carlsberg"))
@@ -131,7 +132,7 @@ class LetsPractice {
         Map<String, Double> collect = groceries
                 .stream()
                 .collect(Collectors.groupingBy(
-                        Groceries::getBrand,
+                        GroceriesInfo::getBrand,
                         Collectors.summingDouble(i -> Double.parseDouble(i.getCostPrice().toString()))));
         collect.forEach((k, v) -> System.out.println(k + " : " + v));
     }
@@ -141,28 +142,28 @@ class LetsPractice {
         Map<String, LongSummaryStatistics> collect = groceries
                 .stream()
                 .collect(Collectors.groupingBy(
-                        Groceries::getBrand,
-                        Collectors.summarizingLong(Groceries::getQuantity)));
+                        GroceriesInfo::getBrand,
+                        Collectors.summarizingLong(GroceriesInfo::getQuantity)));
         collect.forEach((k, v) -> System.out.println(k + " : " + v));
     }
 
     @Test
     void ItemWithMinimumQuantity() {
-        Groceries minGroceries = groceries
+        GroceriesInfo minGroceriesInfo = groceries
                 .stream()
-                .min(Comparator.comparing(Groceries::getQuantity))
+                .min(Comparator.comparing(GroceriesInfo::getQuantity))
                 .orElse(null);
-        System.out.println(minGroceries);
-        assertThat(minGroceries).isNotNull();
-        assertThat(minGroceries.getQuantity()).isEqualTo(2);
+        System.out.println(minGroceriesInfo);
+        assertThat(minGroceriesInfo).isNotNull();
+        assertThat(minGroceriesInfo.getQuantity()).isEqualTo(2);
     }
 
     @Test
     void minQuantityOfEachBrand() {
-        List<Groceries> groceryList = groceries.stream()
+        List<GroceriesInfo> groceryList = groceries.stream()
                 .collect(Collectors.groupingBy(
-                        Groceries::getBrand,
-                        Collectors.minBy(Comparator.comparingLong(Groceries::getQuantity))
+                        GroceriesInfo::getBrand,
+                        Collectors.minBy(Comparator.comparingLong(GroceriesInfo::getQuantity))
                 ))
                 .values()
                 .stream()
@@ -178,7 +179,7 @@ class LetsPractice {
         LinkedHashMap<String, Long> collect = groceries
                 .stream()
                 .collect(
-                        Collectors.groupingBy(Groceries::getCountry, Collectors.counting()))
+                        Collectors.groupingBy(GroceriesInfo::getCountry, Collectors.counting()))
                 .entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))

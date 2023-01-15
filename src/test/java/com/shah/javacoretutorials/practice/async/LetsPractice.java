@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 
 import static com.shah.javacoretutorials.util.CommonUtil.*;
 
-public class LetsPractice {
+class LetsPractice {
 
     private int processors = Runtime.getRuntime().availableProcessors();
 
@@ -71,4 +71,5 @@ public class LetsPractice {
 /**
  * Threads - Java 1
  * ExecutorService - Java 5
+ * CompletableFuture - Java 8
  */

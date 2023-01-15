@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.practice.async;
+package com.shah.javacoretutorials.parallelStreams;
 
 import java.util.List;
 import java.util.stream.IntStream;
