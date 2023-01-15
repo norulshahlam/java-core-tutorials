@@ -14,10 +14,10 @@ import static com.shah.javacoretutorials.util.CommonUtil.*;
 
 class LetsPractice {
 
-    private int processors = Runtime.getRuntime().availableProcessors();
 
     @Test
     void findProcessors() {
+        int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(processors);
         System.out.println(processors);
     }

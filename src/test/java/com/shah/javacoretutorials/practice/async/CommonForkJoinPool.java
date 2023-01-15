@@ -19,6 +19,7 @@ import static com.shah.javacoretutorials.util.CommonUtil.timeTaken;
 public class CommonForkJoinPool {
 
     ParallelStreamPerformance intStreamExample = new ParallelStreamPerformance();
+    private GroceriesService service = new GroceriesService();
 
     @Test
     void findProcessors() {
@@ -39,8 +40,6 @@ public class CommonForkJoinPool {
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "100");
         intStreamExample.sum_using_iterate(100000000, true);
     }
-
-    private GroceriesService service = new GroceriesService();
 
     @Test
     void getGrocery() {
