@@ -22,6 +22,7 @@ class LetsPractice {
         System.out.println(processors);
     }
 
+
     @RepeatedTest(5)
     void LinkedListIsSLowInParallelProcessing() {
         LinkedList<Integer> integerLinkedList = generateIntegerLinkedList(10000000);

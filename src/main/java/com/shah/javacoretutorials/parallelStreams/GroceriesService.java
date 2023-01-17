@@ -12,6 +12,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static com.shah.javacoretutorials.util.CommonUtil.delay;
 import static com.shah.javacoretutorials.util.CommonUtil.log;
@@ -22,8 +24,11 @@ public class GroceriesService {
     Faker faker = new Faker();
     RandomDataGenerator random = new RandomDataGenerator();
 
-    public GroceriesDiscount getDiscountList(int id) {
+    int processors = Runtime.getRuntime().availableProcessors();
+    ExecutorService executorService = Executors.newFixedThreadPool(50);
 
+    public GroceriesDiscount getDiscountList(int id) {
+        log("inside getDiscountList");
         delay(1000);
 
         return GroceriesDiscount.builder()
@@ -34,7 +39,7 @@ public class GroceriesService {
     }
 
     public GroceriesInfo getInfoList(int id) {
-
+        log("inside getInfoList");
         delay(1000);
 
         return GroceriesInfo.builder()
@@ -62,9 +67,19 @@ public class GroceriesService {
 
     public List<GroceriesDiscount> getGroceryDiscountList(int id) {
         ArrayList<CompletableFuture<GroceriesDiscount>> list = new ArrayList<>();
+        int finalId = id;
         while (id > 0) {
-            int finalId = id;
             CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId));
+            list.add(async);
+            id--;
+        }
+        return list.stream().map(CompletableFuture::join).toList();
+    }
+    public List<GroceriesDiscount> getGroceryDiscountListUsingExecutor(int id) {
+        ArrayList<CompletableFuture<GroceriesDiscount>> list = new ArrayList<>();
+        int finalId = id;
+        while (id > 0) {
+            CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId),executorService);
             list.add(async);
             id--;
         }
