@@ -1,76 +1,53 @@
 package com.shah.javacoretutorials.practice.async;
 
-import org.junit.jupiter.api.RepeatedTest;
+import com.shah.javacoretutorials.parallelStreams.GroceriesService;
+import com.shah.javacoretutorials.parallelStreams.HelloWorldService;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import static org.mockito.Mockito.when;
 
-import static com.shah.javacoretutorials.util.CommonUtil.*;
+@ExtendWith(MockitoExtension.class)
+class ExceptionHandler {
 
-class LetsPractice {
+    @Mock
+    private HelloWorldService helloWorldService;
 
+    @InjectMocks
+    private GroceriesService groceriesService;
 
     @Test
-    void findProcessors() {
-        int processors = Runtime.getRuntime().availableProcessors();
-        ExecutorService executorService = Executors.newFixedThreadPool(processors);
-        System.out.println(processors);
-    }
-
-
-    @RepeatedTest(5)
-    void LinkedListIsSLowInParallelProcessing() {
-        LinkedList<Integer> integerLinkedList = generateIntegerLinkedList(10000000);
-        startTimer();
-        List<Integer> integers = integerLinkedList.stream()
-                .parallel()
-                .map(i -> i * 2)
-                .toList();
-        timeTaken();
-    }
-
-    @RepeatedTest(5)
-    void ArrayListIsFastInParallelProcessing() {
-        ArrayList<Integer> integerArrayList = generateArrayList(10000000);
-        startTimer();
-        List<Integer> integers = integerArrayList.stream()
-                .parallel()
-                .map(i -> i * 2)
-                .toList();
-        timeTaken();
+    void helloWorldSuccess() {
+        when(helloWorldService.hello()).thenCallRealMethod();
+        when(helloWorldService.world()).thenCallRealMethod();
+        String s = groceriesService.asyncWithExceptionalHandling();
+        System.out.println(s);
     }
 
     @Test
-    void setDoesNotGuaranteeOrderOfResults() {
-        Set<Integer> integers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<Integer> integers1 = integers.stream()
-                .parallel()
-                .map(i -> i * 2)
-                .toList();
-        System.out.println(integers);
-        System.out.println(integers1);
+    void helloThrowException() {
+        when(helloWorldService.hello()).thenThrow(new RuntimeException("Exception Occurred"));
+        when(helloWorldService.world()).thenCallRealMethod();
+        String s = groceriesService.asyncWithExceptionalHandling();
+        System.out.println(s);
     }
 
     @Test
-    void listDoesGuaranteeOrderOfResults() {
-        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<Integer> integers1 = integers.stream()
-                .parallel()
-                .map(i -> i * 2)
-                .toList();
-        System.out.println(integers);
-        System.out.println(integers1);
+    void worldThrowException() {
+        when(helloWorldService.hello()).thenCallRealMethod();
+        when(helloWorldService.world()).thenThrow(new RuntimeException("Exception Occurred"));
+        String s = groceriesService.asyncWithExceptionalHandling();
+        System.out.println(s);
     }
 
-
+    @Test
+    void helloWorldThrowException() {
+        when(helloWorldService.hello()).thenThrow(new RuntimeException("Exception Occurred"));
+        when(helloWorldService.world()).thenThrow(new RuntimeException("Exception Occurred"));
+        String s = groceriesService.asyncWithExceptionalHandling();
+        System.out.println(s);
+    }
 }
-/**
- * Threads - Java 1
- * ExecutorService - Java 5
- * CompletableFuture - Java 8
- */

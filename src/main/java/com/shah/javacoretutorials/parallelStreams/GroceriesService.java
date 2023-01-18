@@ -5,7 +5,7 @@ import com.shah.javacoretutorials.model.GroceriesDiscount;
 import com.shah.javacoretutorials.model.GroceriesInfo;
 import com.shah.javacoretutorials.model.GroceriesResponse;
 import org.apache.commons.math3.random.RandomDataGenerator;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -18,8 +18,10 @@ import java.util.concurrent.Executors;
 import static com.shah.javacoretutorials.util.CommonUtil.delay;
 import static com.shah.javacoretutorials.util.CommonUtil.log;
 
-@Service
 public class GroceriesService {
+
+    @Autowired
+    private HelloWorldService helloWorldService;
 
     Faker faker = new Faker();
     RandomDataGenerator random = new RandomDataGenerator();
@@ -75,27 +77,40 @@ public class GroceriesService {
         }
         return list.stream().map(CompletableFuture::join).toList();
     }
+
     public List<GroceriesDiscount> getGroceryDiscountListUsingExecutor(int id) {
         ArrayList<CompletableFuture<GroceriesDiscount>> list = new ArrayList<>();
         int finalId = id;
         while (id > 0) {
-            CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId),executorService);
+            CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId), executorService);
             list.add(async);
             id--;
         }
         return list.stream().map(CompletableFuture::join).toList();
     }
 
-    public String hello() {
-        delay(1000);
-        log("inside hello");
-        return "hello";
-    }
 
-    public String world() {
-        delay(1000);
-        log("inside world");
-        return " world!";
+    public String asyncWithExceptionalHandling() {
+        /**
+         * This method includes exception handling with recovery - you can return a value during exception.
+         * thenCombine is a BiFunction while thenApply is a Function.
+         * Both takes input/s & transforms it into output.
+         */
+        CompletableFuture<String> hello = CompletableFuture.supplyAsync(() -> helloWorldService.hello());
+
+        CompletableFuture<String> world = CompletableFuture.supplyAsync(() -> helloWorldService.world());
+
+        return hello.exceptionally((e) -> {
+                    log("Exception in hello: " + e.getMessage());
+                    return "Exception in hello!";
+                })
+                .thenCombine(world, (h, w) -> h + w)
+                .exceptionally((e) -> {
+                    log("Exception after world: " + e.getMessage());
+                    return "Exception after world!";
+                })
+                .thenApply(i -> i + " A SUCCESS!")
+                .join();
     }
 
 }

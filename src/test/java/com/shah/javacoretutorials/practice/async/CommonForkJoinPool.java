@@ -18,6 +18,7 @@ import static com.shah.javacoretutorials.util.CommonUtil.timeTaken;
 public class CommonForkJoinPool {
 
     ParallelStreamPerformance intStreamExample = new ParallelStreamPerformance();
+
     private GroceriesService service = new GroceriesService();
 
     @Test
@@ -50,7 +51,7 @@ public class CommonForkJoinPool {
     }
 
     @Test
-    void getGroceryDiscountListByModifyingDefaultParallelism() {
+    void getGroceryDiscountListByModifyingDefaultForkJoinPool() {
         /**
          * Modifies the ForkJoinPool. Designed to be used for CPU-intensive workloads.  IO intensive tasks are a bad choice for a ForkJoinPool as theses threads might be blocked by a time-consuming task or is not available. For that, you should use ExecutorService instead
          */
