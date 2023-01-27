@@ -15,5 +15,7 @@ public class GroceriesDiscount {
 
     private Long id;
     private Boolean discount;
-    private Long discPercent;
+    private Object discPercent;
+
+
 }

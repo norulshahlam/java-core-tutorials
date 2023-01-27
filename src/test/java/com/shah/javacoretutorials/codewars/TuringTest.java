@@ -3,9 +3,12 @@ package com.shah.javacoretutorials.codewars;
 import org.junit.jupiter.api.Test;
 
 class TuringTest {
+
+
     @Test
     void test() {
         rotate1(new int[]{1, 2, 3, 4, 5}, 2);
+
     }
 
     @Test

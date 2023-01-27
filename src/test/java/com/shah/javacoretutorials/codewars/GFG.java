@@ -1,14 +1,6 @@
 package com.shah.javacoretutorials.codewars;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.StopWatch;
-
-import java.util.Random;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 
 public class GFG
 {
@@ -19,7 +11,14 @@ public class GFG
     {
         // private constructor
     }
-    public static GFG getInstance(){
+    public static GFG getInstance(int i){
+
         return instance;
+    }
+
+    @Test
+    void test() {
+       GFG instance1 = GFG.getInstance(1);
+        System.out.println(instance1);
     }
 }
