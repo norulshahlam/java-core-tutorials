@@ -89,7 +89,6 @@ public class GroceriesService {
         return list.stream().map(CompletableFuture::join).toList();
     }
 
-
     public String asyncWithExceptionalHandling() {
         /**
          * This method includes exception handling with recovery - you can return a value during exception.
