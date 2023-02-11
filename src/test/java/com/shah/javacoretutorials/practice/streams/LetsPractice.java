@@ -118,7 +118,7 @@ class LetsPractice {
 
     @Test
     void AllCarlsbergProducts() {
-        List<GroceriesInfo> collect = groceries
+              List<GroceriesInfo> collect = groceries
                 .stream()
                 .filter(
                         brand -> brand.getBrand().equals("Carlsberg"))
