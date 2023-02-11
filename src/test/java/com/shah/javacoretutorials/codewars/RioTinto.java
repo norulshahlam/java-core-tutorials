@@ -25,11 +25,13 @@ class RioTinto {
     @Test
     void ArrayInitialization() {
         List<Long> list1 = Arrays.asList(1L, 2L, 3L, 3L);
-        Map<Long, Long> collect1 = list1.stream().collect(Collectors.toMap(i -> i, i -> i, (existing, replacement) -> existing));
         List<Long> list2 = List.of(1L, 2L, 3L, 3L);
         ArrayList<Long> list3 = new ArrayList<>(List.of(1L, 2L, 3L, 3L));
         ArrayList<Long> list4 = new ArrayList<>(Arrays.asList(1L, 2L, 3L, 3L));
+        Map<Long, Long> collect1 = list1.stream().collect(Collectors.toMap(i -> i, i -> i, (existing, replacement) -> existing));
         collect1.forEach((k, v) -> log.info("list1: {}", v));
+
+        list1.forEach((v) -> log.info("list2: {}", v));
         list2.forEach((v) -> log.info("list2: {}", v));
         list3.forEach((v) -> log.info("list3: {}", v));
         list4.forEach((v) -> log.info("list4: {}", v));
