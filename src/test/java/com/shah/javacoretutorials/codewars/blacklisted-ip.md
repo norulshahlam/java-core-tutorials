@@ -25,8 +25,9 @@ Suppose n = 3, blacklisted_ips = [“*111.*”, “123.*”, “34.*”], q = 7,
 Hence the answer is [1, 0, 0, 1, 1, 0, 0].
 
 Note : At time 7 the request IP "121.1.23.34" is not blocked because in the last 5 seconds, only the instance which came at time 3 is accepted. The request which came at time 5 was blocked, so it is not included in the current count.
+ 
 
-`Function Description`
+Function Description
 
 Complete the function validateRequests in the editor below.
 
@@ -57,16 +58,16 @@ Each line i of the q subsequent lines contains a string, requests[i].
 Sample Case 0
 Sample Input For Custom Testing
 
-|STDIN        |     |            FUNCTION                                                   |
-|    :-:      | :-: |              :-:                                                      |
-|2            |  →  |blacklisted_ips[] size n = 2                                           |
-|111.*.255    |  →  |blacklisted_ips = ["111.*.255", "12."]                                 |
-|12.          |     |                                                                       |
-|4            |  →  |requests[] size q = 4                                                  |
-|121.3.5.255  |  →  |requests = ["121.3.5.255", "12.13.5.255", "111.3.5.255", "121.3.5.255"]|
-|12.13.5.255  |     |                                                                       |
-|111.3.5.255  |     |                                                                       |
-|121.3.5.255  |     |                                                                       |
+STDIN               FUNCTION
+-------             ----------
+2               →   blacklisted_ips[] size n = 2
+111.*.255       →   blacklisted_ips = ["111.*.255", "12."]
+12.        
+4               →   requests[] size q = 4
+121.3.5.255     →   requests = ["121.3.5.255", "12.13.5.255", "111.3.5.255", "121.3.5.255"]
+12.13.5.255 
+111.3.5.255 
+121.3.5.255 
 
 Sample Output for Case 0:
 
@@ -82,22 +83,20 @@ The third request is blocked since it matches with "111.*.255" -> "111.3.5.255".
 Sample Case 1
 Sample Input For Custom Testing
 
-|STDIN      |     |            FUNCTION             |
-|    :-:    | :-: |              :-:                |
-|1          |  →  |blacklisted_ips[] size n = 1     |
-|111.111.1. |  →  |blacklisted_ips = ["111.111.1.1"]|
-|1          |  →  |requests[] size q = 1            |        
-|111.111.1.1|  →  |requests = ["111.111.1.1"]       |
+STDIN               FUNCTION
+-------             ----------
+1               →   blacklisted_ips[] size n = 1
+111.111.1.      →   blacklisted_ips = ["111.111.1.1"]
+1               →   requests[] size q = 1         
+111.111.1.1     →   requests = ["111.111.1.1"] 
         
 Sample Output for Case 1:
 
     1
 
-Explanation
+Explanation: The only request is blocked since it directly matches with the only blacklisted ip.
 
-The only request is blocked since it directly matches with the only blacklisted ip.
-
-write in this method using java 8
+write the solution in this method using java 8
 
 public static List<Integer> validateRequests(List<String> blacklisted_ips, List<String> requests){
 
