@@ -23,14 +23,14 @@ public class PassByReference {
 
     @Test
     void question1a() {
-        String a = "2";
+        String a = "s";
         System.out.println("Before changes: " + a);
         changeValue(a);
         System.out.println("After changes: " + a);
     }
 
     public void changeValue(String a) {
-        a = "3";
+        a = "t";
     }
 
     /**
@@ -59,6 +59,7 @@ public class PassByReference {
     class Child extends Parent {
         int x = 20;
 
+        @Override
         void printMe() {
             System.out.println("child class");
         }

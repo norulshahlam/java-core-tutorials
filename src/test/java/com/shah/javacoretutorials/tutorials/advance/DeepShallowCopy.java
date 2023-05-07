@@ -15,7 +15,7 @@ In object-oriented programming, object copying is creating a copy of an existing
 
 Shallow copy
 
-Whenever you try to create a copy of an object using the shallow copy, all fields of the original objects are copied exactly. But, if it contains any objects as fields then, only references to those objects are copied not the compete objects.
+Whenever you try to create a copy of an object using the shallow copy, all fields of the original objects are copied exactly. But, if it contains any objects as fields then, only references to those objects are copied not the actual objects.
 
 This implies that, if you perform shallow copy on an object that contains any objects as fields, since only references are copied in a shallow copy, both the original and copied object points to the same reference internally and, if you do any changes to the data using the copied object, they are reflected in the original object too.
 
@@ -65,7 +65,8 @@ class DeepShallowCopy {
 
         /* change in 1 DOESN'T affect the other */
         book1.getAuthor().setAuthorName("seg");
-        assertThat(book1.getAuthor().getAuthorName()).isNotEqualTo(book2.getAuthor().getAuthorName());
+        assertThat(book1.getAuthor().getAuthorName())
+                .isNotEqualTo(book2.getAuthor().getAuthorName());
     }
 
     @Test

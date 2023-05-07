@@ -10,16 +10,16 @@ below shows a class having show(); and interface having show(); and compiler pri
 show(); from class A
  */
 class A {
-  public void show() {
-    System.out.println("in Class A");
-  }
+    public void show() {
+        System.out.println("in Class A");
+    }
 }
 
 interface B {
-  // in java 8, u can implement a method in interface by using default keyword
-  default void show() {
-    System.out.println("in Interface B");
-  }
+    // in java 8, u can implement a method in interface by using default keyword
+    default void show() {
+        System.out.println("in Interface B");
+    }
 }
 
 class C extends A implements B {
@@ -27,10 +27,10 @@ class C extends A implements B {
 
 public class ThirdRule {
 
-  @Test
-  void test() {
+    @Test
+    void test() {
 
-    C c = new C();
-    c.show();
-  }
+        C c = new C();
+        c.show();
+    }
 }
