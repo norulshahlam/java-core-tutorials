@@ -10,14 +10,14 @@ public class PassByReference {
      * If we pass an object reference to a method as argument, and within the method if we are performing any changes to the state of object, those changes will be reflected to the caller. In this case just duplicate reference variable will be created but not duplicate object.
      */
     @Test
-    void question1() {
+    void passByReference() {
         Student student = new Student(1, "adam", 99);
         System.out.println("Before changes: " + student);
-        changeIt(student);
+        changeName(student);
         System.out.println("After changes: " + student);
     }
 
-    public void changeIt(Student student) {
+    public void changeName(Student student) {
         student.setName("bob");
     }
 
@@ -25,10 +25,11 @@ public class PassByReference {
     void question1a() {
         String a = "2";
         System.out.println("Before changes: " + a);
-        changeIt(a);
+        changeValue(a);
         System.out.println("After changes: " + a);
     }
-    public void changeIt(String a) {
+
+    public void changeValue(String a) {
         a = "3";
     }
 
@@ -36,26 +37,29 @@ public class PassByReference {
      * If we pass any primitive to a method as argument, and within the method if we are performing any changes to the primitive value, those changes won't be reflected to the caller. In this case duplicate copy of that primitive value will be maintained.
      */
     @Test
-    void question1b() {
+    void passByValue() {
         int a = 2;
         System.out.println("Before changes: " + a);
-        changeIt(a);
+        changeValue(a);
         System.out.println("After changes: " + a);
     }
-    public void changeIt(int a) {
+
+    public void changeValue(int a) {
         a = 3;
     }
 
     class Parent {
         int x = 10;
-        void printMe(){
+
+        void printMe() {
             System.out.println("parent class");
         }
     }
 
     class Child extends Parent {
         int x = 20;
-        void printMe(){
+
+        void printMe() {
             System.out.println("child class");
         }
     }
