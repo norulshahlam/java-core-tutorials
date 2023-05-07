@@ -67,9 +67,11 @@ public class PassByReference {
     @Test
     void TestMe() {
         Parent p = new Child();
-        /* Variable resolution is always based on reference type but not based on runtime object. We used Parent reference and hence we will get 10. */
+
+        /** Variable resolution is always based on reference type but not based on runtime object. We used Parent reference and hence we will get 10. **/
         System.out.println(p.x);
-        /* In overriding method resolution is always based on runtime object. Hence child class method will be executed. */
+
+        /** In overriding method resolution is always based on runtime object. Hence, child class method will be executed. **/
         p.printMe();
     }
 }
