@@ -37,7 +37,7 @@ class Future7 {
 
 class task5 implements Callable<String> {
 
-  private String n;
+  private final String n;
 
   public task5(String n) {
     this.n = n;

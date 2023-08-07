@@ -32,7 +32,6 @@ class StringBufferBuilder {
             StringBuffer sb = new StringBuffer();
             long t = currentTimeMillis();
             for (long i = N; i-- > 0; ) {
-                sb.append("");
             }
             out.println("StringBuffer: " + (currentTimeMillis() - t) + "ms");
             out.println(sb);
@@ -42,7 +41,6 @@ class StringBufferBuilder {
             StringBuilder sb = new StringBuilder();
             long t = currentTimeMillis();
             for (long i = N; i > 0; i--) {
-                sb.append("");
             }
             out.println("StringBuilder: " + (currentTimeMillis() - t) + "ms");
         }

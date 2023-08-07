@@ -47,7 +47,7 @@ class ProcessingThread extends Thread {
     private void processSomething(int i) {
         // processing some job
         try {
-            Thread.sleep(i * 100);
+            Thread.sleep(i * 100L);
             System.out.println(Thread.currentThread() + " delayed, called " + i + " times");
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -48,7 +48,7 @@ class RunMe {
 		// System.out.println(new2.a);
 		System.out.println(new2.y);
 
-		System.out.println("");
+		System.out.println();
 
 		public1 new3 = new public1();
 		// below code gives error because variable 'a' is private
@@ -65,7 +65,7 @@ class protected1 {
 @SuppressWarnings("unused")
 class private1 extends protected1 {
 
-	private int a = 1;
+	private final int a = 1;
 	int b = 2;
 }
 class public1 extends private1 {

@@ -26,7 +26,7 @@ class TightCoupling {
         set.add((int) 3.0);
         set.add(2);
         set.add(2);
-        set.add(new Integer(2));
+        set.add(Integer.valueOf(2));
         set.add(Integer.parseInt("2"));
         System.out.println(set);
     }
@@ -48,21 +48,21 @@ class TightCoupling {
 
         stack.push("Cherry");
 
-        ((LinkedList<String>) queue).add(stack.pop());
+        queue.add(stack.pop());
         stack.push("Dingleberry");
         stack.push("Eggplant");
 
-        ((LinkedList<String>) queue).add("Fig");
+        queue.add("Fig");
         stack.push(queue.remove());
-        ((LinkedList<String>) queue).add(stack.pop());
-        ((LinkedList<String>) queue).add(stack.pop());
+        queue.add(stack.pop());
+        queue.add(stack.pop());
 
         System.out.println(stack);
         System.out.println(queue);
     }
     @Test
     void test5() {
-        float d[] = {1,2,3};
+        float[] d = {1,2,3};
 //        int x[] = int[10];
         System.out.println(round(22.9));
     }

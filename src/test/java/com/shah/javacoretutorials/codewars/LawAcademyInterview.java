@@ -26,7 +26,7 @@ public class LawAcademyInterview {
         int rightBracket = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            if (Character.compare(str.charAt(i), '(') == 0)
+            if (str.charAt(i) == '(')
                 leftBracket++;
             if (str.charAt(i) == ')')
                 rightBracket++;

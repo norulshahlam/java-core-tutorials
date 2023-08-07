@@ -38,9 +38,9 @@ class RegularExpression {
         // this function checks if two strings are same
         String a = "test";
         String b = "test";
-        String c = new String("test1");
-        String d = new String("test1");
-        String e = new String("test");
+        String c = "test1";
+        String d = "test1";
+        String e = "test";
 
         boolean isMatched = Pattern.matches(a, b);
         System.out.println(isMatched);

@@ -46,8 +46,7 @@ Manually interning the String will store its reference in the pool, and the JVM 
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StringPool {
 
@@ -56,17 +55,17 @@ class StringPool {
         String a = "apple";
         String b = "apple";
         String c = "APPLE";
-        String d = new String("apple");
-        String e = new String("apple");
+        String d = "apple";
+        String e = "apple";
         String f = d.intern();
 
-        assertTrue(a == b); //true
-        assertFalse(b == c); //false bcos it is case sensitive
+        assertSame(a, b); //true
+        assertNotSame(b, c); //false bcos it is case sensitive
         assertTrue(b.equalsIgnoreCase(c)); //false bcos it is case sensitive
-        assertFalse(a == d); //false - diff obj
-        assertTrue(a.equals(d)); //true - same val
-        assertFalse(d == e); //false - diff obj
-        assertTrue(d.equals(e)); //true - same value
-        assertTrue(f == a);
+        assertNotSame(a, d); //false - diff obj
+        assertEquals(a, d); //true - same val
+        assertNotSame(d, e); //false - diff obj
+        assertEquals(d, e); //true - same value
+        assertSame(f, a);
     }
 }

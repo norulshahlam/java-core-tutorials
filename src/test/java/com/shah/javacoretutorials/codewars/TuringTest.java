@@ -21,14 +21,14 @@ class TuringTest {
         rotate3(new int[]{1, 2, 3, 4, 5}, 2);
     }
 
-    static void rotate2(int nums[], int k) {
+    static void rotate2(int[] nums, int k) {
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");
         }
-        System.out.println("");
+        System.out.println();
         // Storing rotated version of array
         int n = nums.length;
-        int temp[] = new int[n];
+        int[] temp = new int[n];
 
         // Keeping track of the current index
         // of temp[]
@@ -50,9 +50,7 @@ class TuringTest {
 
         // Copying the elements of temp[] in nums[]
         // to get the final rotated array
-        for (int i = 0; i < n; i++) {
-            nums[i] = temp[i];
-        }
+        System.arraycopy(temp, 0, nums, 0, n);
         for (int i = 0; i < n; i++) {
             System.out.print(nums[i] + " ");
         }
@@ -62,7 +60,7 @@ class TuringTest {
         for (int i = 0; i < A.length; i++) {
             System.out.print(A[i] + " ");
         }
-        System.out.println("");
+        System.out.println();
         int n = A.length;
         int p = 1;
         while (p <= K) {
@@ -85,7 +83,7 @@ class TuringTest {
         }
         System.out.println(" ");
         int n = A.length;
-        int temp[] = new int[n];
+        int[] temp = new int[n];
         int a = 0;
 
         if (n == K) {

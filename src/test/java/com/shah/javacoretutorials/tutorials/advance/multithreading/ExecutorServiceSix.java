@@ -35,7 +35,7 @@ class ExecutorService6 {
 }
 
 class task4 extends Thread {
-    private int n;
+    private final int n;
     public task4(int n) {
         this.n = n;
     }

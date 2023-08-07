@@ -19,7 +19,7 @@ public class CommonForkJoinPool {
 
     ParallelStreamPerformance intStreamExample = new ParallelStreamPerformance();
 
-    private GroceriesService service = new GroceriesService();
+    private final GroceriesService service = new GroceriesService();
 
     @Test
     void findProcessors() {

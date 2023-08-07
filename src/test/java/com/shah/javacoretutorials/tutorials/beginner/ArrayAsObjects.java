@@ -10,7 +10,6 @@ class ArrayAsObjects {
 	/**
 	 * An array of Student type holding student objects
 	 */
-
 	@Test
 	void test()  {
 

@@ -6,6 +6,10 @@ import java.util.Arrays;
 
 class ArrayCreation {
 
+    /**
+     * Different ways of creating an array
+     */
+
     @Test
     void method1() {
 

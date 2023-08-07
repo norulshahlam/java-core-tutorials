@@ -12,7 +12,7 @@ public class Code8 {
 		String 	b = "pqr" + "abc";
 		String c = a + "123";
 		String d = "abc123";
-		String e = new String("xyz");
+		String e = "xyz";
 
 		System.out.println(c ==	d);
 		System.out.println("xyz"== e);

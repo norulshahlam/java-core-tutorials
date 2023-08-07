@@ -38,7 +38,7 @@ class BankOfJulius {
             }
 
             HashMap<Character, Integer> countedString = countArrayString(L[j]);
-            System.out.println("");
+            System.out.println();
             ArrayList<Integer> counter = new ArrayList<>();
 
 
@@ -98,4 +98,5 @@ class BankOfJulius {
         }
         return 1;
     }
+
 }

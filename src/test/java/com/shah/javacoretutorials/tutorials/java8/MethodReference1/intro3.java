@@ -27,7 +27,7 @@ public class intro3 {
                 .map(String::toUpperCase).forEach(intro3::print);
 
         // old way
-        Supplier<String> supplier = () -> new String();
+        Supplier<String> supplier = () -> "";
         // method reference
         Supplier<String> supplier2 = String::new;
 
