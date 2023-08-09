@@ -21,7 +21,7 @@ class StaticVariable {
     void test() {
 
         Worker a = new Worker(1, "shah", "mike");
-        Worker b = new Worker(2, "ahmad", "drh");
+        Worker b = new Worker(2, "ahmad", "mike");
 
         // we have the latest supervisor name
         System.out.println(a);

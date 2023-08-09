@@ -40,20 +40,23 @@ class Constructor {
 
     @Test
     void test() {
-        //this will call default constructor as no value is assigned upon creation
+        /*
+         this will call default constructor as no value is assigned upon creation. Note that even this is not called, java will call for you. so if u define something in the constructor like print statement, it will print by itself.
+         */
         Vehicle vehicle1 = new Vehicle();
         System.out.println(vehicle1);
 
-        // from (a), note that even this is not called, java will call for you. so if u define something in the constructor like print statement, it will print by itself
-        // System.out.println(vehicle1);
-
-        //create an object and assign values to all 4 parameters
-        Vehicle vehicle2 = new Vehicle("Integra", "Red", "2018", "Honda");
+        // create an object with only 2 parameter. note that the 3rd & 4th argument is not defined so it will b assigned using default value defined in Vehicle()
+        Vehicle vehicle2 = new Vehicle("nissan", "yellow");
         System.out.println(vehicle2);
 
-        //create an object with only 2 parameter. note that the 3rd & 4th argument is not defined so it will b assigned using default value defined in Vehicle()
-        Vehicle vehicle3 = new Vehicle("nissan", "yellow");
-        System.out.println(vehicle3);
+        // create an object and assign values to 3 parameters
+        Vehicle vehicle3 = new Vehicle("nissan", "yellow", "2200");
+        System.out.println(vehicle2);
+
+        // create an object and assign values to all 4 parameters
+        Vehicle vehicle4 = new Vehicle("Integra", "Red", "2018", "Honda");
+        System.out.println(vehicle4);
     }
 }
 

@@ -23,37 +23,61 @@ The hashCode(int value) is an inbuilt Java Integer Class method which determines
 This method is compatible with Integer.hashCode().
 */
 class HashCode2 {
-  @Test
-  void test()  {
-    Integer i = Integer.valueOf(155);
-    Integer j = Integer.valueOf(155);
-    Integer k = Integer.valueOf(156);
+    @Test
+    void test() {
+        Integer i = Integer.valueOf(155);
+        Integer j = Integer.valueOf(155);
+        Integer k = Integer.valueOf(156);
+        String l = "155";
 
-    String a = "123";
-    String b = "123";
-    String c = "49";
-    String d = a;
+        /*
+         * Two variables have the hashcode because the hash codes are derived from their contents having same value and datatype. One way to tell if two variable have the same hashcode is to use the .equals() method and returns true.
+         */
+        System.out.println(i.equals(j));
 
-    /*
-     * Integers have same value as the hashcode because the hash
-     * codes are derived from their contents.
-     */
-    System.out.println(i.equals(j));
-    System.out.println(a.equals(b));
-    System.out.println(i==j); // false as '==' is reference comparison (address comparison)
+        /* String/Number having diff value usually has diff hashcode */
+        System.out.println(i.equals(k));
+        System.out.println(i.equals(l));
 
-    System.out.println("i: " + i.hashCode() + ", j: " + j.hashCode() + ", k: " + k.hashCode());
-    System.out.println("a: " + a.hashCode() + ", b: " + b.hashCode() + ", c: " + c.hashCode());
+        System.out.println("i.hashCode(): " + i.hashCode());
+        System.out.println("j.hashCode(): " + j.hashCode());
+        System.out.println("k.hashCode(): " + k.hashCode());
+        System.out.println("l.hashCode(): " + l.hashCode());
+    }
 
-    /* String/Number having diff value usually has diff hashcode */
-    System.out.println(a.equals(c));
-    System.out.println(i.equals(k));
+    @Test
+    void test2() {
+        String a = "123";
+        String b = "123";
+        String c = "49";
+        String d = a;
+        System.out.println("a.hashCode(): " + a.hashCode());
+        System.out.println("b.hashCode(): " + b.hashCode());
+        System.out.println("c.hashCode(): " + c.hashCode());
+        System.out.println("d.hashCode(): " + d.hashCode());
+        System.out.println("a.equals(b)?: " + a.equals(b));
+        System.out.println("a.equals(c)?: " + a.equals(c));
+        /* Since a points to d, they are equal in reference comparison */
+        System.out.println("a.equals(d)?: " + a.equals(d));
+    }
 
-    /* Since a points to d, they are equal in reference comparison */
-    System.out.println(a.equals(d));
+    @Test
+    void test3() {
+        String x = "apple";
+        String y = "apple";
+        String z = "banana";
+        System.out.println("x.hashCode(): " + x.hashCode());
+        System.out.println("y.hashCode(): " + y.hashCode());
+        System.out.println("z.hashCode(): " + z.hashCode());
 
-    /* equal() only applies to wrapper class! */
-    int f = 1, g = 1;
-    // System.out.println(f.equals(g)); // gives error
-  }
+        /* equal() only applies to wrapper class! */
+        int f = 1, g = 1;
+        // System.out.println(f.equals(g)); // gives error
+    }
+
+    @Test
+    void test4() {
+        int i = Integer.hashCode(152340);
+        System.out.println(i);
+    }
 }

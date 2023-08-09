@@ -4,8 +4,7 @@ package com.shah.javacoretutorials.tutorials.beginner;
 
 hashCode() vs .equals()
 
-A hash code is an integer that is derived from an object. Hash codes should be scrambled—if x and y are two distinct objects, there should be a high probability that 
-x.hashCode() and y.hashCode() are different
+A hash code is an integer that is derived from an object. Hash codes should be scrambled—if x and y are two distinct objects, there should be a high probability that x.hashCode() and y.hashCode() are different
 
 Importance of equals() and hashCode() method
 
@@ -19,29 +18,42 @@ import com.shah.javacoretutorials.model.Employee;
 import org.junit.jupiter.api.Test;
 
 class HashCode3 {
+    // both has same value but obj reference is diff
+    Employee e1 = new Employee("cindy", 55);
+    Employee e2 = new Employee("cindy", 55);
+    Employee e3 = e1; // point to same obj
+
     @Test
-    void test() {
+    void hashCodeValue() {
+        /*
+         * e1 & e2 gives diff hashcode (NATURALLY) as it is created as diff obj, although the values
+         * are the same. e3 & e1 is the same as e3 points to e1
+         */
+        System.out.println("e3.equals(e1)?: " + e3.equals(e1));
+        System.out.println("e1.equals(e2)?: " + e1.equals(e2));
 
-        Employee e1 = new Employee("cindy", 55); // both has same value but obj reference is diff
-        Employee e2 = new Employee("cindy", 55); // both has same value but obj reference is diff
-        Employee e3 = e1; // point to same obj
+        System.out.println(e1.hashCode());
+        System.out.println(e2.hashCode());
+        System.out.println(e3.hashCode());
+    }
 
-        System.out.println("e1 : " + e1 + ", e2 : " + e2 + ", e3 : " + e3);
-        System.out.println("is e3=e1?: " + e3.equals(e1) + ", is e1=e2?: " + e1.equals(e2));
+    @Test
+    void changeValues() {
+
+        System.out.println("e1: " + e1);
+        System.out.println("e2: " + e2);
+        System.out.println("e3: " + e3);
 
         e3.setName("cindy");
-        e3.setAge(55);
+        e3.setAge(56);
 
         /* since e3 refers to e1, any change to either 1 will change the other. but
          still, it returns true */
-
-        System.out.println("e1 : " + e1 + ", e2 : " + e2 + ", e3 : " + e3);
-        System.out.println("is e3=e1?: " + e3.equals(e1) + ", is e1=e2?: " + e1.equals(e2));
-
-        /*
-         * e1 & e2 gives diff hashcode as it is created as diff obj, although the values
-         * are the same. e3 & e1 is the same as e3 points to e1
-         */
-        System.out.println("e1 is: " + e1.hashCode() + ", e2 : " + e2.hashCode() + ", e3 : " + e3.hashCode());
+        System.out.println("After changing values..");
+        System.out.println("e1: " + e1);
+        System.out.println("e2: " + e2);
+        System.out.println("e3: " + e3);
     }
+
+
 }

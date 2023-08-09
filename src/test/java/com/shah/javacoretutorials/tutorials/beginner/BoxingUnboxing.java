@@ -36,8 +36,10 @@ class BoxingUnboxing {
         int d = B;    //auto unboxing
 
         String str = "123";
-        //to convert string to int; wrapper class is needed
-        //parse int is a static method so to access it, wrapper class is needed (Integer)
+
+        /*  to convert string to int; wrapper class is needed parse int is a static method so to access it, wrapper class is needed(Integer)
+         */
+
         int n = Integer.parseInt(str);
         //once conv to int, u can make math ops
         System.out.println(n + 1);  //123 + 1 = 124

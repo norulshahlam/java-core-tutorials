@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.tutorials.beginner;
 /*
 The super keyword in Java is a reference variable which is used to refer immediate parent class object.
 
-Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by 'super' reference variable
 
 this lesson shows 
 1. how super keyword works. super is a special keyword that directs the compiler to invoke the superclass method.

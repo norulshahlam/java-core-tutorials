@@ -2,6 +2,9 @@ package com.shah.javacoretutorials.model;
 
 import lombok.Data;
 
+/**
+ * @author NORUL
+ */
 @Data
 public class Worker {
     private int id;

@@ -26,7 +26,7 @@ class StaticBlockMethodVariable {
     static int num;
 
     static void method1() {
-        System.out.println("Inside method1");
+        System.out.println("Inside parentMethod");
     }
 
     // static block - will get called on runtime

@@ -33,6 +33,9 @@ d) However, then you are not able to set initial values for object attributes.
 3. constructor will be called once you create the object
  */
 
+import lombok.Data;
+
+@Data
 public class Vehicle {
     //if we create an object without assigning a value then it will use default value (here)
     private String name = "defaultName";
@@ -76,35 +79,5 @@ public class Vehicle {
         System.out.println("from constructor with 2 param");
     }
 
-    //getters and setters
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String color) {
-        this.color = color;
-    }
-    public String getModel() {
-        return model;
-    }
-    public void setModel(String model) {
-        this.model = model;
-    }
-    public String getCompany() {
-        return company;
-    }
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
-    @Override
-    public String toString() {
-        return "Vehicle [name=" + name + ", color=" + color + ", model=" + model + ", company=" + company + "]";
-    }
 }
 

@@ -29,7 +29,7 @@ class IntegerLiteral {
     //byte b = 200;
 
     
-    // how to check the datatype of prmimitive var
+    // how to check the datatype of primimitive var
     System.out.println(((Object) j).getClass().getName());
     System.out.println(((Object) g).getClass().getName());
     System.out.println(((Object) h).getClass().getName());

@@ -25,9 +25,14 @@ class DateTimeTest {
         LocalTime t = LocalTime.now(ZoneId.of("Asia/Singapore"));
         System.out.println("Time: " + t + ". Date: " + d);
 
-        // getting time of a specific zone(machine-readable)
+        // full datetime information of SG time zone
+        ZonedDateTime zonedDateTime = Instant.now().atZone(ZoneId.of(("Asia/Singapore")));
+        System.out.println("zonedDateTime: " + zonedDateTime);
+
+        // getting time of UTC time zone(machine-readable)
         Instant i = Instant.now();
-        System.out.println(i);
+        System.out.println("UTC time zone: " + i);
+
     }
 
     @Test

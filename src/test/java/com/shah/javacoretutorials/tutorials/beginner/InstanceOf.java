@@ -11,18 +11,18 @@ class Child extends Parent {}
 class intro1 {
     @Test
     void test() {
-        Child c = new Child();
+        Child child = new Child();
         // A simple case
-        System.out.println(c instanceof Child);
+        System.out.println(child instanceof Child);
         // returns true for Parent class also
-        System.out.println(c instanceof Parent);
+        System.out.println(child instanceof Parent);
         // returns true for all ancestors (Note : object is ancestor of all classes in Java)
-        System.out.println(c instanceof Object);
+        System.out.println(child instanceof Object);
         System.out.println("**********************");
-        Parent p = new Parent();
-        System.out.println(p instanceof Child);
-        System.out.println(p instanceof Parent);
-        System.out.println(p instanceof Object);
+        Parent parent = new Parent();
+        System.out.println(parent instanceof Child);
+        System.out.println(parent instanceof Parent);
+        System.out.println(parent instanceof Object);
 
     }
 }
