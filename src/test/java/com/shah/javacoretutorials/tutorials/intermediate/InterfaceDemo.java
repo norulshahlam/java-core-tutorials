@@ -71,8 +71,7 @@ class InterfaceDemo implements MyInterface {
     void publicStaticFinal() {
 
         System.out.println(a);
-        /** 2. we can access 'a' as it is public and static.
-         * & since it is final, we cant make any changes
+        /** 2. we can access 'a' as it is public and static. And since it is final, we cant make any changes
          *  a++;  <-- causes error
          * **/
     }
@@ -100,8 +99,7 @@ interface MyInterface {
     // public and abstract
     void display();
 
-    // in future if i 1 2 add a method, i can use default keyword so the classes
-    // that implements this interface dont need to define.
+    // default and static method is introduced in java 8. In future if we want to add a new method, we can use default keyword so the classes that implements this interface dont need to define.
     default void newlyAddedMethod() {
         System.out.println("sorry guys i am new here so dont need to implement me cos i have 'default' keyword");
     }

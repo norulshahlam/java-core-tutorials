@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner;
+package com.shah.javacoretutorials.tutorials.beginnerImpt;
 /*
 
 https://www.baeldung.com/java-string-pool

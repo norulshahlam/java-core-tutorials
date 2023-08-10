@@ -7,11 +7,11 @@ Only different btwn builder and buffer
 
 StringBuffer
 -- synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously.
--- Hence is less efficient than StringBuilder.	
+-- Hence is less efficient (slower) than StringBuilder.
 
 StringBuilder 
--- non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously.
--- Hence is more efficient than StringBuffer.
+-- non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously and can cause data inconsistencies.
+-- But is more efficient (faster) than StringBuffer.
 
 ******************************************
 
@@ -27,7 +27,7 @@ class StringBufferBuilder {
     @Test
     void test() {
 
-        long N = 77777771;
+        long N = Integer.MAX_VALUE;
         {
             StringBuffer sb = new StringBuffer();
             long t = currentTimeMillis();

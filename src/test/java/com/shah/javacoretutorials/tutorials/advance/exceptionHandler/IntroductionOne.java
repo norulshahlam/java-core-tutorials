@@ -14,7 +14,7 @@ a) Checked (compile time) exceptions − A checked exception is an exception tha
 
 b) Unchecked (Runtime) exceptions − An unchecked exception is an exception that occurs at the time of execution. These include programming bugs, such as logic errors or improper use of an API. Runtime exceptions are ignored at the time of compilation.
 
-For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsExceptionexception occurs.
+For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsException occurs.
 
 c) Errors − These are not exceptions at all, but problems that arise beyond the control of the user or the programmer. Errors are typically ignored in your code because you can rarely do anything about an error. For example, if a stack overflow occurs, an error will arise. They are also ignored at the time of compilation.
 
@@ -28,7 +28,7 @@ try-finally
 
 import org.junit.jupiter.api.Test;
 
-class Introduction {
+class IntroductionOne {
     @Test
     void tryCatch() {
 

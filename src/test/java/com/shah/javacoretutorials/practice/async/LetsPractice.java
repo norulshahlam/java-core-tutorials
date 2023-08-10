@@ -43,25 +43,25 @@ class LetsPractice {
     }
 
     @Test
-    void setDoesNotGuaranteeOrderOfResults() {
-        Set<Integer> integers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<Integer> integers1 = integers.stream()
+    void setDoesNotGuaranteeOrderOfInsertion() {
+        Set<Integer> set = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> list = set.stream()
                 .parallel()
                 .map(i -> i * 2)
                 .toList();
-        System.out.println(integers);
-        System.out.println(integers1);
+        System.out.println(set);
+        System.out.println(list);
     }
 
     @Test
-    void listDoesGuaranteeOrderOfResults() {
-        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        List<Integer> integers1 = integers.stream()
+    void listDoesGuaranteeOrderOfInsertion() {
+        List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> list2 = list.stream()
                 .parallel()
                 .map(i -> i * 2)
                 .toList();
-        System.out.println(integers);
-        System.out.println(integers1);
+        System.out.println(list);
+        System.out.println(list2);
     }
 
 

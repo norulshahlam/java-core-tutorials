@@ -15,7 +15,7 @@ class ClassAnonymous {
     //this is the part where you 1 2 override
 		E e = new E(){
 			public void show(){
-				System.out.println("wazzup");
+				System.out.println("inside anonymous class");
 			}
 		};
 		e.show();
@@ -23,6 +23,6 @@ class ClassAnonymous {
 }
 class E{
 	public void show(){
-		System.out.println("hola");
+		System.out.println("inside class E");
 	}
 }

@@ -1,19 +1,21 @@
 package com.shah.javacoretutorials.tutorials.advance.exceptionHandler;
 
 /*
-Exception handling best practics
+Exception handling best practices
 
 - Never hide exceptions
-- dont use it for flow-control - expensive resourcest
+- dont use it for flow-control - expensive resources
 - think about your user
 - think about your support team
 - think about the calling method
 - have global exception handling
+
+This also includes forced exception handling.
 */
 
 import org.junit.jupiter.api.Test;
 
-class UserDefinedExceptionSix {
+class UserDefinedExceptionFive {
 
     @Test
     void test() {

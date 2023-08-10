@@ -12,7 +12,7 @@ Understanding Reference variable
 4. You can access object members using a reference variable using dot syntax.
 
 we show that an obj can have ref of another obj.
-a change of either one of the obj property can effect the ohter as they point to the same memory
+a change of either one of the obj property can effect the other as they point to the same memory
 we can dereference and obj - point to other obj memory
 there is no way to access an obj directly - all is done using reference
 */

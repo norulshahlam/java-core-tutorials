@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class ForcedExceptionThree {
+class ForcedExceptionTwo {
     @Test
     @Disabled
     void test() {

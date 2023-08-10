@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.tutorials.beginner;
+package com.shah.javacoretutorials.tutorials.beginnerImpt;
 
 /*
 The super keyword in Java is a reference variable which is used to refer immediate parent class object.
