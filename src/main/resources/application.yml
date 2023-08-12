@@ -1,0 +1,10 @@
+openapi:
+  project-title: Employee Salary Management API
+  project-version: v11
+  project-description: Management of employee salary
+item:
+  info: hi
+  name: john
+email:
+  username: john
+  password: pswd
