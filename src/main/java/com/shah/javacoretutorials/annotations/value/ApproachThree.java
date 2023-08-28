@@ -12,8 +12,8 @@ public class ApproachThree {
     private String username;
     @Value("${email.password}")
     private String password;
-    /* You can insert a default value if not defined yet */
 
+    /* You can insert a default value if not defined yet */
     @Value("${email.status:defaultstatus}")
     private String status;
 

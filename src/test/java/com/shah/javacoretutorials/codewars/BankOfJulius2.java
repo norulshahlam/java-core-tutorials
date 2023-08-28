@@ -4,9 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -61,5 +59,4 @@ required to perform some pre((-))processing on it. What you must do is:
         System.out.println(avg);
         return avg.stream();
     }
-
 }

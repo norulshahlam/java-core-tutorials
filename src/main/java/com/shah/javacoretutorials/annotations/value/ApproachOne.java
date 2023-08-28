@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApproachOne {
 
     /*
-    use @ConfigurationProperties on a @Bean method to bind externalized properties to the Item instance:
+    use @ConfigurationProperties on a @Bean method to bind externalized properties to the Item instance
      */
 
     @Bean
