@@ -53,7 +53,7 @@ public class CommonForkJoinPool {
     @Test
     void getGroceryDiscountListByModifyingDefaultForkJoinPool() {
         /**
-         * Modifies the ForkJoinPool. Designed to be used for CPU-intensive workloads. IO intensive tasks are a bad choice for a ForkJoinPool as theses threads might be blocked by a time-consuming task or is not available. For that, you should use ExecutorService instead
+         * Modifies the ForkJoinPool. Designed to be used for CPU-intensive workloads. IO intensive tasks are a bad choice for a ForkJoinPool as these threads might be blocked by a time-consuming task or is not available. For that, you should use ExecutorService instead
          */
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "50");
         startTimer();
