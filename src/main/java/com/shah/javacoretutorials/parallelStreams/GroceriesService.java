@@ -102,12 +102,12 @@ public class GroceriesService {
 
         CompletableFuture<String> world = CompletableFuture.supplyAsync(() -> helloWorldService.world());
 
-        return hello.exceptionally((e) -> {
+        return hello.exceptionally(e -> {
                     log("Exception in hello: " + e.getMessage());
                     return "Exception in hello!";
                 })
                 .thenCombine(world, (h, w) -> h + w)
-                .exceptionally((e) -> {
+                .exceptionally(e -> {
                     log("Exception after world: " + e.getMessage());
                     return "Exception after world!";
                 })
