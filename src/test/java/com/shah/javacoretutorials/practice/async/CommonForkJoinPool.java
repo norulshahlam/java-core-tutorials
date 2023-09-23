@@ -23,6 +23,7 @@ public class CommonForkJoinPool {
 
     @Test
     void findProcessors() {
+        /* Set the thread pool to match the cpu processor */
         int processors = Runtime.getRuntime().availableProcessors();
         ExecutorService executorService = Executors.newFixedThreadPool(processors);
         System.out.println(processors);
@@ -36,7 +37,7 @@ public class CommonForkJoinPool {
 
     @Test
     void getGrocery() {
-        // if there is 1s delay in each list, using parallel, it will give around 1s result.
+        /* if there is 1s delay in each list, using parallel, it will give around 1s result. */
         startTimer();
         CompletableFuture<GroceriesResponse> groceries = service.getOneGrocery(3);
         System.out.println(groceries.join());
@@ -45,15 +46,19 @@ public class CommonForkJoinPool {
 
     @Test
     void getGroceryDiscountList() {
+        /*
+         This method uses Completable future which uses ForkJoinPool.
+         If there is 15 threads, iterating 60 times will take approximately 60/15 = 4 seconds
+         */
         startTimer();
-        List<GroceriesDiscount> groceryDiscountList = service.getGroceryDiscountList(50);
+        List<GroceriesDiscount> groceryDiscountList = service.getGroceryDiscountList(60);
         timeTaken();
     }
 
     @Test
     void getGroceryDiscountListByModifyingDefaultForkJoinPool() {
-        /**
-         * Modifies the ForkJoinPool. Designed to be used for CPU-intensive workloads. IO intensive tasks are a bad choice for a ForkJoinPool as these threads might be blocked by a time-consuming task or is not available. For that, you should use ExecutorService instead
+        /*
+        Modifies the ForkJoinPool. Designed to be used for CPU-intensive workloads. IO intensive tasks are a bad choice for a ForkJoinPool as these threads might be blocked by a time-consuming task or is not available. For that, you should use ExecutorService instead
          */
         System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "50");
         startTimer();
@@ -78,6 +83,7 @@ public class CommonForkJoinPool {
 /**
  * Java 7 introduced the fork/join framework.
  * ForkJoin pool is used by parallelStreams & completableFuture.
+ * ExecutorService was introduced in Java 5
  * The common ForkJoin pool has a shared work queue and a double-ended-queue (deque).
  * The tasks that submitted by the parallel streams lands in the shared work queue.
  * And each deque is backed by a Java thread.

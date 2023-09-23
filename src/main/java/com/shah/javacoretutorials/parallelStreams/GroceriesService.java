@@ -61,10 +61,10 @@ public class GroceriesService {
     }
 
     public CompletableFuture<GroceriesResponse> getOneGrocery(int id) {
-        CompletableFuture<GroceriesDiscount> discount = CompletableFuture
-                .supplyAsync(() -> getDiscountList(id));
-        CompletableFuture<GroceriesInfo> info = CompletableFuture
-                .supplyAsync(() -> getInfoList(id));
+        CompletableFuture<GroceriesDiscount> discount =
+                CompletableFuture.supplyAsync(() -> getDiscountList(id));
+        CompletableFuture<GroceriesInfo> info =
+                CompletableFuture.supplyAsync(() -> getInfoList(id));
         return discount.thenCombine(info, (d, i) ->
                 GroceriesResponse.builder().groceriesInfo(i).groceriesDiscount(d).build()
         );
@@ -74,7 +74,8 @@ public class GroceriesService {
         ArrayList<CompletableFuture<GroceriesDiscount>> list = new ArrayList<>();
         int finalId = id;
         while (id > 0) {
-            CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId));
+            CompletableFuture<GroceriesDiscount> async =
+                    CompletableFuture.supplyAsync(() -> getDiscountList(finalId));
             list.add(async);
             id--;
         }
@@ -85,7 +86,8 @@ public class GroceriesService {
         ArrayList<CompletableFuture<GroceriesDiscount>> list = new ArrayList<>();
         int finalId = id;
         while (id > 0) {
-            CompletableFuture<GroceriesDiscount> async = CompletableFuture.supplyAsync(() -> getDiscountList(finalId), executorService);
+            CompletableFuture<GroceriesDiscount> async =
+                    CompletableFuture.supplyAsync(() -> getDiscountList(finalId), executorService);
             list.add(async);
             id--;
         }
