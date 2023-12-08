@@ -14,7 +14,8 @@ import com.shah.javacoretutorials.model.House;
 import org.junit.jupiter.api.Test;
 
 class HashCode4 {
-    // both has same value but obj reference is diff so naturally it will give different hashcode. But by overriding the equals() method, we can make sure that both objects have the same hashcode.
+    // Both have the same value, but obj reference is diff, so naturally it will give different hashcode.
+    // But by overriding the equals() method, we can make sure that both objects have the same hashcode.
     House h1 = new House("condo");
     House h2 = new House("condo");
 

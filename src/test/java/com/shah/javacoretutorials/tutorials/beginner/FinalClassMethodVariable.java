@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 this class demonstrates final var, method, class
 in summary,
 final var - cant make any changes
-final method - cant overide parent method
+final method - cant override parent method
 final class - cant inherit class
 */
 class FinalClassMethodVariable {

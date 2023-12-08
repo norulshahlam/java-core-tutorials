@@ -37,7 +37,7 @@ import lombok.Data;
 
 @Data
 public class Vehicle {
-    //if we create an object without assigning a value then it will use default value (here)
+    // If we create an object without assigning a value then it will use default value (here)
     private String name = "defaultName";
     private String color = "defaultColor";
     private String model = "defaultModel";
@@ -51,14 +51,13 @@ public class Vehicle {
     //parameterized constructor (constructor overloading)
     public Vehicle(String name, String color, String model, String company) {
         //"this.color" is from the class vehicle. while the latter "color" refers to the one in the parameter. 'this' is used to avoid confusion when using same variable names.
-        this.getName(); //same as below
+        this.name = name;
         this.color = color;
         this.model = model;
         this.company = company;
 
         System.out.println("from constructor with 4 param");
     }
-
 
     //parameterized constructor (constructor overloading)
     public Vehicle(String name, String color, String model) {
@@ -78,6 +77,5 @@ public class Vehicle {
 
         System.out.println("from constructor with 2 param");
     }
-
 }
 

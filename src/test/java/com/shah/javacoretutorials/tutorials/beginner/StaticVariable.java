@@ -8,15 +8,14 @@ In Java, static variables are also called class variables. That is, they belong 
 
 In contrast, a class's instance will initialize the instance variables (non-static variables). All the instances of a class share the class's static variables.
 
-static var means variable is shared / accessible among all obj of the same class. if any object changes that static variable, it will affect other object too.
-instance variables is th opposite - has its own copy of variable aka fields/member variables
+static var means variable is shared / accessible among all objects of the same class. if any object changes that static variable, it will affect another object too.
+instance variables are the opposite - has its own copy of variable aka fields/member variables
 
 Static - class level
 non-static - object level
  */
 
 class StaticVariable {
-
     @Test
     void test() {
 
@@ -27,8 +26,8 @@ class StaticVariable {
         System.out.println(a);
         System.out.println(b);
 
-        System.out.println("after changing a static variable CEO");
-        Worker c = new Worker(2, "ahmad", "new");
+        System.out.println("after changing a static variable to CEO");
+        Worker c = new Worker(2, "abu", "CEO");
 
         // now all have new supervisor
         System.out.println(a);

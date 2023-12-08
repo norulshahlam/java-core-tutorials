@@ -10,7 +10,6 @@ another value that is returned if the condition is false.
 Here is a simple Java ternary operator example:
  */
 class TernaryOperator {
-
     @Test
     void test() {
 

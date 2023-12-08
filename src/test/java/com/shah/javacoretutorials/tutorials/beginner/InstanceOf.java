@@ -16,7 +16,7 @@ class intro1 {
         System.out.println(child instanceof Child);
         // returns true for Parent class also
         System.out.println(child instanceof Parent);
-        // returns true for all ancestors (Note : object is ancestor of all classes in Java)
+        // Note: an Object is ancestor of all classes in Java, hence returns true for all ancestors
         System.out.println(child instanceof Object);
         System.out.println("**********************");
         Parent parent = new Parent();

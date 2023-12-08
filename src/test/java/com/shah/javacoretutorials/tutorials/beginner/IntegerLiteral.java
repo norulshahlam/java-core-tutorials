@@ -3,8 +3,10 @@ package com.shah.javacoretutorials.tutorials.beginner;
 import org.junit.jupiter.api.Test;
 
 /*
-1. By default, the Java compiler treats all integer literals as of type int, unless it ends with the letter L or l, it is of type long.
-2. By default, the Java compiler treats all floating-point literals as of type double, unless it ends with the letter F (F or f), it is of type float.
+1. By default, the Java compiler treats all integer literals as of type int,
+unless it ends with the letter L or l, it is of type 'Long'.
+2. By default, the Java compiler treats all floating-point literals as of type double,
+unless it ends with the letter F (F or f), it is of type float.
 
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 https://www.informit.com/articles/article.aspx?p=22065&seqNum=5

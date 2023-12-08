@@ -4,7 +4,7 @@ package com.shah.javacoretutorials.tutorials.beginner;
 
 hashCode() vs .equals()
 
-A hash code is an integer that is derived from an object. Hash codes should be scrambled—if x and y are two distinct objects, there should be a high probability that x.hashCode() and y.hashCode() are different
+A hash code is an integer derived from an object. Hash codes should be scrambled—if x and y are two distinct objects, there should be a high probability that x.hashCode() and y.hashCode() are different
 
 Importance of equals() and hashCode() method
 
@@ -18,10 +18,10 @@ import com.shah.javacoretutorials.model.Employee;
 import org.junit.jupiter.api.Test;
 
 class HashCode3 {
-    // both has same value but obj reference is diff
+    // both have the same value but obj reference is diff
     Employee e1 = new Employee("cindy", 55);
     Employee e2 = new Employee("cindy", 55);
-    Employee e3 = e1; // point to same obj
+    Employee e3 = e1; // point to the same obj
 
     @Test
     void hashCodeValue() {

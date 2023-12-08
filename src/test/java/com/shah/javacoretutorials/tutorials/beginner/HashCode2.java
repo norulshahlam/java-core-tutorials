@@ -3,10 +3,10 @@ package com.shah.javacoretutorials.tutorials.beginner;
 import org.junit.jupiter.api.Test;
 
 /*
-A hash code is an integer value that is associated with each object in Java.
+A hash code is an integer value associated with each object in Java.
 Its main purpose is to facilitate hashing in hash tables, which are used by data structures like HashMap.
 
-The hashCode() method is a Java Integer class method which returns the hash code for the given inputs.
+The hashCode() method is a Java Integer class method that returns the hash code for the given inputs.
 There are two different types of Java hashCode() method which can be differentiated depending on its parameter.
 
 These are:
@@ -31,7 +31,10 @@ class HashCode2 {
         String l = "155";
 
         /*
-         * Two variables have the hashcode because the hash codes are derived from their contents having same value and datatype. One way to tell if two variable have the same hashcode is to use the .equals() method and returns true.
+         * Two variables have the same hashcode
+         * because the hash codes are derived from their contents having the same value and datatype.
+         * One way to tell if two variables have the same hashcode is to use the .equals()
+         * method and see it returns true.
          */
         System.out.println(i.equals(j));
 

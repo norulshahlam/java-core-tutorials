@@ -14,8 +14,8 @@ class ArrayAsObjects {
 	void test()  {
 
 		Student[] arr = new Student[2];
-		arr[0] = new Student(01, "shah", 99);
-		arr[1] = new Student(02, "farid", 30);
+		arr[0] = new Student(1, "shah", 99);
+		arr[1] = new Student(2, "farid", 30);
 
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);

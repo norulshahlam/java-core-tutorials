@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 /*
-variable arguments: Var args methods accept zero or more arguments (args) of a given type.
+Variable arguments: Var args methods accept zero or more arguments (args) of a given type.
 Such methods can have a variable number of arguments and thus useful for passing of dynamic data.
 */
 class VariableArguments {

@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Calendar;
 
 class PrintStatement1 {
-
     @Test
     void test() {
 
