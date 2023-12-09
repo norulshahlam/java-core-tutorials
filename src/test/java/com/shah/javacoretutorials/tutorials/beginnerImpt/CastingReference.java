@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.tutorials.beginnerImpt;
 import org.junit.jupiter.api.Test;
 
 /*
-Casting a reference variable doesn’t touch the object it refers to, but only labels this object in another way, expanding or narrowing opportunities to work with it. Upcasting narrows the list of methods and properties available to this object, and downcasting can extend it.
+Casting a reference variable doesn’t touch the object it refers to, but only labels this object in another way, expanding or narrowing opportunities to work with it. Upcasting narrows the list of methods and properties available to this object, and down-casting can extend it.
 
 A reference is like a remote control to an object. The remote control has more or fewer buttons depending on its type, and the object itself is stored in a heap. When we do casting, we change the type of the remote control but don’t change the object itself.
 
@@ -40,24 +40,23 @@ class ObjectCasting {
         c2.childMethod();// ok
     }
 }
-
 class Parent2 {
     public Parent2() {
-        System.out.println("constructor in base class");
+        System.out.println("constructor in parent class");
     }
 
     public void parentMethod() {
-        System.out.println("parentMethod in base class");
+        System.out.println("parentMethod in parent class");
     }
 }
 
 class Child2 extends Parent2 {
     public Child2() {
-        System.out.println("constructor in derived class");
+        System.out.println("constructor in child class");
     }
 
     public void childMethod() {
-        System.out.println("childMethod in derived class");
+        System.out.println("childMethod in child class");
     }
 
 }
