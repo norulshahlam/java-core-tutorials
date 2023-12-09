@@ -8,9 +8,9 @@ https://www.udemy.com/course/java-programming-tutorial-for-beginners/learn/lectu
 THREAD PRIORITY
 
 we can set the priority level of the thread: max - 10, min -1, normal -5
-we set t1 to max prioirty and see the result
+we set t1 to max priority and see the result
 
-it is just a request, it might be honoured or might not be but most time it will be honoured.
+it is just a request, it might be honored or might not be, but most time it will be honored.
 
 THREAD JOIN
 

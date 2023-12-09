@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.tutorials.intermediate;
 import org.junit.jupiter.api.Test;
 
 /*
-we can write a class within a method and this will be a local type. Like local variables, the scope of the inner class is restricted within the method.
+We can write a class within a method and this will be a local type. Like local variables, the scope of the inner class is restricted within the method.
 
 A method-local inner class can be instantiated only within the method where the inner class is defined.
 */

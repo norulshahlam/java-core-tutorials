@@ -29,7 +29,7 @@ class VolatileData {
     }
 
     public void increaseCounter() {
-        ++counter;      //increases the value of counter by 1
+        ++counter;      //increases the value of AtomicCounter by 1
     }
 }
 

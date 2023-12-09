@@ -99,7 +99,7 @@ interface MyInterface {
     // public and abstract
     void display();
 
-    // default and static method is introduced in java 8. In future if we want to add a new method, we can use default keyword so the classes that implements this interface dont need to define.
+    // Default and static method is introduced in java 8. In the future, if we want to add a new method, we can use the "default" keyword so the classes that implement this interface don't need to define.
     default void newlyAddedMethod() {
         System.out.println("sorry guys i am new here so dont need to implement me cos i have 'default' keyword");
     }

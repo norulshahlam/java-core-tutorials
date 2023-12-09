@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 
 
 class RegularExpression {
-
     @Test
     void replaceTest() {
         /*

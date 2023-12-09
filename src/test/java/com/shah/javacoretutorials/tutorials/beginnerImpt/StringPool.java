@@ -30,7 +30,7 @@ From Java 7 onwards, the Java String Pool is stored in the Heap space
 
 When we create a String via the new operator, the Java compiler will create a new object and store it in the heap space reserved for the JVM.
 
-When we create an object using String literal syntax e.g. “Baeldung”, it may return an existing object from the String pool, if it already exists. Otherwise, it will create a new String object and put in the string pool for future re-use.
+When we create an object using String literal syntax e.g., String a = “Baeldung,” it may return an existing object from the String pool, if it already exists. Otherwise, it will create a new String object and put in the string pool for future re-use.
 
 At a high level, both are the String objects, but the main difference comes from the point that new() operator always creates a new String object. Also, when we create a String using literal – it is interned.
 

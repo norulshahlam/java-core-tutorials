@@ -19,8 +19,8 @@ There are many non-access modifiers, such as static, abstract, synchronized, nat
 											ACCESSIBILITY MATRIX
 											---------------------
 
-						(1)					(2)			(3)				(4)
-					within package	within package	outside package	outside package
+				(1)					(2)					(3)				(4)
+			within package		within package		outside package		outside package
 modifier	within class		outside class		by subclass			other classes
 --------------------------------------------------------------------------------------
 private			yes					no		  			no			  		no

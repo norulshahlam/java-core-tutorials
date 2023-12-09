@@ -1,6 +1,6 @@
 package com.shah.javacoretutorials.tutorials.advance.multithreading;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
 import static com.shah.javacoretutorials.tutorials.advance.multithreading.IntroOne.count;
 
@@ -21,8 +21,8 @@ class IntroOne {
     static int count = 500000;
 
     @SuppressWarnings({"unused"})
-    @Test
-    void test() {
+    @RepeatedTest(5)
+    void test() throws InterruptedException {
         /* Method 1 */
         MyThreadExtend t1 = new MyThreadExtend();
 
@@ -45,7 +45,7 @@ class IntroOne {
 }
 
 class MyThreadExtend extends Thread {
-
+    @Override
     public void run() {
         System.out.print("thread extends t start\n");
         long start = System.currentTimeMillis();
@@ -60,7 +60,7 @@ class MyThreadExtend extends Thread {
 }
 
 class MyThreadImplements implements Runnable {
-
+    @Override
     public void run() {
         System.out.print("thread implement i start\n");
         long start = System.currentTimeMillis();

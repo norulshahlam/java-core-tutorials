@@ -22,9 +22,9 @@ class Future7 {
   void test() throws ExecutionException, InterruptedException {
 
     ExecutorService es = Executors.newFixedThreadPool(1);
-    Future<String> x = es.submit(new task5("bob"));
-    Future<String> y = es.submit(new task5("adam"));
-    Future<String> z = es.submit(new task5("pam"));
+    Future<String> x = es.submit(new Task5("bob"));
+    Future<String> y = es.submit(new Task5("adam"));
+    Future<String> z = es.submit(new Task5("pam"));
 
     System.out.println("executed");
     System.out.println(x.get());
@@ -35,11 +35,11 @@ class Future7 {
   }
 }
 
-class task5 implements Callable<String> {
+class Task5 implements Callable<String> {
 
   private final String n;
 
-  public task5(String n) {
+  public Task5(String n) {
     this.n = n;
   }
 

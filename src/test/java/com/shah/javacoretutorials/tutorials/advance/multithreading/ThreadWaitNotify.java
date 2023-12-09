@@ -31,7 +31,6 @@ class ThreadWaitNotify {
                 }
             }
             System.out.println(message);
-
         }
     }
 }

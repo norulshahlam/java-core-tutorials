@@ -3,7 +3,7 @@ package com.shah.javacoretutorials.tutorials.intermediate;
 import org.junit.jupiter.api.Test;
 
 /*
-A static inner class is a nested class which is a static member of the outer class. It can be accessed without instantiating the outer class, using other static members. Just like static members, a static nested class does not have access to the instance variables and methods of the outer class.
+A static inner class is a nested class, which is a static member of the outer class. It can be accessed without instantiating the outer class, using other static members. Just like static members, a static nested class does not have access to the instance variables and methods of the outer class.
 */
 class ClassStaticInner {
     @SuppressWarnings("unused")

@@ -1,5 +1,7 @@
 package com.shah.javacoretutorials.tutorials.intermediate;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.junit.jupiter.api.Test;
 
 import java.util.EnumSet;
@@ -11,6 +13,8 @@ Java enums were added in Java 5.
 enums are used when we know the values at compile time
  */
 
+@AllArgsConstructor
+@Getter
 enum EnumGirls {
     // constant or object or enum or variables that never change
     nadia("fun", "33"),
@@ -22,16 +26,6 @@ enum EnumGirls {
     private final String remarks;
     private final String age;
 
-    EnumGirls(String remarks, String age) {
-        this.remarks = remarks;
-        this.age = age;
-    }
-    public String getRemarks() {
-        return remarks;
-    }
-    public String getAge() {
-        return age;
-    }
 }
 
 class IntroTwo {

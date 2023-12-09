@@ -24,19 +24,19 @@ class ExecutorService6 {
 
         ExecutorService es = Executors.newFixedThreadPool(4);
 
-        es.execute(new Thread(new task4(1)));
-        es.execute(new Thread(new task4(2)));
-        es.execute(new Thread(new task4(3)));
-        es.execute(new Thread(new task4(4)));
-        es.execute(new Thread(new task4(5)));
+        es.execute(new Thread(new Task4(1)));
+        es.execute(new Thread(new Task4(2)));
+        es.execute(new Thread(new Task4(3)));
+        es.execute(new Thread(new Task4(4)));
+        es.execute(new Thread(new Task4(5)));
 
         es.shutdown();
     }
 }
 
-class task4 extends Thread {
+class Task4 extends Thread {
     private final int n;
-    public task4(int n) {
+    public Task4(int n) {
         this.n = n;
     }
 

@@ -4,7 +4,7 @@ package com.shah.javacoretutorials.tutorials.advance.exceptionHandler;
 Exception handling best practices
 
 - Never hide exceptions
-- dont use it for flow-control - expensive resources
+- don't use it for flow-control: expensive resources
 - think about your user
 - think about your support team
 - think about the calling method
@@ -22,7 +22,7 @@ class UserDefinedExceptionFive {
         int i = 5;
         try {
             if (i < 10) {
-                // firstly forcing an error, then using a constructor of a class
+                // firstly, forcing an error, then using a constructor of a class
                 throw new MyException("number must be >= 10");
             } else System.out.println("hi");
         }

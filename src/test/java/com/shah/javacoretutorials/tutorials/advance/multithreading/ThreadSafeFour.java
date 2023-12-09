@@ -1,12 +1,11 @@
 package com.shah.javacoretutorials.tutorials.advance.multithreading;
 /* 
-thread safe means that a method or class instance can be used by multiple
-threads at the same time without any problems occuring.
+Thread safe means that multiple threads can use a method or class instance at the same time without any problems occurring.
 
 Here we demonstrate to ensure thread-safe by using:
 
 1. AtomicInteger - use this class as ref and use incrementAndGet() to count
-2. synchronized - just use this keyword in your method. it only call by 1 thread at a time. if t1 is executing, t2 have to wait.
+2. synchronized - use this keyword in your method. It only calls by 1 thread at a time. If t1 is executed, t2 have to wait.
 
 We also we can create thread using anonymous class instead of creating a new class n extends thread
  */
@@ -15,18 +14,17 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-class counter {
+class AtomicCounter {
 
     // 1.
     AtomicInteger count = new AtomicInteger();
-
     public void increment() {
         count.incrementAndGet();
     }
 }
 
 // 2.
-// class counter {
+// class AtomicCounter {
 //   int count = 0;
 
 //   public synchronized void increment() {
@@ -38,7 +36,7 @@ class ThreadSafeFour {
     @Test
     void test() throws InterruptedException {
 
-        counter c = new counter();
+        AtomicCounter c = new AtomicCounter();
         // thread1
         Thread t1 = new Thread(() -> {
             for (int i = 1; i <= 1000000; i++)
@@ -49,8 +47,8 @@ class ThreadSafeFour {
             for (int i = 1; i <= 1000000; i++)
                 c.increment();
         });
-        t1.run();
-        t2.run();
+        t1.start();
+        t2.start();
         t1.join();
         t2.join();
         System.out.println(c.count);

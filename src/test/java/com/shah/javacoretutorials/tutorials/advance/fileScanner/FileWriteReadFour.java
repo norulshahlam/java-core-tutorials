@@ -13,9 +13,9 @@ now we will read a file of type Path
 
 1. normal approach - read everything in a file
 
-in practice, we don't read all. we read certain content using filter so we remove unnecesssary data, avoid memory overloading
+in practice, we don't read all. we read certain content using filter, so we remove unnecessary data, avoid memory overloading
 
-2. stream approach - lowercase all content, get only word contain 'a'
+2. stream approach - lowercase all content, get only word contains 'a'
  */
 class FileWriteReadFour {
 

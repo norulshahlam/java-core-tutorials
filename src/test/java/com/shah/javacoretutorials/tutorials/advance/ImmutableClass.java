@@ -9,34 +9,38 @@ Immutable class means that once an object is created, we cannot change its conte
 -- The benefits of such classes are:
 safety: you, as a developer, can be sure that no one is able to change their state;
 
--- thread-safety: the same as mentioned above is also actual for the multithreaded environment;
+-- Thread-safety: the same as mentioned above is also actual for the multithreading environment;
 
--- cacheable: instances could be easily cached by VM cache or custom implementation, as we are 100% sure, that their values are not going to be changed;
+-- Cacheable: instances could be easily cached by VM cache or custom implementation, as we are 100% sure, that their values are not going to be changed;
 
--- hashable: such classes could be safely put inside the hash collections (like HashMap, HashSet etc) - of course, if equals() & hashCode() methods are overridden in a proper way.
+-- Hashable: such classes could be safely put inside the hash collections (like HashMap, HashSet etc.) - of course, if equals() & hashCode() methods are overridden in a proper way.
  *****************************************************
 Following are the requirements: 
 
-a) The class must be declared as final (So that child classes can’t be created)
+A) The class must be declared as final (So that child classes can’t be created)
 
-b) Data members in the class must be declared as private (So that direct access is not allowed)
+B) Data members in the class must be declared as private (So that direct access is not allowed)
 
 c) Data members in the class must be declared as final (So that we can’t change the value of it after object creation)
 
 d) A parametrized constructor should initialize all the fields performing a deep copy (So that data members can’t be modified with object reference)
 
-e) Deep Copy of objects should be performed in the getter methods (To return a copy rather than returning the actual object reference)
+E) Deep Copy of objects should be performed in the getter methods (To return a copy rather than returning the actual object reference)
 
-f) No setters (To not have the option to change the value of the instance variable)
+F) No setters (To not have the option to change the value of the instance variable)
 
-in short,
+In short,
 a) make class as final
 b, c )make variables as private & final
-d) parametrized constructor
+d) Parametrized constructor
 e) Deep Copy of objects
 f)no setter method
 
 https://www.youtube.com/watch?v=85lrlPrvrAw&t=315s&ab_channel=CodingSimplified
+
+*** UPDATE ***
+We can skip this using Records in Java 14
+
 */
 
 //how to insert this obj into the final class while behaving as one

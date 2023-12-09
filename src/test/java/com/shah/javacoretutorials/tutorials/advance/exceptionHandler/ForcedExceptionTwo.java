@@ -11,10 +11,8 @@ class ForcedExceptionTwo {
     @Disabled
     void test() {
 
-        /*
-         * 1. we show that we can force an error if certain user input doesnt meet
-         * requirements 2. we can use 1 try with many catch to handle diff type of
-         * exceptions defined by us
+        /* We show that we can force an error if certain user input doesn't meet
+         * requirements 2. we can use 1 try with many catches to handle a diff type of exceptions defined by us
          */
         Scanner scanner = new Scanner(System.in);
 

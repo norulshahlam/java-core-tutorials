@@ -5,7 +5,7 @@ What is the difference between Association and Aggregation?
 
 Association means the relationship between the two interdependent classes. The connection is established using the two objects.
 
-Aggregation - both the entries can survive individually which means ending one entity will not affect the other entity.
+Aggregation - both the entries can survive individually, which means ending one entity will not affect the other entity.
 
 Composition is a restricted form of Aggregation in which two entities are highly dependent on each other.
 

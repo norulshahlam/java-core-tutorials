@@ -1,8 +1,8 @@
 package com.shah.javacoretutorials.tutorials.advance.exceptionHandler;
 
 /*
-Some resources like FileReader, BufferedReader, SQLConnections etc. require you to use try-catch because they have a potential to cause exceptions.
-You can avoid handling this by suppressing them by adding 'throws Exception' in your main method. this will ignore ALL resources. if u only 1 2 suppress certain resource, use that specific handler eg 'throws IOException'. NOTE: use this if you are certain there's no error
+Some resources like FileReader, BufferedReader, SQLConnections etc. require you to use try-catch because they have the potential to cause exceptions.
+You can avoid handling this by suppressing them by adding 'throws Exception' in your main method. This will ignore ALL resources. If u only 1 2 suppress certain resources, use that specific handler eg 'throws IOException'. NOTE: use this if you are certain there's no error
 */
 
 import org.junit.jupiter.api.Disabled;

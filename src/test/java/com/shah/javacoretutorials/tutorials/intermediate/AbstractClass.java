@@ -2,17 +2,17 @@ package com.shah.javacoretutorials.tutorials.intermediate;
 
 import org.junit.jupiter.api.Test;
 
-/* Abstraction is one of the key concepts of object-oriented programming (OOP) languages. Its main goal is to handle complexity by hiding unnecessary details from the user. An abstract class is a class that is declared abstract— it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon),
+/* Abstraction is one of the key concepts of object-oriented programming (OOP) languages. Its main goal is to handle complexity by hiding unnecessary details from the user. An abstract class is a class declared abstract— it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. An abstract method is a method declared without an implementation (without braces, and followed by a semicolon).
 
-like this:
+Like this:
 
-	abstract void moveTo(double deltaX, double deltaY);
+	Abstract void moveTo(double deltaX, double deltaY);
 
 If a class includes abstract methods, then the class itself must be declared abstract. Even if one method is abstract, then the class must be declared abstract
 
 A class extends abstract class, but implements interface
  */
-abstract class animal {
+abstract class Animal {
 
     /* Mixture of abstract and concrete method */
     abstract void eat(String name);
@@ -24,7 +24,7 @@ abstract class animal {
 }
 
 /* A class no need to be declared abstract class if there is not a single abstract method */
-class fish extends animal {
+class fish extends Animal {
 
     @Override
     void eat(String name) {
@@ -32,7 +32,7 @@ class fish extends animal {
     }
 }
 
-class feline extends animal {
+class feline extends Animal {
 
     @Override
     void eat(String name) {
@@ -45,10 +45,10 @@ class AbstractClass {
     @Test
     void test() {
 
-        // this is upcasting. reference of parent class with object of child class
-        animal shark = new fish();
-        animal cat = new feline();
-        shark.eat("meat");
-        cat.eat("mouse");
+        // this is upcasting. reference of parent class with an object of child class
+        Animal Shark = new fish();
+        Animal Cat = new feline();
+        Shark.eat("meat");
+        Cat.eat("mouse");
     }
 }

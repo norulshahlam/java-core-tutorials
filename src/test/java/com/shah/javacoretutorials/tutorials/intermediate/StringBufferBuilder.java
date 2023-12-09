@@ -6,12 +6,12 @@ The String class is an immutable class whereas StringBuffer and StringBuilder cl
 Only different btwn builder and buffer
 
 StringBuffer
--- synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously.
+-- synchronized i.e., thread safe. It means two threads can't call the methods of StringBuffer simultaneously.
 -- Hence is less efficient (slower) than StringBuilder.
 
 StringBuilder 
--- non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously and can cause data inconsistencies.
--- But is more efficient (faster) than StringBuffer.
+-- non-synchronized i.e., not thread safe. It means two threads can call the methods of StringBuilder simultaneously and can cause data inconsistencies.
+-- But it is more efficient (faster) than StringBuffer.
 
 ******************************************
 
