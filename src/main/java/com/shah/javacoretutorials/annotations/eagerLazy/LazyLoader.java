@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class LazyLoader {
 
     public LazyLoader() {
-        System.out.println("lazy");
+        System.out.println("lazy loaded");
     }
 
 }

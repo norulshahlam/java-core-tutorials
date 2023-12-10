@@ -1,19 +1,10 @@
 package com.shah.javacoretutorials.annotations.value;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import lombok.Data;
 
-@Configuration
+@Data
 public class ApproachOne {
-
-    /*
-    use @ConfigurationProperties on a @Bean method to bind externalized properties to the Item instance
-     */
-
-    @Bean
-    @ConfigurationProperties(prefix = "item")
-    public Item item() {
-        return new Item();
-    }
+    private String projectDescription;
+    private String projectTitle;
+    private String projectVersion;
 }

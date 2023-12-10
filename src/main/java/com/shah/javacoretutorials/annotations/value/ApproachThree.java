@@ -8,13 +8,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApproachThree {
 
-    @Value("${email.username}")
-    private String username;
-    @Value("${email.password}")
-    private String password;
-
     /* You can insert a default value if not defined yet */
-    @Value("${email.status:defaultstatus}")
-    private String status;
-
+    @Value("${openapi.project-description:defaultstatus}")
+    private String projectDescription;
+    @Value("${openapi.project-title}")
+    private String projectTitle;
+    @Value("${openapi.project-version}")
+    private String projectVersion;
 }

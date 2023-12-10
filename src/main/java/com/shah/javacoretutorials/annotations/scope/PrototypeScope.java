@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 public class PrototypeScope {
 
     public PrototypeScope() {
-        System.out.println("prototype scope");
+        System.out.println("init prototype scope");
     }
 }

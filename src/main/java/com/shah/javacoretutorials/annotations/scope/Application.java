@@ -23,6 +23,8 @@ public class Application {
 
         Prototype: a new instance of the bean is created every time it is requested.
 
+        Singleton scope is the default scope for beans in Spring container. This means that if we do not specify a scope for a bean, Spring will create a single bean instance and will reuse it whenever requested.
+
         One way to check is to use the hashcode() method. a singleton scope always returns the same hashcode value because it is the same instance.
          */
 

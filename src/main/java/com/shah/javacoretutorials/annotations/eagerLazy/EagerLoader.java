@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class EagerLoader {
 
     public EagerLoader() {
-        System.out.println("eager");
+        System.out.println("eager loaded");
     }
 }

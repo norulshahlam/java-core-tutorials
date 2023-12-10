@@ -14,26 +14,26 @@ public class Food {
     /* By field injection */
 
 //    @Autowired
-//    private Drink drink;
+//    private Pepsi pepsi;
 
 
     /* By constructor injection. */
 
-//    private Drink drink;
-//    public Food(Drink drink) {
-//        this.drink = drink;
+//    private Pepsi pepsi;
+//    public Food(Pepsi pepsi) {
+//        this.pepsi = pepsi;
 //    }
 
     /* By setter injection. */
 
-    private Drink drink;
+    private Pepsi pepsi;
 
     @Autowired
-    public void setDrink(Drink drink) {
-        this.drink = drink;
+    public void setDrink(Pepsi pepsi) {
+        this.pepsi = pepsi;
     }
 
     public String getPizza() {
-        return drink.getPepsi();
+        return pepsi.getPepsi();
     }
 }

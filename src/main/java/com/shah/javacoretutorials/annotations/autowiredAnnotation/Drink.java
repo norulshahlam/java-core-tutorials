@@ -1,11 +1,6 @@
 package com.shah.javacoretutorials.annotations.autowiredAnnotation;
 
-import org.springframework.stereotype.Component;
+public interface Drink {
 
-@Component
-public class Drink {
-
-    public String getPepsi() {
-        return "pepsi";
-    }
+    String getPepsi();
 }

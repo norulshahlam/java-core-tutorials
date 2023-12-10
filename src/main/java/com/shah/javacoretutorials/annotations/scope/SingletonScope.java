@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class SingletonScope {
 
     public SingletonScope() {
-        System.out.println("singleton scope");
+        System.out.println("init singleton scope");
     }
 
 }

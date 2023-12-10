@@ -15,7 +15,7 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @Getter
 @ToString
 public class ApproachTwo {
-    private final String projectTitle;
     private final String projectDescription;
+    private final String projectTitle;
     private final String projectVersion;
 }

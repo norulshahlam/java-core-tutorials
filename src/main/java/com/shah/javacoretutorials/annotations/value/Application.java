@@ -18,7 +18,7 @@ public class Application {
 
         /*
         @Value annotation is used to assign default values to variables and method arguments.
-        It is mostly used to get value for specific property key from the properties file. We can read spring environment variables as well as system variables using @Value annotation.
+        It is mostly used to get value for a specific property key from the properties file. We can read spring environment variables as well as system variables using @Value annotation.
 
         https://www.baeldung.com/spring-value-defaults
         https://www.baeldung.com/configuration-properties-in-spring-boot
@@ -27,14 +27,12 @@ public class Application {
          */
 
         /* For this approach, remember to add @ConfigurationPropertiesScan in your main class */
+
+        ApproachOne approachOne = applicationContext.getBean(ApproachOne.class);
+        System.out.println(approachOne);
         ApproachTwo approachTwo = applicationContext.getBean(ApproachTwo.class);
         System.out.println(approachTwo);
-
-        Item approachOne = applicationContext.getBean(Item.class);
-        System.out.println(approachOne);
-
         ApproachThree approachThree = applicationContext.getBean(ApproachThree.class);
         System.out.println(approachThree);
-
     }
 }
