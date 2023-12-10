@@ -13,10 +13,10 @@ public class Meal {
     }
 
     public void init() {
-        System.out.println("Initislization Logic™");
+        System.out.println("Initialization Logic™");
     }
 
     public void destroy() {
-        System.out.println(" * Destruction Logic®");
+        System.out.println("Destruction Logic®");
     }
 }

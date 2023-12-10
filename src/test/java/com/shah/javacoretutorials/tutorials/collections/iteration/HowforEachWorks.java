@@ -26,13 +26,12 @@ class HowforEachWorks {
       }
     };
 
-    // 2nd step: since consumer is a functional interface, we can remove boiler
-    // plate codes and add lambda exp.
+    // 2nd step: since consumer is a functional interface, we can remove boilerplate codes and add lambda exp.
     Consumer<Integer> d = (Integer i) -> {
       System.out.println("in d: " + i);
     };
 
-    // 3rd step: integer can be declared once, so the right right can be removed
+    // 3rd step: integer can be declared once, so the type can be removed
     Consumer<Integer> e = (i) -> {
       System.out.println("in e: " + i);
     };
@@ -43,19 +42,22 @@ class HowforEachWorks {
     // 5th step: since there is only 1 parameter, we can remove the round bracket
     Consumer<Integer> g = i -> System.out.println("in g: " + i);
 
-    // final step: rather than implementing and then call, insert the implementation
-    // in the call method
+    // final step: rather than implementing and then call, insert the implementation in the call method:
+
     // Consumer<Integer> h = i -> System.out.println("in g: " + i); <-this
     // definition goes right into the call method
-    // values.forEach(h); <- method definition replaces the reference itself in the
-    // call method
+
+    // values.forEach(h); <- method definition replaces the reference itself in the call method
     values.forEach(i -> System.out.println("in final: " + i));
 
+    // Bonus: method reference
+    values.forEach(System.out::println);
+
+    // Usage of Consumer interface
     values.forEach(c);
     values.forEach(d);
     values.forEach(e);
     values.forEach(f);
     values.forEach(g);
-    values.forEach(i -> System.out.println(i));
   }
 }

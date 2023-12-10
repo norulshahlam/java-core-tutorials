@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
 
     /*
-    This is Java-based configuration, rather than annotation-based configuration. All the annotations are removed from the other classes and is replaced by this configuration here.
+    This is Java-based configuration, rather than annotation-based configuration. All the annotations are removed from the other classes and are replaced by this configuration here.
      */
 
     @Bean

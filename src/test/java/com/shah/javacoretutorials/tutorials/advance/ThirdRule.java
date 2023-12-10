@@ -22,8 +22,7 @@ interface B {
     }
 }
 
-class C extends A implements B {
-}
+class C extends A implements B {}
 
 public class ThirdRule {
 

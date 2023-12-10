@@ -8,14 +8,14 @@ import java.util.List;
 /*
 Lower Bounded Wildcards
 
-The Upper Bounded Wildcards section shows that an upper bounded wildcard restricts the unknown type to be a specific type or a subtype of that type and is represented using the extends keyword. 
+The Upper Bounded Wildcards section shows that an upper-bounded wildcard restricts the unknown type to be a specific type or a subtype of that type and is represented using the "extends" keyword.
 
-In a similar way, a lower bounded wildcard restricts the unknown type to be a specific type or a super type of that type.
+In a similar way, a lower-bounded wildcard restricts the unknown type to be a specific type or a super type of that type.
 
 https://docs.oracle.com/javase/tutorial/java/generics/lowerBounded.html
 
 */
-class lowerBound4 {
+class LowerBoundThree {
     
     @SuppressWarnings("unused")
     @Test
@@ -27,16 +27,16 @@ class lowerBound4 {
         List<RedCat> redCatList = new ArrayList<>();
         List<Dog> dogList = new ArrayList<>();
 
-        // can add list of super class Animal of Cat class
+        // can add a list of superclass Animal of Cat class
         addCat(animalList);
 
-        // can add list of Cat class
+        // can add a list of Cat class
         addCat(catList);
 
-        // compile time error - can not add list of subclass RedCat of Cat class
+        // compile time error - cannot add a list of subclass RedCat of Cat class
         // addCat(redCatList);
 
-        // compile time error - can not add list of subclass Dog of Superclass Animal of Cat class
+        // compile time error - cannot add a list of subclass Dog of Superclass Animal of Cat class
         // addCat.addMethod(dogList);
     }
 

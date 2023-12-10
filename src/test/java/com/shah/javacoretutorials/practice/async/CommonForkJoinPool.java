@@ -47,8 +47,8 @@ public class CommonForkJoinPool {
     @Test
     void getGroceryDiscountList() {
         /*
-         This method uses Completable future which uses ForkJoinPool.
-         If there is 15 threads, iterating 60 times will take approximately 60/15 = 4 seconds
+         This method uses Completable future, which uses ForkJoinPool.
+         If there are 15 threads, iterating 60 times will take approximately 60/15 = 4 seconds
          */
         startTimer();
         List<GroceriesDiscount> groceryDiscountList = service.getGroceryDiscountList(60);

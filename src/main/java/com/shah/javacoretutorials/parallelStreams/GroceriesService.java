@@ -98,7 +98,7 @@ public class GroceriesService {
         /**
          * This method includes exception handling with recovery - you can return a value during exception.
          * thenCombine is a BiFunction while thenApply is a Function.
-         * Both takes input/s & transforms it into output.
+         * Both take input/s & transforms it into output.
          */
         CompletableFuture<String> hello = CompletableFuture.supplyAsync(() -> helloWorldService.hello());
 

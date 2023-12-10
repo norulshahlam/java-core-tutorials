@@ -70,11 +70,11 @@ class MapExamples {
         /*
         IdentityHashMap vs HashMap
 
-        IdentityHashMap uses the equality operator “==” for comparing keys and values while HashMap uses the equals method for comparing keys and values inside Map.
+        IdentityHashMap uses the equality operator “==” for comparing keys and values while HashMap uses the equals() method for comparing keys and values inside the Map.
 
-        Since IdentityHashMap doesn’t use equals() its comparatively faster than HashMap for an object with expensive equals().
+        Since IdentityHashMap doesn’t use equals(), its comparatively faster than HashMap for an object with expensive equals().
 
-        IdentityHashMap doesn’t require keys to be immutable as it is not relied on equals().
+        IdentityHashMap doesn’t require keys to be immutable as it doesn't relied on equals().
 
         Shows that duplication is based on key, not value
          */

@@ -1,18 +1,18 @@
 package com.shah.javacoretutorials.tutorials.collections.iteration;
 
 /*
-3 ways to loop thru a collections:
+5 ways to loop through a collections:
 
 1. for loop
-2. iterator, 
-3. enhanced forloop
-4. static method reference
+2. Iterator,
+3. Enhanced for loop
+4. Static method reference
 5. forEach
 
-‘Iterator’ is an interface which belongs to collection framework. It allows us to traverse the collection, 
+‘Iterator’ is an interface that belongs to collection framework. It allows us to traverse the collection,
 access the data element and remove the data elements of the collection
 
-An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an "iterator" because "iterating" is the technical term for looping. It is an interface which belongs to collection framework.
+An Iterator is an object that can be used to loop through collections, like ArrayList and HashSet. It is called an "iterator" because "iterating" is the technical term for looping. It is an interface that belongs to the collection framework.
 
 The iterator() method can be used to get an Iterator for any collection:
 

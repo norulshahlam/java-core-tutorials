@@ -4,11 +4,11 @@ package com.shah.javacoretutorials.tutorials.collections.sort;
 
     ****DEPRECATED****
 
-this is the same as previous demo.
+this is the same as the previous demo.
 comparator can be used to sort multiple elements, so we will create 1 to sort
  by name, another 1 by age. steps are similar to comparable:
 
- a) create a class that implement comparator
+ a) create a class that implements comparator
  b) override compareTo() inside this class to define your sorting logic
  c) create obj of this class in main()
  d) use this overridden method by Collections.sort(itemToBeSorted, yourCustomSort);
@@ -20,7 +20,6 @@ import com.shah.javacoretutorials.model.Student;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 class Comparator2 {
@@ -35,15 +34,15 @@ class Comparator2 {
         al.forEach(s -> System.out.println(s.getRollNo() + " " + s.getName() + " " + s.getMarks()));
 
         System.out.println("\nSorting by Name");
-        Collections.sort(al, new sortByName());
+        al.sort(new sortByNameAsc());
         al.forEach(s -> System.out.println(s.getRollNo() + " " + s.getName() + " " + s.getMarks()));
 
         System.out.println("\nsorting by Age Asc");
-        Collections.sort(al, new sortByMarkAsc());
+        al.sort(new sortByMarkAsc());
         al.forEach(s -> System.out.println(s.getRollNo() + " " + s.getName() + " " + s.getMarks()));
 
         System.out.println("\nsorting by Age Desc");
-        Collections.sort(al, new sortByMarkDesc());
+        al.sort(new sortByMarkDesc());
         al.forEach(s -> System.out.println(s.getRollNo() + " " + s.getName() + " " + s.getMarks()));
     }
 }
@@ -60,7 +59,7 @@ class sortByMarkDesc implements Comparator<Student> {
     }
 }
 
-class sortByName implements Comparator<Student> {
+class sortByNameAsc implements Comparator<Student> {
     public int compare(Student s1, Student s2) {
         return s1.getName().compareTo(s2.getName());
     }

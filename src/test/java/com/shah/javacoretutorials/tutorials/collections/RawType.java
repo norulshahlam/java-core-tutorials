@@ -10,15 +10,15 @@ class RawType {
     @Test
     void test() {
 		
-		/*  we are now creating an ArrayList without datatype defined. This is considered not type-safe.
-		this is also called raw type  */
+		/*  We are now creating an ArrayList without datatype defined. This is considered not type-safe.
+		This is also called raw type  */
         ArrayList salary = new ArrayList();
         salary.add(2);
         salary.add(3);
         salary.add("hi");
 
-		/* if u wanna create arrayist of certain datatype ie int, you cannot assign int cos it only accept Integer class.
-		thats where wrapper class comes. Collections only accept wrapper class, not primitive */
+		/* if you want to create arraylist of certain datatype i.e., int, you cannot assign int cos it only accepts Integer class.
+		that's where wrapper class comes. Collections only accept wrapper class, not primitive */
         ArrayList<Integer> bonus = new ArrayList<>();
         bonus.add(4);
         bonus.add(3);

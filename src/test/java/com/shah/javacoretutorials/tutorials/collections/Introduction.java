@@ -86,14 +86,14 @@ class Introduction {
     void test() {
 
         /*
-         * List Interface
-         * 1. store the ordered collection of objects.
-         * 2. It can have duplicate values.
+         List Interface
+         1. Store the ordered collection of objects.
+         2. It can have duplicate values.
          */
-        List<Integer> list1 = new ArrayList<Integer>();
-        List<Integer> list2 = new LinkedList<Integer>();
-        List<Integer> list3 = new Vector<Integer>();
-        List<Integer> list4 = new Stack<Integer>();
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new LinkedList<>();
+        List<Integer> list3 = new Vector<>();
+        List<Integer> list4 = new Stack<>();
 
         /*
          Queue Interface
@@ -101,16 +101,16 @@ class Introduction {
          2. ordered list
          */
 
-        Queue<String> q1 = new PriorityQueue<String>();
-        Queue<String> q2 = new ArrayDeque<String>();
+        Queue<String> q1 = new PriorityQueue<>();
+        Queue<String> q2 = new ArrayDeque<>();
 
         /*
          Deque Interface
-         1. Remove and add the elements from both the side.
+         1. Remove and add the elements from both sides.
          2. "double-ended queue" - enables to perform the operations at both the ends.
          */
 
-        Deque<String> d = new ArrayDeque<String>();
+        Deque<String> d = new ArrayDeque<>();
 
         /*
          Set Interface
@@ -119,9 +119,9 @@ class Introduction {
          3. store at most one null value
          */
 
-        Set<Integer> s1 = new HashSet<Integer>();
-        Set<Integer> s2 = new LinkedHashSet<Integer>();
-        Set<Integer> s3 = new TreeSet<Integer>();
+        Set<Integer> s1 = new HashSet<>();
+        Set<Integer> s2 = new LinkedHashSet<>();
+        Set<Integer> s3 = new TreeSet<>();
 
         /*
             SortedSet Interface
@@ -130,7 +130,6 @@ class Introduction {
          3. arranged in the increasing (ascending) order.
          4. has additional methods that inhibit the natural ordering of the elements.
          */
-        SortedSet<Integer> set = new TreeSet<Integer>();
-
+        SortedSet<Integer> set = new TreeSet<>();
     }
 }

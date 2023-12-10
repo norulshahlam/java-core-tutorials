@@ -8,7 +8,7 @@ import java.util.List;
 /*
 
 Unbounded Wildcards
-The unbounded wildcard type is specified using the wildcard character (?), for example, List<?>. This is called a list of unknown type. There are two scenarios where an unbounded wildcard is a useful approach:
+The unbounded wildcard type is specified using the wildcard character (?), for example, List<?>. This is called a list of unknown types. There are two scenarios where an unbounded wildcard is a useful approach:
 
 - If you are writing a method that can be implemented using functionality provided in the Object class.
 
@@ -17,7 +17,7 @@ The unbounded wildcard type is specified using the wildcard character (?), for e
 https://docs.oracle.com/javase/tutorial/java/generics/unboundedWildcards.html
 
 */
-class UnboundedFive {
+class UnboundedFour {
 
     @Test
     void test() {

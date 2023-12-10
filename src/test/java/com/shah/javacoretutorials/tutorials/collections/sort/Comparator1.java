@@ -13,13 +13,20 @@ import java.util.List;
 THIS IS NO LONGER WIDELY USED AS WE CAN USE JAVA STREAMS TO ACHIEVE THE SAME WITH SHORTER CODE
 */
 class Comparator1 {
+    private static int compare(Integer o1, Integer o2) {
+        return o1 % 10 > o2 % 10 ? 1 : -1;
+    }
+
     @Test
     void test() {
         List<Integer> val1 = Arrays.asList(403, 109, 845, 330, 23);
         System.out.println("before sort:" + val1);
 
-        Collections.sort(val1, new CompSet());
+        val1.sort(new CompSet());
         System.out.println("after sort:" + val1);
+
+        // Leveraging method reference
+        val1.sort(Comparator1::compare);
     }
 }
 

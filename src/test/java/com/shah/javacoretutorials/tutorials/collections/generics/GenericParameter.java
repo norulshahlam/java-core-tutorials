@@ -10,14 +10,14 @@ Generics means parameterized types. The idea is to allow type (Integer, String, 
 An entity such as class, interface, or method that operates on a parameterized type is called generic entity.
 
 Why Generics?
-Object is the superclass of all other classes and Object reference can refer to any type object. These features lack type safety. Generics adds that type safety feature
+Object is the superclass of all other classes and Object reference can refer to any type object. These features lack type safety. Generics add that type safety feature
 
 Java Generics were introduced in JDK 5.0 with the aim of reducing bugs and adding an extra layer of abstraction over types.
 
 here we have:
  a method with a generic parameter.
  a class with a generic parameter.
-this way, u can insert any value type, not restricted to 1 datatype
+this way, you can insert any value type, not restricted to 1 datatype
 */
 class GenericParameter {
     @Test
