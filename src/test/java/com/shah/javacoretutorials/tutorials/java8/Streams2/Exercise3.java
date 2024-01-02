@@ -1,4 +1,4 @@
-package com.shah.javacoretutorials.practice.streams;
+package com.shah.javacoretutorials.tutorials.java8.Streams2;
 
 import com.shah.javacoretutorials.model.GroceriesInfo;
 import com.shah.javacoretutorials.parallelStreams.InitData;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class LetsPractice {
+class Exercise3 {
 
     List<GroceriesInfo> groceries = null;
 
