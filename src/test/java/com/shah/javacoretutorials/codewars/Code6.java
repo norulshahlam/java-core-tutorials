@@ -8,7 +8,7 @@ import static java.lang.Integer.MIN_VALUE;
 import static java.util.Arrays.stream;
 
 
-public class Code9 {
+public class Code6 {
     /**
      * The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
      * <p>
@@ -23,7 +23,6 @@ public class Code9 {
     void contextLoads() {
         int[] a = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
         sequence(a);
-
     }
 
     public static int sequence(int[] arr) {
