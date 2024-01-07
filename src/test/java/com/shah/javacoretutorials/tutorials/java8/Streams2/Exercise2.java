@@ -37,7 +37,7 @@ public class Exercise2 {
         System.out.println(IntStream.iterate(0, e -> e + 5).limit(10).sum());
         // same as (4), only we can peek what is the value range
         System.out.println(IntStream.iterate(0, e -> e + 5).limit(10).peek(System.out::println).sum());
-        // same as (4), only we ssstore into list
+        // same as (4), only we store into list
         System.out.println(IntStream.iterate(0, e -> e + 5).limit(10).boxed().collect(Collectors.toList()));
         // same as (4), only we use LongStream instead of IntStream to use large numbers
         System.out.println(LongStream.iterate(1, e -> e * 500).limit(10).peek(System.out::println).sum());
