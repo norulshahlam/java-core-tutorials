@@ -7,7 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /*
 https://www.digitalocean.com/community/tutorials/atomicinteger-java
 
-Atomic operations are performed in a single unit of task without interference from other operations. Atomic operations are necessity in multi-threaded environment to avoid data inconsistency.
+Atomic operations are performed in a single unit of a task without interference from other operations.
+Atomic operations are a necessity in multithreading environment to avoid data inconsistency.
  */
 class JavaAtomicInteger {
     @Test
