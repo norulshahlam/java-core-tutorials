@@ -21,7 +21,7 @@ class AtomicCounter {
     public void increment() {
         count.incrementAndGet();
     }
-}
+
 
 // 2.
 // class AtomicCounter {
@@ -32,7 +32,9 @@ class AtomicCounter {
 //   }
 // }
 
-class ThreadSafeFour {
+}
+
+class ThreadSafeFourr {
     @Test
     void test() throws InterruptedException {
 
