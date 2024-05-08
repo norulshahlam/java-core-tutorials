@@ -7,7 +7,7 @@ class ThreadWaitNotify {
     void test() {
         SharedObject obj = new SharedObject();
 
-        Thread thread1 = new Thread(() -> obj.printMessage());
+        Thread thread1 = new Thread(obj::printMessage);
         Thread thread2 = new Thread(() -> obj.setMessage("A message from thread1"));
 
         thread1.start();
