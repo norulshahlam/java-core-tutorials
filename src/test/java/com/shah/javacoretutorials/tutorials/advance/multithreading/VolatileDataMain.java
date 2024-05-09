@@ -3,50 +3,41 @@ package com.shah.javacoretutorials.tutorials.advance.multithreading;
 import org.junit.jupiter.api.Test;
 
 /*
+volatile has semantics for memory visibility. Basically, the value of a volatile field becomes visible to all readers (other threads in particular) after a write operation completes on it. Without volatile, readers could see some non-updated value. To tackle the issues with Cache Coherence, we ensure that updates to variables propagate predictably to other threads.
  */
 class VolatileDataMain {
 
-    private final static int noOfThreads = 20;
+    private static boolean negativeReading;
+    private static volatile boolean positiveReading;
 
     @Test
-    void test() throws InterruptedException {
-        VolatileData volatileData = new VolatileData();     //object of VolatileData class
-        Thread[] threads = new Thread[noOfThreads];     //creating Thread array
-        for (int i = 0; i < noOfThreads; ++i)
-            threads[i] = new VolatileThread(volatileData);
-        for (int i = 0; i < noOfThreads; ++i)
-            threads[i].start();                 //starts all reader threads
-        for (int i = 0; i < noOfThreads; ++i)
-            threads[i].join();                  //wait for all threads
+    void negativeSample() throws InterruptedException {
+        Thread myCount = new Thread(() -> {
+            int i = 0;
+            while (!negativeReading) {
+                i++;
+            }
+            System.out.println("Reading is TRUE");
+        });
+        myCount.start();
+        Thread.sleep(1000);
+        negativeReading = true;
+        System.out.println("Completed");
+    }
+    @Test
+    void positiveSample() throws InterruptedException {
+        Thread myCount = new Thread(() -> {
+            int i = 0;
+            while (!positiveReading) {
+                i++;
+            }
+            System.out.println("Reading is TRUE");
+        });
+        myCount.start();
+        Thread.sleep(1000);
+        positiveReading = true;
+        System.out.println("Completed");
     }
 }
 
-class VolatileData {
-    private volatile int counter = 0;
 
-    public int getCounter() {
-        return counter;
-    }
-
-    //increases the value of AtomicCounter by 1
-    public void increaseCounter() {
-        ++counter;
-    }
-}
-
-class VolatileThread extends Thread {
-    private final VolatileData data;
-
-    public VolatileThread(VolatileData data) {
-        this.data = data;
-    }
-
-    @Override
-    public void run() {
-        int oldValue = data.getCounter();
-        System.out.println("[Thread " + Thread.currentThread().getId() + "]: Old value = " + oldValue);
-        data.increaseCounter();
-        int newValue = data.getCounter();
-        System.out.println("[Thread " + Thread.currentThread().getId() + "]: New value = " + newValue);
-    }
-}
