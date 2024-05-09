@@ -1,6 +1,9 @@
 package com.shah.javacoretutorials.tutorials.collections.map;
 
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.util.*;
 
@@ -30,7 +33,7 @@ Hashtable
 example - Difference between HashMap, LinkedHashMap & TreeMap
 
 */
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class MapExamples {
 
     Map<Integer, String> m = Map.of(
@@ -40,6 +43,7 @@ class MapExamples {
             5, "B");
 
     @Test
+    @Order(1)
     void testHashMap() {
         Map<Integer, String> hashMap = new HashMap<>(m);
         System.out.println("\noriginal value: "+m);
@@ -52,6 +56,7 @@ class MapExamples {
     }
 
     @Test
+    @Order(2)
     void testLinkedHashMap() {
         Map<Integer, String> linkedHashMap = new LinkedHashMap<>(m);
         System.out.println("\noriginal value: "+m);
@@ -59,6 +64,7 @@ class MapExamples {
     }
 
     @Test
+    @Order(3)
     void testTreeMap() {
         Map<Integer, String> treeMap = new TreeMap<>(m);
         System.out.println("\noriginal value: "+m);
@@ -66,6 +72,7 @@ class MapExamples {
     }
 
     @Test
+    @Order(4)
     void testIdentityHashMap() {
         /*
         IdentityHashMap vs HashMap
@@ -74,7 +81,7 @@ class MapExamples {
 
         Since IdentityHashMap doesn’t use equals(), its comparatively faster than HashMap for an object with expensive equals().
 
-        IdentityHashMap doesn’t require keys to be immutable as it doesn't relied on equals().
+        IdentityHashMap doesn’t require keys to be immutable as it doesn't rely on equals().
 
         Shows that duplication is based on key, not value
          */
