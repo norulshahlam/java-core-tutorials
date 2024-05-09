@@ -22,7 +22,7 @@ class HowToImplementThread {
 
     @SuppressWarnings({"unused"})
     @RepeatedTest(5)
-    void test() throws InterruptedException {
+    void test() {
         /* Method 1 */
         MyThreadExtend t1 = new MyThreadExtend();
 
