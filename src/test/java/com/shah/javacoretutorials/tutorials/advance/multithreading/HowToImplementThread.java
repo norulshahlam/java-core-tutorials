@@ -2,7 +2,7 @@ package com.shah.javacoretutorials.tutorials.advance.multithreading;
 
 import org.junit.jupiter.api.RepeatedTest;
 
-import static com.shah.javacoretutorials.tutorials.advance.multithreading.IntroOne.count;
+import static com.shah.javacoretutorials.tutorials.advance.multithreading.HowToImplementThread.count;
 
 /**
  * diff way to use thread.
@@ -16,7 +16,7 @@ import static com.shah.javacoretutorials.tutorials.advance.multithreading.IntroO
  * <p>
  * run this to see who / show they start off
  */
-class IntroOne {
+class HowToImplementThread {
 
     static int count = 500000;
 
