@@ -59,15 +59,16 @@ class ThreadSafeFourr {
 
         AtomicCounter2 c = new AtomicCounter2();
         // thread1
-        Thread t1 = new Thread(() -> IntStream
+        Thread increaseCount1 = new Thread(() -> IntStream
                 .range(0, 1000000).forEach(i -> c.increment()));
         // thread2
-        Thread t2 = new Thread(() -> IntStream
+        Thread increaseCount2 = new Thread(() -> IntStream
                 .range(0, 1000000).forEach(i -> c.increment()));
-        t1.start();
-        t2.start();
-        t1.join();
-        t2.join();
+        increaseCount1.start();
+        increaseCount2.start();
+
+        increaseCount1.join();
+        increaseCount2.join();
         System.out.println(c.count);
     }
 }
