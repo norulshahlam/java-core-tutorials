@@ -13,42 +13,57 @@ We also we can create thread using anonymous class instead of creating a new cla
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.IntStream;
 
 class AtomicCounter {
 
     // 1.
     AtomicInteger count = new AtomicInteger();
+
     public void increment() {
         count.incrementAndGet();
     }
+}
 
+class ThreadSafeFour {
+    @Test
+    void testUsingAtomic() throws InterruptedException {
 
-// 2.
-// class AtomicCounter {
-//   int count = 0;
+        AtomicCounter c = new AtomicCounter();
+        // thread1
+        Thread t1 = new Thread(() -> IntStream
+                .range(0, 1000000).forEach(i -> c.increment()));
+        // thread2
+        Thread t2 = new Thread(() -> IntStream
+                .range(0, 1000000).forEach(i -> c.increment()));
+        t1.start();
+        t2.start();
+        t1.join();
+        t2.join();
+        System.out.println(c.count);
+    }
 
-//   public synchronized void increment() {
-//     count++;
-//   }
-// }
+}
 
+class AtomicCounter2 {
+    int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
 }
 
 class ThreadSafeFourr {
     @Test
-    void test() throws InterruptedException {
+    void testUsingAtomic() throws InterruptedException {
 
-        AtomicCounter c = new AtomicCounter();
+        AtomicCounter2 c = new AtomicCounter2();
         // thread1
-        Thread t1 = new Thread(() -> {
-            for (int i = 1; i <= 1000000; i++)
-                c.increment();
-        });
+        Thread t1 = new Thread(() -> IntStream
+                .range(0, 1000000).forEach(i -> c.increment()));
         // thread2
-        Thread t2 = new Thread(() -> {
-            for (int i = 1; i <= 1000000; i++)
-                c.increment();
-        });
+        Thread t2 = new Thread(() -> IntStream
+                .range(0, 1000000).forEach(i -> c.increment()));
         t1.start();
         t2.start();
         t1.join();
