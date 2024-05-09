@@ -18,8 +18,14 @@ A race condition occurs when two or more threads can access shared data, and the
 
 Below is an example of a race condition and how to fix it (ensure thread-safe):
 
-1. AtomicInteger - use this class as ref and use incrementAndGet() to count
-2. synchronized - use this keyword in your method. It only calls by 1 thread at a time. If t1 is executed, t2 have to wait.
+1. AtomicInteger - Atomic operations are performed in a single unit of a task without interference from other operations. Atomic operations are a necessity in multithreading environment to avoid data inconsistency.
+2. Synchronized - use this keyword in your method. It only calls by 1 thread at a time. If t1 is executed, t2 have to wait.
+
+We also demonstrate 3 ways to use multiple threads:
+1. Runnable + Thread
+2. Thread + Anonymous class
+3. Executor service
+
 
 We also create thread using anonymous class instead of creating a new class n extends thread
 
