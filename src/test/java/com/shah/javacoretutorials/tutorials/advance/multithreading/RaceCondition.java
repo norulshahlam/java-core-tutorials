@@ -18,7 +18,7 @@ A race condition occurs when two or more threads can access shared data, and the
 
 Below is an example of a race condition and how to fix it (ensure thread-safe):
 
-1. AtomicInteger - Atomic operations are performed in a single unit of a task without interference from other operations. Atomic operations are a necessity in multithreading environment to avoid data inconsistency.
+1. AtomicInteger - Atomic operations are performed in a single unit of a task without interference from other operations. Necessity in multithreading environment to avoid data inconsistency.
 2. Synchronized - Allows only a single thread at a time to access the shared resource and forces all other threads to wait for that accessing thread to release its access to the shared resource
 
 
