@@ -22,14 +22,13 @@ Below is an example of a race condition and how to fix it (ensure thread-safe):
 2. Synchronized - Allows only a single thread at a time to access the shared resource and forces all other threads to wait for that accessing thread to release its access to the shared resource
 
 
-
 We also demonstrate 3 ways to use multiple threads:
 1. Runnable + Thread
 2. Thread + Anonymous class
 3. Executor service
 
 
-We also create thread using anonymous class instead of creating a new class n extends thread
+We also create thread using anonymous class instead of creating a new class & extends thread
 
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
