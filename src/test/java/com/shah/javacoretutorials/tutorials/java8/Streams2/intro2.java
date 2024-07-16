@@ -30,7 +30,7 @@ public class intro2 {
         System.out.println("***************");
         sortReverseNumbers(numbers);
         System.out.println("***************");
-        courses.stream().forEach(System.out::println);
+        courses.forEach(System.out::println);
         System.out.println("***************");
         sortByLength(courses);
     }
