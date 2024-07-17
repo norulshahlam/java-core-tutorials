@@ -49,7 +49,6 @@ class RunnableVsCallable {
         }
 
         executorService.shutdown();
-
         System.out.println(count.get());
     }
 
