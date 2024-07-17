@@ -11,12 +11,38 @@ import java.util.stream.IntStream;
 
 https://www.youtube.com/watch?v=3vptroRUvn8
 https://www.linkedin.com/pulse/understanding-race-conditions-causes-prevention-pavan-pothuganti-9z61c/
+https://www.youtube.com/watch?v=71dgtPrbToE&t=5s
+
+Volatile
+For read / write variables
+Are never cached and are read directly from the main memory.
+Changes done by 1 thread are visible to other threads.
+Can be used to implement Non-lock-based algorithms.
+Relatively faster than Synchronized.
+Possibility of deadlock and livelock.
+Used to ensure visibility of changes to variables across threads, but it does not solve the problem of atomicity required for operations like incrementing a counter.
+
+Synchronized
+For executing on Methods/blocks.
+1 & only 1 thread is allowed to enter block of code at the same time.
+Can be used to implement lock-based algorithms.
+Slow because of acquire and release of lock.
+No possibility of deadlock and livelock.
+
+Atomic
+For read / write / modify variables.
+Can be used to implement Non-lock-based algorithms.
+Can be a combination of volatile and synchronized.
+Relatively faster than Synchronized and Volatile.
+Possibility of deadlock and livelock.
+
+************************
 
 Thread safe means that multiple threads can use a method or class instance at the same time without any problems occurring.
 
 A race condition occurs when two or more threads can access shared data, and they try to change it at the same time. Because the thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to access the shared data. Therefore, the result of the change in data is dependent on the thread scheduling algorithm, i.e., both threads are "racing" to access/change the data.
 
-Below is an example of a race condition and how to fix it (ensure thread-safe):
+Below is an example of how to fix it (ensure thread-safe):
 
 1. AtomicInteger - Atomic operations are performed in a single unit of a task without interference from other operations. Necessity in multithreading environment to avoid data inconsistency.
 2. Synchronized - Allows only a single thread at a time to access the shared resource and forces all other threads to wait for that accessing thread to release its access to the shared resource
