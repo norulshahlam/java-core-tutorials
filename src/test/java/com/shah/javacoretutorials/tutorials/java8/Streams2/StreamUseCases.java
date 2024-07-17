@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Exercise3 {
+class StreamUseCases {
 
     List<GroceriesInfo> groceries = null;
 
