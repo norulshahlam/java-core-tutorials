@@ -14,7 +14,7 @@ public class ConcurrentHashMapVsSynchronizedMap {
 
     /*
     https://www.baeldung.com/java-synchronizedmap-vs-concurrenthashmap
-    
+
     SynchronizedMap and ConcurrentHashMap are both thread safe class and can be used in multithreading application, the main difference between them is regarding how they achieve thread safety.
 
     SynchronizedMap acquires lock on the entire Map instance.
