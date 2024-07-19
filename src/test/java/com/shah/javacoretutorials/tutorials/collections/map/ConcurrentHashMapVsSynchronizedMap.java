@@ -20,6 +20,11 @@ public class ConcurrentHashMapVsSynchronizedMap {
 
     ConcurrentHashMap acquires lock on the individual Map instance.
     ConcurrentHashMap doesn’t allow null in keys or values
+
+    When to Use???
+    We should favor Collections.synchronizedMap() when data consistency is of utmost importance, and we should choose ConcurrentHashMap for performance-critical applications where there are far more write operations than there are read operations.
+
+    This is because the Collections.synchronizedMap() requires each thread to acquire a lock on the entire object for both read/write operations. By comparison, the ConcurrentHashMap allows threads to acquire locks on separate segments of the collection, and make modifications at the same time.
      */
 
     @Test
