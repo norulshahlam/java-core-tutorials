@@ -28,7 +28,7 @@ Hashtable
 - thread safe version of hashmap
 - unsorted, unordered
 - hashcode is used
-- not allow null val key
+- doesn't allow null val & key
 
 example - Difference between HashMap, LinkedHashMap & TreeMap
 
