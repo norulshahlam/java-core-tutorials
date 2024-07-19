@@ -54,7 +54,7 @@ public class ConcurrentHashMapVsSynchronizedMap {
 
     @Test
     void compareTimeTaken() throws InterruptedException {
-        int numberOfTasks = 10000000;
+        int numberOfTasks = 20000000;
         int numberOfThreads = 10;
 
         // Test SynchronizedMap
