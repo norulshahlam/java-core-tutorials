@@ -6,6 +6,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class ConcurrentHashMapVsSynchronizedMap {
 
@@ -13,7 +16,10 @@ public class ConcurrentHashMapVsSynchronizedMap {
     SynchronizedMap and ConcurrentHashMap are both thread safe class and can be used in multithreading application, the main difference between them is regarding how they achieve thread safety.
 
     SynchronizedMap acquires lock on the entire Map instance.
+    SynchronizedMap - if backed by HashMap or LinkedHashMap, only one null as a key and any number of null values. if backed by TreeMap, we can have null values but not null keys.
+
     ConcurrentHashMap acquires lock on the individual Map instance.
+    ConcurrentHashMap doesn’t allow null in keys or values
      */
 
     @Test
@@ -44,5 +50,39 @@ public class ConcurrentHashMapVsSynchronizedMap {
         for (Map.Entry<String, String> entry : concurrentMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
+    }
+
+    @Test
+    void compareTimeTaken() throws InterruptedException {
+        int numberOfTasks = 10000000;
+        int numberOfThreads = 10;
+
+        // Test SynchronizedMap
+        Map<String, String> synchronizedMap = Collections.synchronizedMap(new HashMap<>());
+        long synchronizedMapTime = measureTimeForMap(synchronizedMap, numberOfTasks, numberOfThreads);
+        System.out.println("Time taken for SynchronizedMap: " + synchronizedMapTime + " ms");
+
+        // Test ConcurrentHashMap
+        Map<String, String> concurrentMap = new ConcurrentHashMap<>();
+        long concurrentMapTime = measureTimeForMap(concurrentMap, numberOfTasks, numberOfThreads);
+        System.out.println("Time taken for ConcurrentHashMap: " + concurrentMapTime + " ms");
+    }
+
+    private static long measureTimeForMap(Map<String, String> map, int numberOfTasks, int numberOfThreads) throws InterruptedException {
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+
+        long startTime = System.nanoTime();
+
+        for (int i = 0; i < numberOfTasks; i++) {
+            final int index = i;
+            executor.submit(() -> {
+                map.put("key" + index, "value" + index);
+            });
+        }
+        executor.shutdown();
+        executor.awaitTermination(1, TimeUnit.MINUTES);
+
+        long endTime = System.nanoTime();
+        return (endTime - startTime) / 1_000_000; // Convert to milliseconds
     }
 }
