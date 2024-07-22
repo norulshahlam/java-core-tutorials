@@ -7,7 +7,7 @@ https://www.baeldung.com/java-string-pool
 
 1. equals() is a method & '==' is an operator.
 
-2. ''==' is for reference comparison (address comparison) & .equals() is for content comparison. 
+2. '==' is for reference comparison (address comparison) & .equals() is for content comparison.
 
 In simple words, "==" checks if both objects point to the same memory location 
 whereas .equals() evaluates to the comparison of values in the objects.
