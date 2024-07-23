@@ -26,6 +26,21 @@ public class Application {
         Singleton scope is the default scope for beans in Spring container. This means that if we do not specify a scope for a bean, Spring will create a single bean instance and will reuse it whenever requested.
 
         One way to check is to use the hashcode() method. a singleton scope always returns the same hashcode value because it is the same instance.
+
+        The latest version of the Spring framework defines 6 types of scopes:
+
+        singleton
+        prototype
+        request
+        session
+        application
+        websocket
+
+        four additional scopes that are only available in a web-aware application context. We use these less often in practice.
+
+        The request scope creates a bean instance for a single HTTP request, while the session scope creates a bean instance for an HTTP Session.
+
+        The application scope creates the bean instance for the lifecycle of a ServletContext, and the websocket scope creates it for a particular WebSocket session.
          */
 
         PrototypeScope prototypeScope = applicationContext.getBean(PrototypeScope.class);
