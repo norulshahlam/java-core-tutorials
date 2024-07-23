@@ -21,7 +21,7 @@ public class Application {
         /*
         Get the Food bean you just created. there are 2 ways:
         1. use the class name
-        2. use the bean you defined
+        2. use the bean name you defined in @Component
          */
         Food foodBean = applicationContext.getBean(Food.class);
         Food foodBean2 = (Food) applicationContext.getBean("foodBean");
