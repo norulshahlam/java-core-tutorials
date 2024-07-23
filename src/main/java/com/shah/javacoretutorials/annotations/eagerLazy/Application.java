@@ -21,7 +21,7 @@ public class Application {
 
         @Lazy annotation can be used with @Configuration, @Component and @Bean annotations. Eager initialization is recommended to avoid and detect all possible errors immediately rather than at runtime.
 
-        Use case: We created two beans with constructor to print a string. one is eager and one is lazy. when spring starts, we see that only the eager class gets loaded from the log. Below, we manually load the lazy class hence only then it gets loaded.
+        Use case: We created two beans with constructor to print a string. one is eager and one is lazy. when spring starts, we see that only the eager class gets loaded from the log. Below, we manually load the lazy class hence only then it gets loaded. If we comment below code, then the lazyLoader wont be loaded
          */
 
         LazyLoader lazyLoader = applicationContext.getBean(LazyLoader.class);
