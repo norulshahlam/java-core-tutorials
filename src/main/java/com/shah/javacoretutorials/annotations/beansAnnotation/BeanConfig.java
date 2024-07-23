@@ -22,10 +22,13 @@ public class BeanConfig {
 
     /*
     @Bean annotation provides initMethod and destroyMethod attributes to perform certain actions after bean initialization or before bean destruction by a container.
+
+    Also, here u can change the implementation to Pizza or Burger.
+
      */
 
     @Bean(initMethod = "init", destroyMethod = "destroy")
     public Meal meal() {
-        return new Meal(pizza());
+        return new Meal(burger());
     }
 }
