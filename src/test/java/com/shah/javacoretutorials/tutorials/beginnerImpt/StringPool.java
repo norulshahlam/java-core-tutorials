@@ -55,17 +55,13 @@ class StringPool {
         String a = "apple";
         String b = "apple";
         String c = "APPLE";
-        String d = "apple";
-        String e = "apple";
-        String f = d.intern();
+        String d = new String("apple");
+        String e = a.intern();
 
-        assertSame(a, b); //true
-        assertNotSame(b, c); //false bcos it is case sensitive
-        assertTrue(b.equalsIgnoreCase(c)); //false bcos it is case sensitive
-        assertNotSame(a, d); //false - diff obj
-        assertEquals(a, d); //true - same val
-        assertNotSame(d, e); //false - diff obj
-        assertEquals(d, e); //true - same value
-        assertSame(f, a);
+        assertSame(a, b); // true
+        assertNotSame(b, c); // false bcos it is case sensitive
+        assertTrue(b.equalsIgnoreCase(c)); // true cos case sensitive is ignored
+        assertSame(a, e);
+        assertNotSame(a, d); // false - diff obj
     }
 }
