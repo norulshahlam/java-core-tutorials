@@ -24,10 +24,13 @@ public class Food {
 //        this.pepsi = pepsi;
 //    }
 
-    /* By setter injection. */
+    /*
+    Here u can change the implementation to Coke or Pepsi
+     */
 
     private Pepsi pepsi;
 
+    /* By setter injection. */
     @Autowired
     public void setDrink(Pepsi pepsi) {
         this.pepsi = pepsi;
