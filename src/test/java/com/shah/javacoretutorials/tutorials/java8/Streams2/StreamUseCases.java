@@ -81,6 +81,7 @@ class StreamUseCases {
     @Test
     void findItemArriveDate() {
         List<GroceriesInfo> collect = groceries.stream()
+
                 .filter(date -> date.getArrivalDate().isEqual(LocalDate.of(2022, 8, 1)))
                 .toList();
         collect.forEach(System.out::println);
