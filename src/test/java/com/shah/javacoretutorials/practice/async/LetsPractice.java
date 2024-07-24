@@ -3,9 +3,13 @@ package com.shah.javacoretutorials.practice.async;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 import static com.shah.javacoretutorials.util.CommonUtil.*;
 
@@ -62,6 +66,17 @@ class LetsPractice {
                 .toList();
         System.out.println(list);
         System.out.println(list2);
+    }
+
+    @Test
+    void filterEvenNumberAndDisplayOnlyOddNumber() {
+        List<Integer> allNumber = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> onlyOddNumber = allNumber.stream()
+                .parallel()
+                .filter(i -> i % 2 != 0)
+                .collect(Collectors.toList());
+        System.out.println(allNumber);
+        System.out.println(onlyOddNumber);
     }
 
 
