@@ -1,0 +1,107 @@
+@startuml Amend, Submit and Send to LMS
+!theme toy
+title Amend, Accept, Revoke S.I.
+autonumber
+actor "User" as UI
+box "E-services" #LightBlue
+participant "Booking Service" as B
+participant "Email Service" as EmailService
+end box
+box "LMS service" #LightGoldenRodYellow
+participant "LMS Service" as LMS
+end box
+database "MyPIL DB" as MyPilDb
+skinparam MaxMessageSize 5000
+!$siRevoke = {
+  "status": "revoke"
+}
+!$siConfirm = {
+  "status": "confirm"
+}
+
+!procedure $insert_participants()
+   rnote over B #Salmon: Booking Service 
+  /rnote over LMS #Salmon: LMS Service
+  /rnote over MyPilDb #Salmon: MyPilDb
+  /rnote over EmailService #Salmon: EmailService
+  /rnote over UI #Salmon: UI
+!endprocedure
+
+UI -> UI++: User login to e-service
+UI -> B++: Search for list of S.I. \n<color #Blue>POST</color> \nbooking-service/bookings/info
+alt <color Navy> status is 'DRAFT' </color>
+    B -> MyPilDb++: Fetch List of S.I.
+    MyPilDb --> B--: Return List of S.I.
+else <color Navy> status is 'SUBMITTED' / 'CONFIRMED' </color>
+    B -> LMS++: Fetch List of S.I.
+    LMS --> B--: Return List of S.I.
+end
+B --> UI--: Return list of S.I. data
+Note right of UI: Amend, Accept, Revoke button enabled for data if BDC = 'Y'
+
+group Amend SI
+    UI -> UI: User clicks on 'Amend' button for 1 S.I.
+    UI -> B++: <color #Blue>PATCH</color> \nbooking-service/si/amend/confirm/{bkgRqstNo}
+    B -> MyPilDb++: Update siRqstStatusCode = "D"
+    MyPilDb --> B--: Return success
+    UI -> B: Fetch single S.I. \n<color #Blue>GET</color> \nbooking-service/bookings/{bookingRqstNo}
+    B -> MyPilDb++: Fetch S.I. data
+    MyPilDb --> B--: Return S.I. data
+    B --> UI--: Return S.I. data
+    UI -> UI: User amend single S.I.
+    Note right of UI: Only selected fields can be amended
+    alt <color Navy>When user click on Save </color>
+      
+        UI -> B++: Send Edited Data \n<color #Blue>PUT</color> \nbooking-service/bookings/{bookingRqstNo}
+
+        group update value in MyPIL
+            B -> MyPilDb++: Update database
+            MyPilDb --> B--: Return Success
+            B -> EmailService: Send Email Notification\n<color #Blue>POST</color> \nnotification-service/notify/agency???
+            B -> LMS : \nNotify LMS to update status as BDC=N
+            
+            Note right of B: SI will be open for any amendments.
+        end
+        B --> UI--: Return Successs
+
+    else <color Navy>When user click on Submit </color>
+        UI -> UI: UI set S.I status to 'Submit'
+        UI -> B++: <color #Blue>PUT</color> \nbooking-service/bookings/{bookingRqstNo}
+
+$insert_participants()
+        Note over LMS, B: Update myPIL DB???
+        group update value in LMS
+
+            B -> LMS++: Send updated data\n<color #Blue>POST</color> \nlms/mypil/bkg/addBkgSI 
+            LMS --> B--: Return Success
+            B -> EmailService: Send Email Notification\n<color #Blue>POST</color> \nnotification-service/notify/agency??
+        end
+        B --> UI--: Return Success
+    end
+end
+group Accept SI
+    UI -> UI: User clicks on 'Accept' button for single S.I. 
+    UI -> B++: \n<color #Blue>PATCH</color> \nbooking-service/si/accept/confirm/\n{bkgRqstNo}?bookingNo={bkgNo}
+    B -> MyPilDb++: Update siRqstStatusCode = "C"
+    MyPilDb --> B--: Return success
+    B -> EmailService: Send Email Notification\n<color #Blue>POST</color> \nnotification-service/notify/agency??
+    B -> LMS++:Notify LMS \n<color #Blue>POST</color> \nlms/mypil/bkg/siConfirmRevoke  \n**$siConfirm**
+
+    Note right of B: Shipment will be locked for any amendments
+    LMS --> B--: Return Success
+    B --> UI--: Return Success
+end
+group Revoke SI
+    UI -> UI: User clicks on 'Revoke' button for single S.I.
+    UI -> B++: \n<color #Blue>PATCH</color> \nbooking-service/si/revoke/confirm/\n{bkgRqstNo}?bookingNo={bkgNo}
+    B -> MyPilDb++: Update siRqstStatusCode = "D"
+    MyPilDb --> B--: Return success
+    B -> EmailService: Send Email Notification\n<color #Blue>POST</color> \nnotification-service/notify/agency??
+    B -> LMS++: \n<color #Blue>POST</color>\nlms/mypil/bkg/siConfirmRevoke  \n**$siRevoke**
+    Note right of B: SI will be open for any amendments.
+
+    LMS --> B--: Return Success
+    B --> UI--: Return Success
+end
+
+@enduml

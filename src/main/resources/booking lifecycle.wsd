@@ -1,0 +1,42 @@
+@startuml s
+[*] --> NewBooking
+NewBooking --> Draft : Save as draft
+Draft: bkgRqstStsCd = 'Draft'
+Draft --> [*]
+NewBooking --> Submit : Submit booking on MyPIL
+Submit: bkgRqstStsCd = 'Submit'
+Submit: siRqstStsCd = 'Draft'
+Submit --> Cancel : Cancel on LMS side
+Cancel: bkgRqstStsCd = 'CANCEL'
+Cancel --> [*]
+Submit --> ConfirmSi : Confirm SI on MyPIL side
+ConfirmSi: siRqstStsCd = 'Submit'
+ConfirmSi: bkgRqstStsCd = 'Confirm'
+ConfirmSi --> AmendSi : Amend SI on MyPIL side
+AmendSi --> SubmitSi: Submit SI on MyPIL side
+AmendSi: Amend SI details
+SubmitSi: siRqstStsCd = 'Submit'
+SubmitSi: bkgRqstStsCd = 'Confirm'
+SubmitSi --> AcceptSi: Accept SI on LMS side
+AcceptSi: siRqstStsCd = 'Accept'
+AcceptSi: bkgRqstStsCd = 'Accept'
+AcceptSi --> blIssued: Issued BL on LMS side
+blIssued: bkgRqstStsCd = 'Confirm'
+blIssued: siRqstStsCd = 'Confirm'
+blIssued: blStatusCode = 'Issued'
+blIssued --> blReleased: Released BL on LMS side
+blReleased: bkgRqstStsCd = 'Confirm'
+blReleased: siRqstStsCd = 'Confirm'
+blReleased: blStatusCode = 'Released'
+blReleased --> blPrinted: Printed BL on LMS side  
+blPrinted: bkgRqstStsCd = 'Confirm'
+blPrinted: siRqstStsCd = 'Confirm'
+blPrinted: blStatusCode = 'Printed'
+blPrinted --> doPending: Pending DO on LMS side
+doPending: bkgRqstStsCd = 'Confirm'
+doPending: siRqstStsCd = 'Confirm'
+doPending: doStatusCode = 'Pending DO Release'
+doPending --> doReleased: Released DO on LMS side
+doReleased: doStatusCode = 'DO Released'
+doReleased --> [*]
+@enduml

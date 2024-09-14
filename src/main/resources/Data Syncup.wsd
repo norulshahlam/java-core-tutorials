@@ -1,0 +1,51 @@
+@startuml Data Syncup
+!theme toy
+title Data Syncup
+autonumber
+box "E-services" #LightBlue
+participant "Booking Service" as BS
+participant "Booking Inbound" as BI
+end box
+box "LMS service" #LightGoldenRodYellow
+participant "LMS Service" as LMS
+end box
+database "MyPIL DB" as MyPilDb
+database "LMS DB" as LMSDb
+queue "Kafka" as MQ
+skinparam MaxMessageSize 5000
+LMS -> LMSDb++ : Makes changes
+Note right of BI: Batch job triggered every 5 mins
+BI -> LMSDb : Fetch data for latest changes
+LMSDb -> BI-- : Return data
+group No data found
+    Note right of BI #Yellow: End job
+    else Data found
+    BI -> BI : Update related fields
+    BI -> MQ : Send updated data via messaging queue
+    group Successfully send VIA MQ
+        Note right of BI #Yellow: End job
+        Note over BS, MyPilDb: Booking service receives data VIA kafka
+        MQ <-- BS-- : Consume
+        BS -> BS++ : Update related fields
+        BS -> MyPilDb : Update DB
+        group Success
+            Note right of BS #Yellow: End job
+            else Failure
+            BS -> MyPilDb : Save payload in MyPil DB
+            Note right of BS #Yellow: End job
+        end
+        else Failure to send VIA MQ
+        Note left of BI: Sent using REST API
+        BI -> BS : POST /sync/updatebooking
+        Note over BS, MyPilDb: Booking service receives data VIA REST
+        BS -> MyPilDb : Update DB
+        group Successfully save to MyPilDb
+            Note right of BI #Yellow: End job
+            else Failure to save to MyPilDb
+            BI -> MyPilDb : Save payload in MyPil DB
+            Note right of BI #Yellow: End job
+        end
+    end
+end
+
+@enduml
