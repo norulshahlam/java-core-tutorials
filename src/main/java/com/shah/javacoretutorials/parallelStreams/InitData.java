@@ -15,13 +15,13 @@ public class InitData {
 
     public static List<GroceriesInfo> initGroceries() throws IOException {
         mapper.registerModule(new JavaTimeModule());
-        return mapper.readValue(new File("src/main/resources/groceries.json"), new TypeReference<List<GroceriesInfo>>() {
+        return mapper.readValue(new File("src/main/resources/groceries.json"), new TypeReference<>() {
         });
     }
 
     public static List<GroceriesDiscount> initGroceriesDiscount() throws IOException {
         mapper.registerModule(new JavaTimeModule());
-        return mapper.readValue(new File("src/main/resources/groceries-discount.json"), new TypeReference<List<GroceriesDiscount>>() {
+        return mapper.readValue(new File("src/main/resources/groceries-discount.json"), new TypeReference<>() {
         });
     }
 

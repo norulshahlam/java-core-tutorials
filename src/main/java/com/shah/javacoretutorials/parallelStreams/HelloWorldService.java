@@ -18,4 +18,10 @@ public class HelloWorldService {
         log("inside world");
         return " world!";
     }
+
+    public String beautiful(String hello, String world) {
+        delay(1000);
+        log("inside beautiful");
+        return hello + "-beautiful-" + world;
+    }
 }
