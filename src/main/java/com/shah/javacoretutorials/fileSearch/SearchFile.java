@@ -46,15 +46,6 @@ public class SearchFile {
         }
     }
 
-    /**
-     * Search for a file by filename, suffix, and date embedded in the filename.
-     *
-     * @param filename   Partial filename to search for (e.g., "GSM").
-     * @param suffix     File suffix (e.g., ".txt").
-     * @param targetDate Date to filter files by (in DDMMYYYY format).
-     * @return Path of the matching file.
-     * @throws IOException If an I/O error occurs.
-     */
     @SneakyThrows
     public Path searchFileByNamePartSuffixAndDateInput(String filename, String suffix, Date date) {
         log.info("Searching for filename: [{}], suffix: [{}], and date: [{}] in location [{}]",
