@@ -15,6 +15,8 @@ import java.nio.file.FileSystemNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -29,7 +31,7 @@ public class SearchFile {
     private String pathLocation;
 
     @SneakyThrows
-    public Path searchFile(String filename, String suffix) {
+    public Path searchFileByNamePArtAndSuffix(String filename, String suffix) {
         log.info("Searching filename: [{}] with suffix: [{}] in location [{}]", filename, suffix, pathLocation);
 
         try (Stream<Path> files =
@@ -43,6 +45,46 @@ public class SearchFile {
             }).orElseThrow(() -> new FileSystemNotFoundException(filename + " Could not be found in " + pathLocation));
         }
     }
+
+    /**
+     * Search for a file by filename, suffix, and date embedded in the filename.
+     *
+     * @param filename   Partial filename to search for (e.g., "GSM").
+     * @param suffix     File suffix (e.g., ".txt").
+     * @param targetDate Date to filter files by (in DDMMYYYY format).
+     * @return Path of the matching file.
+     * @throws IOException If an I/O error occurs.
+     */
+    @SneakyThrows
+    public Path searchFileByNamePartSuffixAndDateInput(String filename, String suffix, Date date) {
+        log.info("Searching for filename: [{}], suffix: [{}], and date: [{}] in location [{}]",
+                filename, suffix, date, pathLocation);
+
+        // Convert the provided date to the expected format in the filename (DDMMYYYY)
+        SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyyy");
+        String targetDateStr = dateFormat.format(date);
+
+        try (Stream<Path> files = Files.find(Paths.get(pathLocation), 1, (path, fileAttributes) -> {
+            String fileName = path.getFileName().toString();
+
+            // Filter by filename and suffix
+            return fileName.contains(filename) && fileName.endsWith(suffix);
+        })) {
+            return files.filter(path -> {
+                String fileName = path.getFileName().toString();
+
+                // Extract the last 10 characters (DDMMYYYY + suffix length)
+                int dateStartIndex = fileName.length() - 10 - suffix.length();
+                if (dateStartIndex >= 0) {
+                    String datePart = fileName.substring(dateStartIndex, dateStartIndex + 8); // Extract DDMMYYYY
+                    return datePart.equals(targetDateStr); // Compare with the target date
+                }
+                return false;
+            }).findFirst().orElseThrow(() -> new FileSystemNotFoundException(
+                    "No file found with filename [" + filename + "], suffix [" + suffix + "], and date [" + targetDateStr + "] in location [" + pathLocation + "]"));
+        }
+    }
+
 
     public List<GroceriesInfo> txtPortfolioParser(@NotNull Path path) throws IOException {
         log.info("inside txtPortfolioParser. Parsing filename: {}", path.getFileName());
