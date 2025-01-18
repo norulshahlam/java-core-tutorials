@@ -4,12 +4,10 @@ import org.junit.jupiter.api.Test;
 
 class TuringTest2 {
 
-
     @Test
     void test() {
         System.out.println(minOperations(3));
     }
-
 
     public int minOperations(int k) {
         int ans = k;
