@@ -55,7 +55,7 @@ public class GroceriesService {
                 .quantity(random.nextLong(50, 200))
                 .category(faker.cat().breed())
                 .costPrice(BigDecimal.valueOf(35.74))
-                .expiryDate(LocalDate.of(2022, 01, 26))
+                .expiryDate(LocalDate.of(2022, 1, 26))
                 .arrivalDate(LocalDate.of(2021, 12, 10))
                 .build();
     }
