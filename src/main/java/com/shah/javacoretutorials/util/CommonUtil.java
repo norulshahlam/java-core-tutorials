@@ -21,14 +21,14 @@ public class CommonUtil {
 
     public static void timeTaken() {
         stopWatch.stop();
-        log.info("Total Time Taken : " + stopWatch.getTime() + " ms");
+        log.info("Total Time Taken : {} ms", stopWatch.getTime());
     }
 
     public static void delay(long delayMilliSeconds) {
         try {
             sleep(delayMilliSeconds);
         } catch (Exception e) {
-            log.info("Exception is :" + e.getMessage());
+            log.info("Exception is :{}", e.getMessage());
         }
 
     }
