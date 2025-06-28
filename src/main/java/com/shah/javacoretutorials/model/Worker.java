@@ -19,6 +19,6 @@ public class Worker {
     }
 
     public String toString() {
-        return "" + id + ", " + name + ", " + supervisor;
+        return id + ", " + name + ", " + supervisor;
     }
 }

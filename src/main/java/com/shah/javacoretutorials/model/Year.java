@@ -18,6 +18,6 @@ public class Year {
         // return String.format("place is %d, name is %d, age is %d", place, name, age);
         // //return "place is " +place+ "/" +name+ "/" +age;
 
-        return "" + "\nName is " + name + ", age is " + age + ", Staying in " + place;
+        return "\nName is " + name + ", age is " + age + ", Staying in " + place;
     }
 }
