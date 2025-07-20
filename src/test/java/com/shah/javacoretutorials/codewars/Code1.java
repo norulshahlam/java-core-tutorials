@@ -1,10 +1,12 @@
 package com.shah.javacoretutorials.codewars;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+@Slf4j
 public class Code1 {
     @Test
     void contextLoads() {
@@ -13,6 +15,26 @@ public class Code1 {
                 .collect(Collectors.joining(" "));
         System.out.println(s);
     }
+
+
+    @Test
+    void yayas() {
+        int a = 10;
+        int b = 20;
+        int c = 30;
+        int d = a + b;
+        log.info("c is: " + c);
+    }
+
+    @Test
+    void printMyName() {
+        String name = "Shah";
+        int age = 21;
+        String country = "Japan";
+        log.info("My name is {} and I am {} years old and I live in {}.", name, age, country);
+    }
+
+
 }
 
 /*
