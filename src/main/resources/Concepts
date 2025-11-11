@@ -1,0 +1,20 @@
+“Kaizen” is a Japanese term that captures the concept
+of continuously making many small improvements
+
+***************
+Run SonarQube in Docker (Local)
+***************
+
+docker run -d --name sonarqube \
+  -p 9000:9000 \
+  sonarqube:lts-community
+
+***************
+Run Sonar Scanner on your Spring Boot project
+***************
+
+mvn sonar:sonar \
+  -Dsonar.projectKey=my-spring-app \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=your_token_here
+
