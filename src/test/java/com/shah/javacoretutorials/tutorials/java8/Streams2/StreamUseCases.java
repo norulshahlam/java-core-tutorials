@@ -2,7 +2,6 @@ package com.shah.javacoretutorials.tutorials.java8.Streams2;
 
 import com.shah.javacoretutorials.model.GroceriesInfo;
 import com.shah.javacoretutorials.parallelStreams.InitData;
-import org.apache.commons.lang.StringUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,8 @@ import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class StreamUseCases {
+class StreamUseCasesTest {
+
 
     List<GroceriesInfo> groceries = null;
 
@@ -99,8 +99,7 @@ class StreamUseCases {
     @Test
     void findItemWithLetterA() {
         List<GroceriesInfo> collect = groceries.stream()
-                .filter(i -> StringUtils.containsIgnoreCase(
-                        i.getItem(), "A"))
+                .filter(i -> i.getItem().contains("A"))
                 .toList();
         collect.forEach(System.out::println);
     }
@@ -119,7 +118,7 @@ class StreamUseCases {
 
     @Test
     void AllCarlsbergProducts() {
-              List<GroceriesInfo> collect = groceries
+        List<GroceriesInfo> collect = groceries
                 .stream()
                 .filter(
                         brand -> brand.getBrand().equals("Carlsberg"))
