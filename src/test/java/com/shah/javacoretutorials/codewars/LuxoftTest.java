@@ -1,6 +1,8 @@
 package com.shah.javacoretutorials.codewars;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -8,18 +10,45 @@ import java.util.stream.Collectors;
 
 @Slf4j
 public class LuxoftTest {
-    @Test
-    void contextLoads() {
-        /** Description:
-         * 5/12/2025 DXC interview coding round
-         * An array contains numbers. Exactly one number is duplicated in the array. Write java function to find this duplicate
-         */
+    /**
+     * Description:
+     * 5/12/2025 DXC interview coding round
+     * An array contains numbers -  List.of(1, 2, 3, 4, 4, 5)
+     * Exactly one number is duplicated in the array. Write java function to find this duplicate
+     */
+    static List<Integer> integerList;
 
-        List<Integer> numbers = List.of(1, 2, 3, 4, 4, 5);
-        log.info("{}", findDuplicateUsingSet(numbers));
-        log.info("{}", findDuplicateUsingMap(numbers));
-        log.info("{}", findDuplicateUsingGroup(numbers));
+    @BeforeAll
+    static void beforeAll() {
+        integerList = generate();
+    }
 
+    @RepeatedTest(10)
+    void findDuplicateUsingSet() {
+        log.info("{}", findDuplicateUsingSet(integerList));
+    }
+
+    @RepeatedTest(10)
+    void findDuplicateUsingMap() {
+        log.info("{}", findDuplicateUsingMap(integerList));
+
+    }
+
+    @RepeatedTest(10)
+    void findDuplicateUsingGroup() {
+        log.info("{}", findDuplicateUsingGroup(integerList));
+    }
+
+    private static List<Integer> generate() {
+        // generate 100,000 unique numbers and add 1 duplicate
+
+        List<Integer> largeList = new ArrayList<>();
+        for (int i = 1; i <= 1000000; i++) {
+            largeList.add(i);
+        }
+        largeList.add(50000); // add a duplicate
+        Collections.shuffle(largeList);
+        return largeList;
     }
 
     Integer findDuplicateUsingSet(List<Integer> numbers) {
